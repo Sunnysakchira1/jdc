@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JaiDeeClear - UV Protection Film Quote</title>
+    <title>JaiDeeClear - UV Protection Film Quote Request</title>
     <style>
         * {
             margin: 0;
@@ -11,954 +11,1028 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #ffffff;
-            color: #1f2937;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #1d1d1f;
             line-height: 1.6;
-        }
-
-        header {
-            border-bottom: 1px solid #f3f4f6;
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            z-index: 50;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-text {
-            font-size: 1.125rem;
-            font-weight: bold;
-            color: #111827;
-        }
-
-        .logo-clear {
-            background-color: #000;
-            color: white;
-            padding: 0 0.25rem;
-            margin-left: 0.25rem;
-        }
-
-        .logo-subtitle {
-            font-size: 0.75rem;
-            color: #374151;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-        }
-
-        .price-badge {
-            font-size: 0.875rem;
-            color: #ff8c00;
-            font-weight: 600;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 980px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 0 22px;
         }
 
-        .progress-bar {
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e7;
+            z-index: 100;
+            padding: 20px 0;
+        }
+
+        .header-content {
             display: flex;
-            gap: 0.5rem;
-            margin-bottom: 3rem;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
         }
 
-        .progress-segment {
-            height: 4px;
-            flex: 1;
-            border-radius: 9999px;
-            background-color: #e5e7eb;
-            transition: all 0.3s ease;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .progress-segment.active {
-            background-color: #ff8c00;
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
-        .step {
-            display: none;
+        .logo-text span {
+            background: #1d1d1f;
+            color: white;
+            padding: 2px 6px;
         }
 
-        .step.active {
-            display: block;
-            animation: slideIn 0.3s ease;
+        .tagline {
+            font-size: 11px;
+            color: #6e6e73;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 500;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .price-badge {
+            font-size: 14px;
+            color: #FFA500;
+            font-weight: 600;
         }
 
-        h1 {
-            font-size: 2.25rem;
-            font-weight: 300;
-            color: #111827;
-            margin-bottom: 0.5rem;
+        /* Legend */
+        .legend {
+            background: #f5f5f7;
+            border-radius: 18px;
+            padding: 24px;
+            margin: 40px 0;
         }
 
-        h2 {
-            font-size: 1.875rem;
-            font-weight: 300;
-            color: #111827;
-            margin-bottom: 0.5rem;
+        .legend h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1d1d1f;
         }
 
-        .subtitle {
-            color: #6b7280;
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .grid {
+        .legend-grid {
             display: grid;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
         }
 
-        .grid-2 {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .legend-item {
+            font-size: 14px;
         }
 
-        .grid-4 {
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        .legend-item strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        .legend-item span {
+            color: #6e6e73;
+        }
+
+        /* Film Cards */
+        .film-card {
+            background: white;
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .film-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .film-card.popular {
+            border: 2px solid #1d1d1f;
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 32px;
+            left: 0;
+            background: #1d1d1f;
+            color: white;
+            padding: 6px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .film-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .film-info h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .warranty {
+            font-size: 14px;
+            color: #6e6e73;
+        }
+
+        .price {
+            text-align: right;
+        }
+
+        .price-amount {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1;
+            color: #1d1d1f;
+        }
+
+        .price-unit {
+            font-size: 14px;
+            color: #6e6e73;
+        }
+
+        .specs {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #6e6e73;
+        }
+
+        .suitability {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .suitability h4 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #6e6e73;
+            margin-bottom: 8px;
+        }
+
+        .suitability p {
+            font-size: 14px;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+        }
+
+        .suitability p:last-child {
+            margin-bottom: 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1.5rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 1rem;
-            background: white;
+            padding: 12px 24px;
+            border-radius: 980px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
             cursor: pointer;
-            text-align: center;
-            transition: all 0.3s ease;
-            font-size: 1rem;
+            transition: all 0.2s ease;
             text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            border-color: #ff8c00;
-            background-color: #fff7ed;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
         .btn-primary {
-            background-color: #ff8c00;
+            background: #FFA500;
             color: white;
-            border-color: #ff8c00;
-            width: 100%;
-            padding: 1rem;
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-top: 1rem;
+            flex: 1;
+            min-width: 200px;
         }
 
         .btn-primary:hover {
-            background-color: #e67e00;
+            background: #FF8C00;
+            transform: translateY(-1px);
         }
 
-        .btn-primary:disabled {
-            background-color: #d1d5db;
-            cursor: not-allowed;
-            border-color: #d1d5db;
+        .btn-secondary {
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        .btn-secondary:hover {
+            background: #e8e8ed;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            margin: 60px 0;
+            padding: 48px 0;
+        }
+
+        .contact-section h2 {
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-section p {
+            text-align: center;
+            font-size: 17px;
+            color: #6e6e73;
+            margin-bottom: 48px;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
         }
 
-        label {
+        .form-group label {
             display: block;
-            font-size: 0.875rem;
+            font-size: 14px;
             font-weight: 500;
-            color: #374151;
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
+            color: #1d1d1f;
         }
 
-        .required {
-            color: #ef4444;
-        }
-
-        input[type="text"],
-        input[type="number"],
-        input[type="date"],
-        textarea,
-        select {
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 0.75rem 1rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 0.75rem;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+            padding: 14px 16px;
+            background: #f5f5f7;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            font-size: 15px;
             font-family: inherit;
+            transition: all 0.2s ease;
         }
 
-        input:focus,
-        textarea:focus,
-        select:focus {
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
-            border-color: #ff8c00;
+            background: white;
+            border-color: #1d1d1f;
+            box-shadow: 0 0 0 4px rgba(29, 29, 31, 0.1);
         }
 
-        input.error,
-        textarea.error {
-            border-color: #ef4444;
-        }
-
-        .error-message {
-            color: #ef4444;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-        }
-
-        textarea {
+        .form-group textarea {
             resize: vertical;
             min-height: 100px;
         }
 
-        .film-card {
-            padding: 1.5rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
+        .form-group small {
+            display: block;
+            margin-top: 6px;
+            font-size: 12px;
+            color: #6e6e73;
         }
 
-        .film-card.popular {
-            border-color: #ff8c00;
-            background-color: #fff7ed;
+        .error-message {
+            color: #ff3b30;
+            font-size: 13px;
+            margin-top: 6px;
+            display: none;
         }
 
-        .film-card.popular::before {
-            content: "Most Popular";
-            position: absolute;
-            top: -12px;
-            left: 24px;
-            background-color: #ff8c00;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
+        .form-group.error input,
+        .form-group.error textarea,
+        .form-group.error select {
+            border-color: #ff3b30;
         }
 
-        .film-name {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #111827;
+        .form-group.error .error-message {
+            display: block;
         }
 
-        .film-price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ff8c00;
-        }
-
-        .film-specs {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin: 1rem 0;
-        }
-
-        .upload-area {
-            border: 2px dashed #d1d5db;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .upload-area:hover {
-            border-color: #ff8c00;
-            background-color: #fff7ed;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 0.75rem;
-            margin-top: 1rem;
-        }
-
-        .photo-item {
-            position: relative;
-            aspect-ratio: 1;
-            overflow: hidden;
-            border-radius: 0.5rem;
-        }
-
-        .photo-item img {
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
-        .photo-delete {
-            position: absolute;
-            top: 4px;
-            right: 4px;
-            background-color: #ef4444;
-            color: white;
-            border: none;
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 18px;
+            padding: 48px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .modal-content p {
+            font-size: 17px;
+            color: #6e6e73;
+            margin-bottom: 32px;
+        }
+
+        .checkmark {
+            width: 64px;
+            height: 64px;
+            background: #1d1d1f;
             border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto 24px;
         }
 
-        .photo-item:hover .photo-delete {
-            opacity: 1;
+        .checkmark svg {
+            width: 32px;
+            height: 32px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
         }
 
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            color: #ff8c00;
-            font-size: 0.875rem;
-            margin-bottom: 2rem;
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             background: none;
             border: none;
+            font-size: 24px;
             cursor: pointer;
-            text-decoration: none;
-            gap: 0.5rem;
-        }
-
-        .back-btn:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            border-top: 1px solid #f3f4f6;
-            margin-top: 5rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-
-        .footer-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            font-size: 0.875rem;
-            color: #6b7280;
-        }
-
-        .footer-text {
-            text-align: center;
-            font-size: 0.75rem;
-            color: #9ca3af;
-        }
-
-        .estimate-box {
-            background: linear-gradient(to right, #ff8c00, #ffc107);
-            border-radius: 1rem;
-            padding: 2rem;
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .estimate-amount {
-            font-size: 3rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .success-icon {
-            font-size: 3rem;
-            margin: 2rem 0;
-        }
-
-        .contact-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-card {
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 0.75rem;
-            padding: 1rem;
+            color: #6e6e73;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
+            border-radius: 50%;
         }
 
+        .close-modal:hover {
+            background: #f5f5f7;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e5e5e7;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: #6e6e73;
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: #86868b;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem;
+            .film-header {
+                flex-direction: column;
             }
-            h1 {
-                font-size: 1.875rem;
+
+            .price {
+                text-align: left;
             }
-            h2 {
-                font-size: 1.5rem;
+
+            .price-amount {
+                font-size: 36px;
             }
-            .grid-4 {
-                grid-template-columns: repeat(2, 1fr);
+
+            .button-group {
+                flex-direction: column;
             }
-            .estimate-amount {
-                font-size: 2rem;
+
+            .btn-primary {
+                min-width: 100%;
+            }
+
+            .modal-content {
+                padding: 32px 24px;
+            }
+
+            .legend-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo-section">
-                <svg width="50" height="34" viewBox="0 0 240 120" style="flex-shrink: 0;">
-                    <path d="M 20 40 Q 35 20, 50 40 Q 65 60, 80 40 L 80 80 Q 65 100, 50 80 Q 35 60, 20 80 Z" fill="#f0f0f0"/>
-                    <path d="M 70 35 Q 85 15, 100 35 Q 115 55, 130 35 L 130 85 Q 115 105, 100 85 Q 85 65, 70 85 Z" fill="#d1d5db"/>
-                    <path d="M 120 30 Q 135 10, 150 30 Q 165 50, 180 30 L 180 90 Q 165 110, 150 90 Q 135 70, 120 90 Z" fill="#9ca3af"/>
-                    <path d="M 170 25 Q 185 5, 200 25 Q 215 45, 230 25 L 230 95 Q 215 115, 200 95 Q 185 75, 170 95 Z" fill="#FFA500"/>
-                </svg>
+        <div class="header-content">
+            <div class="logo-container">
                 <div>
-                    <div class="logo-text">JAIDEE<span class="logo-clear">CLEAR</span></div>
-                    <div class="logo-subtitle">UV PROTECTION FILM</div>
+                    <div class="logo-text">JAIDEE<span>CLEAR</span></div>
+                    <div class="tagline">UV Protection Film</div>
                 </div>
             </div>
             <div class="price-badge">Starting at ฿40/sq.ft</div>
         </div>
     </header>
 
-    <div class="container" id="progressContainer">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <div class="container">
-        <!-- Step 1: Property Type -->
-        <div class="step active" id="step1">
-            <h2>What type of property?</h2>
-            <p class="subtitle">This helps us recommend the best film for your needs</p>
-            <div class="grid grid-4" id="propertyTypesContainer"></div>
-        </div>
-
-        <!-- Step 2: Focus -->
-        <div class="step" id="step2">
-            <button class="back-btn" onclick="goToStep(1)">← Back</button>
-            <h2>What's your main concern?</h2>
-            <p class="subtitle">Select your primary need</p>
-            <div class="grid grid-2" id="focusOptionsContainer"></div>
-        </div>
-
-        <!-- Step 3: Film Selection -->
-        <div class="step" id="step3">
-            <button class="back-btn" onclick="goToStep(2)">← Back</button>
-            <h2>Choose your film</h2>
-            <p class="subtitle">Select the protection level that fits your needs</p>
-            <div id="filmsContainer"></div>
-        </div>
-
-        <!-- Step 4: Measurement -->
-        <div class="step" id="step4">
-            <button class="back-btn" onclick="goToStep(3)">← Back</button>
-            <h2>Do you have window measurements?</h2>
-            <p class="subtitle">We can provide free on-site measurement if needed</p>
-            <div class="grid grid-2">
-                <button class="btn" onclick="selectMeasurement(false)" style="padding: 2rem;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📏</div>
-                    <div style="font-weight: 600; color: #111827;">Yes, I have measurements</div>
-                </button>
-                <button class="btn" onclick="selectMeasurement(true)" style="padding: 2rem; border-color: #ff8c00; background-color: #fff7ed;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
-                    <div style="font-weight: 600; color: #111827;">Schedule site measurement</div>
-                    <div style="margin-top: 0.75rem; font-size: 0.75rem; color: #ff8c00;">✓ Recommended</div>
-                </button>
-            </div>
-        </div>
-
-        <!-- Step 5: Estimate -->
-        <div class="step" id="step5">
-            <button class="back-btn" onclick="goToStep(4)">← Back</button>
-            <div class="estimate-box">
-                <div style="font-size: 1.875rem; color: white; margin-bottom: 1rem;">🧮 Your Estimate</div>
-                <div class="estimate-amount" id="estimateAmount">฿---</div>
-                <div id="estimateDetails" style="color: rgba(255,255,255,0.9);"></div>
-            </div>
-            <div id="areaInputContainer"></div>
-            <div style="background-color: #f9fafb; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem;">
-                <h3 style="margin-bottom: 1rem;">Selected Configuration</h3>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    <span style="color: #6b7280;">Property Type</span>
-                    <span id="summaryProperty" style="font-weight: 500;">-</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.875rem;">
-                    <span style="color: #6b7280;">Film Type</span>
-                    <span id="summaryFilm" style="font-weight: 500;">-</span>
-                </div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-                    <span style="color: #6b7280;">Price per sq.ft</span>
-                    <span id="summaryPrice" style="font-weight: 500;">-</span>
-                </div>
-            </div>
-            <button class="btn-primary" onclick="goToStep(6)">Continue to Contact Details</button>
-        </div>
-
-        <!-- Step 6: Contact Form -->
-        <div class="step" id="step6">
-            <button class="back-btn" onclick="goToStep(5)">← Back</button>
-            <h2>Almost done!</h2>
-            <p class="subtitle">Let us know how to reach you</p>
-
-            <form id="contactForm" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label>Full Name <span class="required">*</span></label>
-                    <input type="text" id="nameInput" placeholder="e.g., Somchai Saengchai" required>
-                    <div class="error-message" id="nameError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label>Phone Number <span class="required">*</span></label>
-                    <input type="text" id="phoneInput" placeholder="+66 92-006-8100" required>
-                    <div class="error-message" id="phoneError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label>Installation Location <span class="required">*</span></label>
-                    <input type="text" id="locationInput" placeholder="e.g., Sukhumvit Soi 21, Bangkok" required>
-                    <div class="error-message" id="locationError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label>Photos <span class="required">*</span></label>
-                    <div class="upload-area" onclick="document.getElementById('photoInput').click()">
-                        <div style="font-size: 2rem; margin-bottom: 1rem;">📤</div>
-                        <div style="color: #6b7280; margin-bottom: 0.25rem;">Click to upload photos</div>
-                        <div style="font-size: 0.75rem; color: #9ca3af;">PNG, JPG up to 5MB each</div>
+    <main>
+        <div class="container">
+            <!-- Legend -->
+            <div class="legend">
+                <h3>Understanding Film Performance Ratings</h3>
+                <div class="legend-grid">
+                    <div class="legend-item">
+                        <strong>UVR</strong> <span>— Ultraviolet Rejection: Percentage of harmful UV rays blocked</span>
                     </div>
-                    <input type="file" id="photoInput" accept="image/*" multiple style="display: none;" onchange="handlePhotoUpload(event)">
-                    <div id="photoContainer" style="margin-top: 1rem;"></div>
-                    <div class="error-message" id="photoError"></div>
-                </div>
-
-                <button type="submit" class="btn-primary">Get My Quote</button>
-            </form>
-        </div>
-
-        <!-- Step 7: Success -->
-        <div class="step" id="step7">
-            <div style="text-align: center; padding: 3rem 0;">
-                <div class="success-icon">✓</div>
-                <h2>Quote Request Submitted!</h2>
-                <p class="subtitle">Thank you for choosing JaiDeeClear. Our team will contact you shortly.</p>
-
-                <div class="contact-cards">
-                    <div class="contact-card">
-                        <span style="font-size: 1.5rem; color: #ff8c00;">📞</span>
-                        <span style="font-weight: 500;">+66 92-006-8100</span>
+                    <div class="legend-item">
+                        <strong>IRR</strong> <span>— Infrared Rejection: Percentage of heat-causing infrared blocked</span>
                     </div>
-                    <div class="contact-card">
-                        <span style="font-size: 1.5rem; color: #ff8c00;">💬</span>
-                        <span style="font-weight: 500;">@jaideeclear</span>
-                    </div>
-                    <div class="contact-card">
-                        <span style="font-size: 1.5rem; color: #ff8c00;">📧</span>
-                        <span style="font-weight: 500;">jaideeclear@gmail.com</span>
+                    <div class="legend-item">
+                        <strong>TSER</strong> <span>— Total Solar Energy Rejected: Overall solar heat control capability</span>
                     </div>
                 </div>
-
-                <button class="back-btn" onclick="resetForm()" style="margin-top: 2rem; display: block; margin-left: auto; margin-right: auto;">Start New Quote</button>
             </div>
+
+            <!-- Film Cards -->
+            <section id="films">
+                <!-- Carbon Series -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Carbon Series</h2>
+                            <p class="warranty">Warranty: 2-3 years</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿50</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="specs">
+                        <span>UVR 95%</span>
+                        <span>IRR 35%</span>
+                        <span>TSER 40%</span>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Budget-conscious homeowners, rental properties, temporary installations, small residential windows</p>
+                        <h4>Not recommended for</h4>
+                        <p>High-end luxury properties, areas requiring maximum heat rejection, long-term commercial installations</p>
+                        <h4>Commonly used in</h4>
+                        <p>Apartment rentals, student housing, temporary office spaces, seasonal properties, cost-sensitive projects</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Carbon Series')">Schedule On-Site Measurement</button>
+                        <a href="https://online.fliphtml5.com/uuelh/kasv/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            View Catalogue
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                                <path d="M10.5 1.5h-9v9h9v-9zm-1.5 7.5h-6v-6h6v6z"/>
+                                <path d="M7.5 3h3v3M10.5 1.5L6 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Metallic Series -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Metallic Series</h2>
+                            <p class="warranty">Warranty: 2-3 years</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿75</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="specs">
+                        <span>UVR 99%</span>
+                        <span>IRR 45%</span>
+                        <span>TSER 50%</span>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Privacy seekers, street-facing windows, bathrooms, ground floor spaces, commercial storefronts</p>
+                        <h4>Not recommended for</h4>
+                        <p>Spaces requiring WiFi/cellular signals, high-tech offices, medical facilities with sensitive equipment</p>
+                        <h4>Commonly used in</h4>
+                        <p>Urban homes, retail shops, beauty salons, clinics, ground-floor apartments, cafes</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Metallic Series')">Schedule On-Site Measurement</button>
+                        <a href="https://online.fliphtml5.com/qacii/cpsf/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            View Catalogue
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                                <path d="M10.5 1.5h-9v9h9v-9zm-1.5 7.5h-6v-6h6v6z"/>
+                                <path d="M7.5 3h3v3M10.5 1.5L6 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Ceramic Nano -->
+                <article class="film-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Ceramic Nano</h2>
+                            <p class="warranty">Warranty: 5-7 years</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿90</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="specs">
+                        <span>UVR 99%</span>
+                        <span>IRR 65%</span>
+                        <span>TSER 60%</span>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Modern homes, condos, home offices, WiFi-dependent spaces, tech-savvy homeowners</p>
+                        <h4>Not recommended for</h4>
+                        <p>Extreme budget constraints, very short-term installations, historic buildings requiring specific aesthetics</p>
+                        <h4>Commonly used in</h4>
+                        <p>Living rooms, bedrooms, home offices, smart homes, co-working spaces, modern apartments</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Ceramic Nano')">Schedule On-Site Measurement</button>
+                        <a href="https://online.fliphtml5.com/qacii/cqfp/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            View Catalogue
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                                <path d="M10.5 1.5h-9v9h9v-9zm-1.5 7.5h-6v-6h6v6z"/>
+                                <path d="M7.5 3h3v3M10.5 1.5L6 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Ceramic UV400 -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Ceramic UV400</h2>
+                            <p class="warranty">Warranty: 7-9 years</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿110</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="specs">
+                        <span>UVR 99.9%</span>
+                        <span>IRR 70%</span>
+                        <span>TSER 65%</span>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Health-conscious families, homes with children, art collections, premium furniture protection, skin-sensitive individuals</p>
+                        <h4>Not recommended for</h4>
+                        <p>Budget-focused projects, rental properties, spaces where maximum heat rejection is priority over UV blocking</p>
+                        <h4>Commonly used in</h4>
+                        <p>Family homes, nurseries, art galleries, museums, medical offices, dermatology clinics, luxury residences</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Ceramic UV400')">Schedule On-Site Measurement</button>
+                        <a href="https://online.fliphtml5.com/uuelh/egmo/#p=4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            View Catalogue
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                                <path d="M10.5 1.5h-9v9h9v-9zm-1.5 7.5h-6v-6h6v6z"/>
+                                <path d="M7.5 3h3v3M10.5 1.5L6 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Titanium Series -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Titanium Series</h2>
+                            <p class="warranty">Warranty: 7-9 years</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿130</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="specs">
+                        <span>UVR 99.9%</span>
+                        <span>IRR 75%</span>
+                        <span>TSER 70%</span>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Luxury residences, high-rise condos, executive offices, premium commercial spaces, prestige properties</p>
+                        <h4>Not recommended for</h4>
+                        <p>Budget projects, low-end rentals, areas where cost is the primary factor, temporary installations</p>
+                        <h4>Commonly used in</h4>
+                        <p>Penthouse apartments, CEO offices, luxury hotels, upscale restaurants, premium showrooms, corporate headquarters</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Titanium Series')">Schedule On-Site Measurement</button>
+                        <a href="https://online.fliphtml5.com/qacii/uawk/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            View Catalogue
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                                <path d="M10.5 1.5h-9v9h9v-9zm-1.5 7.5h-6v-6h6v6z"/>
+                                <path d="M7.5 3h3v3M10.5 1.5L6 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Sputtering Series -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Sputtering Series</h2>
+                            <p class="warranty">Warranty: 9 years</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿155</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="specs">
+                        <span>UVR 99.9%</span>
+                        <span>IRR 85%</span>
+                        <span>TSER 80%</span>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Ultimate performance seekers, penthouse suites, large glass facades, extreme heat locations, energy-conscious luxury properties</p>
+                        <h4>Not recommended for</h4>
+                        <p>Mid-range budgets, standard residential needs, areas where premium performance is not required</p>
+                        <h4>Commonly used in</h4>
+                        <p>Ultra-luxury penthouses, floor-to-ceiling windows, observatories, high-end commercial towers, architectural showcases, tropical climate properties</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Sputtering Series')">Schedule On-Site Measurement</button>
+                        <a href="https://online.fliphtml5.com/qacii/zzpb/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            View Catalogue
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                                <path d="M10.5 1.5h-9v9h9v-9zm-1.5 7.5h-6v-6h6v6z"/>
+                                <path d="M7.5 3h3v3M10.5 1.5L6 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Safety Film 0.4mm -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Safety Film 0.4mm</h2>
+                            <p class="warranty">Warranty: Varies</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿70</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Basic glass protection, sliding doors, storefront windows, child-safe environments, accident prevention</p>
+                        <h4>Not recommended for</h4>
+                        <p>High-security areas, areas with significant threat risk, locations requiring ballistic protection</p>
+                        <h4>Commonly used in</h4>
+                        <p>Family homes, kindergartens, retail stores, restaurants, offices, residential balconies</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Safety Film 0.4mm')">Schedule On-Site Measurement</button>
+                    </div>
+                </article>
+
+                <!-- Safety Film 0.8mm -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Safety Film 0.8mm</h2>
+                            <p class="warranty">Warranty: Varies</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿90</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Enhanced security needs, ground floor windows, jewelry stores, high-value property protection, break-in prevention</p>
+                        <h4>Not recommended for</h4>
+                        <p>Standard residential use where cost is concern, areas without security risks</p>
+                        <h4>Commonly used in</h4>
+                        <p>Banks, jewelry stores, pharmacies, electronics stores, cash-handling businesses, ground-floor commercial spaces</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Safety Film 0.8mm')">Schedule On-Site Measurement</button>
+                    </div>
+                </article>
+
+                <!-- Safety UV Film 0.4mm -->
+                <article class="film-card">
+                    <div class="film-header">
+                        <div class="film-info">
+                            <h2>Safety UV Film 0.4mm</h2>
+                            <p class="warranty">Warranty: Varies</p>
+                        </div>
+                        <div class="price">
+                            <div class="price-amount">฿120</div>
+                            <div class="price-unit">per sq.ft</div>
+                        </div>
+                    </div>
+                    <div class="suitability">
+                        <h4>Best for</h4>
+                        <p>Protection plus UV blocking, retail displays, museums, galleries with valuable items, combined safety and preservation needs</p>
+                        <h4>Not recommended for</h4>
+                        <p>Areas needing maximum security without UV concerns, budget-constrained projects</p>
+                        <h4>Commonly used in</h4>
+                        <p>Art galleries, museums, antique shops, luxury retail, exhibition spaces, heritage buildings, archival storage</p>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="openContactForm('Safety UV Film 0.4mm')">Schedule On-Site Measurement</button>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-section" id="contact-form">
+                <h2>Schedule Your Free Consultation</h2>
+                <p>Let us know how to reach you and we'll arrange a site visit</p>
+                
+                <form id="quoteForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message">Please enter your full name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message">Please enter a valid email address</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+66 XX-XXX-XXXX">
+                        <small>Optional - we'll use email if not provided</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Installation Location (include Google Maps link) *</label>
+                        <textarea id="location" name="location" required placeholder="e.g., 123 Sukhumvit Soi 21, Bangkok 10110
+Google Maps: https://maps.app.goo.gl/..."></textarea>
+                        <span class="error-message">Please enter your installation location with Google Maps link</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="datetime">Preferred Date/Time</label>
+                        <input type="text" id="datetime" name="datetime" placeholder="e.g., Monday June 5th, morning or 2-4pm">
+                        <small>We'll contact you to confirm availability</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="film">Film of Interest *</label>
+                        <select id="film" name="film" required>
+                            <option value="">Select a film</option>
+                            <option value="Carbon Series">Carbon Series - ฿50/sq.ft</option>
+                            <option value="Metallic Series">Metallic Series - ฿75/sq.ft</option>
+                            <option value="Ceramic Nano">Ceramic Nano - ฿90/sq.ft</option>
+                            <option value="Ceramic UV400">Ceramic UV400 - ฿110/sq.ft</option>
+                            <option value="Titanium Series">Titanium Series - ฿130/sq.ft</option>
+                            <option value="Sputtering Series">Sputtering Series - ฿155/sq.ft</option>
+                            <option value="Safety Film 0.4mm">Safety Film 0.4mm - ฿70/sq.ft</option>
+                            <option value="Safety Film 0.8mm">Safety Film 0.8mm - ฿90/sq.ft</option>
+                            <option value="Safety UV Film 0.4mm">Safety UV Film 0.4mm - ฿120/sq.ft</option>
+                        </select>
+                        <span class="error-message">Please select a film type</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" name="notes" placeholder="Any specific requirements, window measurements you already have, or questions..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 24px;">
+                        Submit Request
+                    </button>
+                </form>
+            </section>
         </div>
-    </div>
+    </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-badges">
-                <div>🛡️ ISO 9001 Certified</div>
-                <div>✨ IWFA Member</div>
-                <div>✓ Professional Installation</div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="certifications">
+                    <span>🏆 ISO 9001 Certified</span>
+                    <span>✨ IWFA Member</span>
+                    <span>✓ Professional Installation</span>
+                </div>
+                <p class="copyright">© 2025 JaiDeeClear. On-site service throughout Bangkok.</p>
             </div>
-            <p class="footer-text">© 2025 JaiDeeClear. On-site service throughout Bangkok.</p>
         </div>
     </footer>
 
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()" aria-label="Close">&times;</button>
+            <div class="checkmark">
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 12l5 5L20 7"/>
+                </svg>
+            </div>
+            <h3>Request Submitted!</h3>
+            <p>Thank you for your interest. Our team will contact you shortly to schedule your free on-site measurement and consultation.</p>
+            <div style="margin-top: 24px; font-size: 14px; color: #6e6e73;">
+                <p><strong>Contact Us:</strong></p>
+                <p>📞 +66 92-006-8100</p>
+                <p>✉️ jaideeclear@gmail.com</p>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal()" style="margin-top: 24px; width: 100%;">Close</button>
+        </div>
+    </div>
+
     <script>
-        // FIX #1: Proper error handling and null checks
-        const films = [
-            { id: 'carbon', name: 'Carbon Series', price: 50, warranty: '2-3 years', bestFor: 'Budget-conscious homeowners', commonlyUsedFor: 'Small residential windows, rental properties', specs: { uvr: '95%', irr: '35%', tser: '40%' }, popular: false },
-            { id: 'metallic', name: 'Metallic Series', price: 75, warranty: '2-3 years', bestFor: 'Privacy seekers on a budget', commonlyUsedFor: 'Street-facing windows, bathrooms', specs: { uvr: '99%', irr: '45%', tser: '50%' }, popular: false },
-            { id: 'ceramic-nano', name: 'Ceramic Nano', price: 90, warranty: '5-7 years', bestFor: 'Modern homes and condos', commonlyUsedFor: 'Living rooms, bedrooms, home offices', specs: { uvr: '99%', irr: '65%', tser: '60%' }, popular: true },
-            { id: 'ceramic-uv400', name: 'Ceramic UV400', price: 110, warranty: '7-9 years', bestFor: 'Health-conscious families', commonlyUsedFor: 'Homes with children, art collections', specs: { uvr: '99.9%', irr: '70%', tser: '65%' }, popular: false },
-            { id: 'titanium', name: 'Titanium Series', price: 130, warranty: '7-9 years', bestFor: 'Luxury residences and offices', commonlyUsedFor: 'High-rise condos, executive offices', specs: { uvr: '99.9%', irr: '75%', tser: '70%' }, popular: false },
-            { id: 'sputtering', name: 'Sputtering Series', price: 155, warranty: '9 years', bestFor: 'Ultimate performance seekers', commonlyUsedFor: 'Penthouse suites, large glass facades', specs: { uvr: '99.9%', irr: '85%', tser: '80%' }, popular: false }
-        ];
+        // Form handling
+        const form = document.getElementById('quoteForm');
+        let isSubmitting = false;
 
-        const propertyTypes = [
-            { value: 'House', icon: '🏠', label: 'House' },
-            { value: 'Condo', icon: '🏢', label: 'Condo' },
-            { value: 'Villa', icon: '🏰', label: 'Villa' },
-            { value: 'Townhouse', icon: '🏘️', label: 'Townhouse' },
-            { value: 'Office', icon: '💼', label: 'Office' },
-            { value: 'Shop', icon: '🏪', label: 'Shop' },
-            { value: 'Cafe', icon: '☕', label: 'Cafe' },
-            { value: 'Other', icon: '🏗️', label: 'Other' }
-        ];
-
-        const focusOptions = [
-            { value: 'heat', label: 'Heat Reduction', icon: '☀️' },
-            { value: 'privacy', label: 'Privacy', icon: '👁️' },
-            { value: 'uv', label: 'UV Protection', icon: '🛡️' },
-            { value: 'both', label: 'Heat + Privacy', icon: '✨' }
-        ];
-
-        // FIX #2: Proper state management
-        let state = {
-            currentStep: 1,
-            propertyType: '',
-            focus: '',
-            selectedFilm: null,
-            area: '',
-            needsMeasurement: null,
-            photos: []
-        };
-
-        // FIX #3: Use traditional null checks instead of optional chaining
-        function safeGet(obj, key) {
-            return obj && obj[key] ? obj[key] : '-';
+        function openContactForm(filmName) {
+            const filmSelect = document.getElementById('film');
+            filmSelect.value = filmName;
+            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => {
+                document.getElementById('name').focus();
+            }, 500);
         }
 
-        // FIX #4: Initialize with proper error handling
-        function init() {
-            try {
-                renderPropertyTypes();
-                renderFocusOptions();
-                updateProgressBar();
-            } catch (error) {
-                console.error('Init error:', error);
-            }
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
         }
 
-        // FIX #5: Render functions with null checks
-        function renderPropertyTypes() {
-            const container = document.getElementById('propertyTypesContainer');
-            if (!container) return;
+        function validateForm() {
+            let isValid = true;
+            const formGroups = form.querySelectorAll('.form-group');
             
-            container.innerHTML = propertyTypes.map(type => `
-                <button class="btn" onclick="selectProperty('${type.value}')" style="padding: 1.5rem;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">${type.icon}</div>
-                    <div>${type.label}</div>
-                </button>
-            `).join('');
-        }
-
-        function renderFocusOptions() {
-            const container = document.getElementById('focusOptionsContainer');
-            if (!container) return;
-            
-            container.innerHTML = focusOptions.map(option => `
-                <button class="btn" onclick="selectFocus('${option.value}')" style="padding: 1.5rem;">
-                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">${option.icon}</div>
-                    <div style="font-weight: 600;">${option.label}</div>
-                </button>
-            `).join('');
-        }
-
-        function selectProperty(type) {
-            state.propertyType = type;
-            goToStep(2);
-        }
-
-        function selectFocus(focus) {
-            state.focus = focus;
-            goToStep(3);
-        }
-
-        function renderFilms() {
-            const container = document.getElementById('filmsContainer');
-            if (!container) return;
-            
-            container.innerHTML = films.map(film => `
-                <div class="film-card ${film.popular ? 'popular' : ''}" style="margin-bottom: 1rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
-                        <div>
-                            <div class="film-name">${film.name}</div>
-                            <div style="font-size: 0.875rem; color: #6b7280;">Warranty: ${film.warranty}</div>
-                        </div>
-                        <div style="text-align: right;">
-                            <div class="film-price">฿${film.price}<span style="font-size: 0.875rem;">/sq.ft</span></div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 0.5rem; font-size: 0.875rem;">
-                        <strong>Best for:</strong> ${film.bestFor}
-                    </div>
-                    <div class="film-specs">
-                        <span>UVR: ${film.specs.uvr}</span>
-                        <span>IRR: ${film.specs.irr}</span>
-                        <span>TSER: ${film.specs.tser}</span>
-                    </div>
-                    <button class="btn" onclick="selectFilm('${film.id}')" style="background-color: #ff8c00; color: white; border: none; width: 100%; margin-top: 1rem;">
-                        Select This Film
-                    </button>
-                </div>
-            `).join('');
-        }
-
-        function selectFilm(filmId) {
-            const film = films.find(f => f.id === filmId);
-            if (film) {
-                state.selectedFilm = film;
-                goToStep(4);
-            }
-        }
-
-        function selectMeasurement(needsMeasurement) {
-            state.needsMeasurement = needsMeasurement;
-            goToStep(5);
-        }
-
-        function renderEstimate() {
-            if (!state.needsMeasurement) {
-                const container = document.getElementById('areaInputContainer');
-                if (container) {
-                    container.innerHTML = `
-                        <div class="form-group">
-                            <label>Total Window Area (sq.ft) <span class="required">*</span></label>
-                            <input type="number" id="areaInputField" value="${state.area}" onchange="updateArea(this.value)" placeholder="e.g., 150">
-                        </div>
-                    `;
-                }
-            }
-
-            updateEstimate();
-            updateSummary();
-        }
-
-        function updateArea(value) {
-            state.area = value;
-            updateEstimate();
-        }
-
-        function updateEstimate() {
-            if (state.selectedFilm && (state.needsMeasurement || state.area)) {
-                const total = state.selectedFilm.price * (parseFloat(state.area) || 0);
-                const amountEl = document.getElementById('estimateAmount');
-                const detailsEl = document.getElementById('estimateDetails');
-                if (amountEl) amountEl.textContent = '฿' + total.toLocaleString();
-                if (detailsEl) detailsEl.textContent = `${state.selectedFilm.name} • ${state.area || '---'} sq.ft`;
-            }
-        }
-
-        function updateSummary() {
-            const filmName = state.selectedFilm ? state.selectedFilm.name : '-';
-            const filmPrice = state.selectedFilm ? state.selectedFilm.price : '-';
-            
-            const summaryProperty = document.getElementById('summaryProperty');
-            const summaryFilm = document.getElementById('summaryFilm');
-            const summaryPrice = document.getElementById('summaryPrice');
-            
-            if (summaryProperty) summaryProperty.textContent = state.propertyType;
-            if (summaryFilm) summaryFilm.textContent = filmName;
-            if (summaryPrice) summaryPrice.textContent = '฿' + filmPrice;
-        }
-
-        // FIX #6: Proper photo handling with compression
-        function handlePhotoUpload(event) {
-            const files = Array.from(event.target.files);
-            
-            files.forEach(file => {
-                // FIX #7: Check file size
-                if (file.size > 5 * 1024 * 1024) {
-                    alert('File too large! Max 5MB per photo.');
-                    return;
-                }
-
-                try {
-                    const reader = new FileReader();
-                    reader.onerror = () => {
-                        alert('Error reading file: ' + file.name);
-                    };
-                    reader.onload = (e) => {
-                        if (state.photos.length < 5) {
-                            state.photos.push({
-                                name: file.name,
-                                data: e.target.result
-                            });
-                            renderPhotos();
-                        } else {
-                            alert('Maximum 5 photos allowed');
-                        }
-                    };
-                    reader.readAsDataURL(file);
-                } catch (error) {
-                    console.error('Photo upload error:', error);
-                }
+            formGroups.forEach(group => {
+                group.classList.remove('error');
             });
-        }
 
-        function renderPhotos() {
-            const container = document.getElementById('photoContainer');
-            if (!container) return;
-            
-            if (state.photos.length === 0) {
-                container.innerHTML = '';
-                return;
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                name.closest('.form-group').classList.add('error');
+                isValid = false;
             }
-            
-            container.innerHTML = `
-                <div class="photo-grid">
-                    ${state.photos.map((photo, index) => `
-                        <div class="photo-item">
-                            <img src="${photo.data}" alt="Photo">
-                            <button type="button" class="photo-delete" onclick="removePhoto(${index})">×</button>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
+
+            const email = document.getElementById('email');
+            if (!email.value.trim() || !validateEmail(email.value)) {
+                email.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            const location = document.getElementById('location');
+            if (!location.value.trim()) {
+                location.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            const film = document.getElementById('film');
+            if (!film.value) {
+                film.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            return isValid;
         }
 
-        function removePhoto(index) {
-            state.photos.splice(index, 1);
-            renderPhotos();
-        }
-
-        // FIX #8: Proper form validation with sanitization
-        function handleSubmit(e) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const nameInput = document.getElementById('nameInput');
-            const phoneInput = document.getElementById('phoneInput');
-            const locationInput = document.getElementById('locationInput');
+            if (isSubmitting) return;
             
-            const errors = {};
-            
-            if (!nameInput || !nameInput.value.trim()) {
-                errors.name = 'Name required';
+            if (!validateForm()) {
+                const firstError = form.querySelector('.form-group.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.querySelector('input, textarea, select').focus();
+                }
+                return;
             }
-            if (!phoneInput || !phoneInput.value.trim()) {
-                errors.phone = 'Phone required';
-            } else if (!/^[\d\s\-\+()]{6,}$/.test(phoneInput.value)) {
-                errors.phone = 'Invalid phone format';
+
+            isSubmitting = true;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            // Simulate submission
+            setTimeout(() => {
+                document.getElementById('successModal').classList.add('active');
+                form.reset();
+                isSubmitting = false;
+                submitBtn.textContent = 'Submit Request';
+                submitBtn.disabled = false;
+            }, 1000);
+        });
+
+        // Real-time validation
+        document.getElementById('email').addEventListener('blur', function() {
+            const group = this.closest('.form-group');
+            if (this.value && !validateEmail(this.value)) {
+                group.classList.add('error');
+            } else {
+                group.classList.remove('error');
             }
-            if (!locationInput || !locationInput.value.trim()) {
-                errors.location = 'Location required';
-            }
-            if (state.photos.length === 0) {
-                errors.photo = 'At least one photo required';
-            }
-            
-            // Display errors
-            const nameError = document.getElementById('nameError');
-            const phoneError = document.getElementById('phoneError');
-            const locationError = document.getElementById('locationError');
-            const photoError = document.getElementById('photoError');
-            
-            if (nameError) nameError.textContent = errors.name || '';
-            if (phoneError) phoneError.textContent = errors.phone || '';
-            if (locationError) locationError.textContent = errors.location || '';
-            if (photoError) photoError.textContent = errors.photo || '';
-            
-            if (Object.keys(errors).length > 0) return;
-            
-            // Success
-            console.log('Form submitted:', {
-                name: nameInput.value,
-                phone: phoneInput.value,
-                location: locationInput.value,
-                photos: state.photos.length
+        });
+
+        document.querySelectorAll('input[required], textarea[required], select[required]').forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.closest('.form-group').classList.remove('error');
+                }
             });
-            
-            goToStep(7);
+        });
+
+        function closeModal() {
+            document.getElementById('successModal').classList.remove('active');
         }
 
-        // FIX #9: Proper navigation with bounds checking
-        function goToStep(step) {
-            if (step < 1 || step > 7) return;
-            
-            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-            const nextStep = document.getElementById('step' + step);
-            if (nextStep) {
-                nextStep.classList.add('active');
+        // Close modal on backdrop click
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
             }
-            
-            state.currentStep = step;
-            updateProgressBar();
-            
-            if (step === 3) renderFilms();
-            if (step === 5) renderEstimate();
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        });
 
-        // FIX #10: Fixed progress bar array bounds
-        function updateProgressBar() {
-            const bar = document.getElementById('progressBar');
-            if (!bar) return;
-            
-            bar.innerHTML = Array(6).fill(0).map((_, i) => `
-                <div class="progress-segment ${i < state.currentStep ? 'active' : ''}"></div>
-            `).join('');
-        }
-
-        function resetForm() {
-            state = {
-                currentStep: 1,
-                propertyType: '',
-                focus: '',
-                selectedFilm: null,
-                area: '',
-                needsMeasurement: null,
-                photos: []
-            };
-            
-            const form = document.getElementById('contactForm');
-            if (form) form.reset();
-            
-            document.getElementById('photoContainer').innerHTML = '';
-            goToStep(1);
-        }
-
-        // FIX #11: Proper initialization timing
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
-        } else {
-            init();
-        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
     </script>
 </body>
 </html>
