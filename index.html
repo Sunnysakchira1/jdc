@@ -299,6 +299,25 @@
             letter-spacing: 0.06em;
         }
 
+        .recommended-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #34C759;
+            color: white;
+            padding: 6px 16px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .film-card.recommended .recommended-badge {
+            display: block;
+        }
+
         .film-header {
             display: flex;
             justify-content: space-between;
@@ -858,6 +877,7 @@
                     <!-- Ceramic Nano -->
                     <article class="film-card popular">
                         <div class="popular-badge">Most Popular</div>
+                        <div class="recommended-badge">Recommended</div>
                         <div class="film-header">
                             <div class="film-info">
                                 <h2>Ceramic Nano</h2>
@@ -936,6 +956,7 @@
 
                     <!-- Titanium Series -->
                     <article class="film-card">
+                        <div class="recommended-badge">Recommended</div>
                         <div class="film-header">
                             <div class="film-info">
                                 <h2>Titanium Series</h2>
@@ -975,6 +996,7 @@
 
                     <!-- Sputtering Series -->
                     <article class="film-card">
+                        <div class="recommended-badge">Recommended</div>
                         <div class="film-header">
                             <div class="film-info">
                                 <h2>Sputtering Series</h2>
@@ -1276,6 +1298,31 @@
 
         function selectFocus(focus) {
             formData.focus = focus;
+            
+            // Remove all existing recommended badges
+            document.querySelectorAll('.film-card').forEach(card => {
+                card.classList.remove('recommended');
+            });
+            
+            // Define recommendations based on concern
+            const recommendations = {
+                'heat': ['Ceramic Nano', 'Sputtering Series', 'Titanium Series'],
+                'privacy': ['Ceramic Nano', 'Sputtering Series', 'Titanium Series'],
+                'uv': ['Ceramic Nano', 'Sputtering Series', 'Titanium Series'],
+                'both': ['Sputtering Series', 'Titanium Series']
+            };
+            
+            // Get recommended films for this concern
+            const recommendedFilms = recommendations[focus] || [];
+            
+            // Add recommended class to matching film cards
+            document.querySelectorAll('.film-card').forEach(card => {
+                const filmName = card.querySelector('h2').textContent;
+                if (recommendedFilms.includes(filmName)) {
+                    card.classList.add('recommended');
+                }
+            });
+            
             goToStep(3);
         }
 
