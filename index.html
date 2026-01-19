@@ -1331,16 +1331,16 @@
             }
             
             // Track funnel step with Seline
-            if (typeof seline !== 'undefined') {
+            if (typeof seline !== 'undefined' && seline.track) {
                 const stepNames = {
-                    1: 'Property Type Selection',
-                    2: 'Main Concern Selection',
-                    3: 'Film Selection',
-                    4: 'Schedule Measurement',
-                    5: 'Contact Form',
-                    6: 'Quote Submitted'
+                    1: 'property: type selected',
+                    2: 'concern: selected',
+                    3: 'film: viewed options',
+                    4: 'measurement: scheduled',
+                    5: 'form: started',
+                    6: 'quote: submitted'
                 };
-                seline('event', stepNames[stepNumber] || 'Step ' + stepNumber);
+                seline.track(stepNames[stepNumber] || 'step: ' + stepNumber);
             }
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
