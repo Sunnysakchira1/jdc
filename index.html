@@ -1330,6 +1330,19 @@
                 document.getElementById('progressBar').style.display = 'none';
             }
             
+            // Track funnel step with Seline
+            if (typeof seline !== 'undefined') {
+                const stepNames = {
+                    1: 'Property Type Selection',
+                    2: 'Main Concern Selection',
+                    3: 'Film Selection',
+                    4: 'Schedule Measurement',
+                    5: 'Contact Form',
+                    6: 'Quote Submitted'
+                };
+                seline('event', stepNames[stepNumber] || 'Step ' + stepNumber);
+            }
+            
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
