@@ -1330,17 +1330,24 @@
                 document.getElementById('progressBar').style.display = 'none';
             }
             
-            // Track funnel step with Seline
-            if (typeof seline !== 'undefined' && seline.track) {
-                const stepNames = {
-                    1: 'property: type selected',
-                    2: 'concern: selected',
-                    3: 'film: viewed options',
-                    4: 'measurement: scheduled',
-                    5: 'form: started',
-                    6: 'quote: submitted'
-                };
-                seline.track(stepNames[stepNumber] || 'step: ' + stepNumber);
+            // Track funnel step with Seline using URL hash for virtual pageviews
+            const stepPaths = {
+                1: '/property-selection',
+                2: '/concern-selection',
+                3: '/film-selection',
+                4: '/schedule-measurement',
+                5: '/contact-form',
+                6: '/quote-submitted'
+            };
+            
+            // Update URL hash without triggering navigation
+            if (stepPaths[stepNumber]) {
+                window.history.replaceState(null, '', stepPaths[stepNumber]);
+                
+                // Send virtual pageview to Seline
+                if (typeof seline !== 'undefined' && typeof seline === 'function') {
+                    seline('pageview', stepPaths[stepNumber]);
+                }
             }
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
