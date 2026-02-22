@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium window tinting services in Thailand. Block 99% UV rays, reduce electricity costs, enhance privacy & security. Perfect for expats in villas, condos, commercial properties.">
-    <title>JaiDeeClear - UV Protection Film </title>
+    <meta name="description" content="JaiDeeClear — Thailand's premium window tinting service. UV protection, heat rejection, and privacy film professionally installed at your property in Bangkok, Chiang Mai, Phuket, Pattaya, and more.">
+    <title>JaiDeeClear — Premium Window Tinting Across Thailand</title>
+
+    <link rel="canonical" href="https://jaideeclear.com/">
+
+    <meta property="og:title" content="JaiDeeClear — Premium Window Tinting Across Thailand">
+    <meta property="og:description" content="Professional window film installation for homes, condos, villas, and offices. Block 99% UV, cut electricity costs, and boost privacy. Serving 10+ major Thai cities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaideeclear.com/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JaiDeeClear",
+      "url": "https://jaideeclear.com",
+      "logo": "https://jaideeclear.com/jdclogo.jpg",
+      "description": "Premium window tinting services across Thailand. UV protection, heat rejection, and privacy film for residential and commercial properties.",
+      "telephone": "+66655079694",
+      "email": "jaideeclear@gmail.com",
+      "areaServed": [
+        {"@type": "Country", "name": "Thailand"}
+      ],
+      "sameAs": [
+        "https://www.facebook.com/Jaideeclear",
+        "https://www.instagram.com/jaideeclear"
+      ]
+    }
+    </script>
+
     <script async src="https://cdn.seline.com/seline.js" data-token="900711a10bdeff9"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -27,7 +57,7 @@
             padding: 0 22px;
         }
 
-        /* Header */
+        /* ── Header ── */
         header {
             position: sticky;
             top: 0;
@@ -53,42 +83,18 @@
             gap: 12px;
         }
 
-        .logo-text {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
+        .logo-container a {
+            display: flex;
+            align-items: center;
         }
 
-        /* logo colours */
-.logo-text {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #000000;        /* “JAIDEE” in black */
-}
-
-.logo-text span {
-  background: #f9a500;   /* black box behind “CLEAR” */
-  color: #FFFFFF;        /* white text for the word “CLEAR” */
-  padding: 2px 6px;
-}
-
-        .tagline {
-  font-size: 11px;
-  font-weight: 500;
-  color: #000000;        /* tagline in black to match the official logo */
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-        /* Header Navigation */
         .header-nav {
             display: flex;
             align-items: center;
             gap: 24px;
         }
 
-        .about-link {
+        .nav-link {
             font-size: 14px;
             color: #1d1d1f;
             text-decoration: none;
@@ -96,7 +102,7 @@
             transition: opacity 0.2s ease;
         }
 
-        .about-link:hover {
+        .nav-link:hover {
             opacity: 0.7;
         }
 
@@ -126,379 +132,56 @@
             height: 20px;
         }
 
-        .price-badge {
-            font-size: 14px;
-            color: #FFA500;
-            font-weight: 600;
-        }
-
-        /* Progress Bar */
-        .progress-container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 24px 22px;
-        }
-
-        .progress-bar {
-            display: flex;
-            gap: 6px;
-        }
-
-        .progress-step {
-            height: 2px;
-            flex: 1;
-            background: #e5e5e7;
-            transition: background 0.3s ease;
-        }
-
-        .progress-step.active {
-            background: #1d1d1f;
-        }
-
-        /* Main Content */
-        .step {
-            display: none;
-            padding: 40px 0;
-            min-height: 60vh;
-        }
-
-        .step.active {
-            display: block;
-        }
-
-        .step-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .step-header h1 {
-            font-size: 48px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .step-header p {
-            font-size: 19px;
-            color: #6e6e73;
-        }
-
-        .back-button {
-            display: inline-block;
-            color: #FFA500;
-            text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 32px;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .back-button:hover {
-            opacity: 0.7;
-        }
-
-        /* Property Grid */
-        .property-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .property-card {
-            background: #f5f5f7;
-            border: none;
-            border-radius: 18px;
-            padding: 32px 24px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .property-card:hover {
-            background: #e8e8ed;
-            transform: translateY(-2px);
-        }
-
-        .property-card .icon {
-            font-size: 48px;
-            margin-bottom: 12px;
-        }
-
-        .property-card .label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #1d1d1f;
-        }
-
-        /* Focus Grid */
-        .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .focus-card {
-            background: #f5f5f7;
-            border: none;
-            border-radius: 18px;
-            padding: 40px;
-            text-align: left;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .focus-card:hover {
-            background: #e8e8ed;
-            transform: translateY(-2px);
-        }
-
-        .focus-card .icon {
-            font-size: 48px;
-            margin-bottom: 16px;
-        }
-
-        .focus-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .focus-card p {
-            font-size: 15px;
-            color: #6e6e73;
-        }
-
-        /* Legend */
-        .legend {
-            background: #f5f5f7;
-            border-radius: 18px;
-            padding: 24px;
-            margin-bottom: 32px;
-        }
-
-        .legend h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #1d1d1f;
-        }
-
-        .legend-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-        }
-
-        .legend-item {
-            font-size: 14px;
-        }
-
-        .legend-item strong {
-            color: #1d1d1f;
-            font-weight: 600;
-        }
-
-        .legend-item span {
-            color: #6e6e73;
-        }
-
-        /* Film Cards */
-        .film-list {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .film-card {
-            background: white;
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
-            position: relative;
-            border: 1px solid #e5e5e7;
-        }
-
-        .film-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
-        }
-
-        .film-card.popular {
-            border: 2px solid #1d1d1f;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: 12px;
-            left: 0;
-            background: #f9a500;
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
             color: white;
-            padding: 6px 16px;
-            font-size: 11px;
+            padding: 80px 0 72px;
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-
-        .recommended-badge {
-            position: absolute;
-            top: 12px;
-            right: 32px;
-            background: #34C759;
-            color: white;
-            padding: 6px 16px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            border-radius: 6px;
-            display: none;
-            box-shadow: 0 2px 8px rgba(52, 199, 89, 0.25);
-        }
-
-        .film-card.recommended .recommended-badge {
-            display: block;
-        }
-
-        .film-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            letter-spacing: 0.1em;
+            color: #f9a500;
             margin-bottom: 16px;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding-top: 8px;
         }
 
-        .film-info h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            letter-spacing: -0.02em;
-            color: #1d1d1f;
-        }
-
-        .lifespan {
-            font-size: 13px;
-            color: #86868b;
-            font-weight: 500;
-        }
-
-        .price {
-            text-align: right;
-        }
-
-        .price-amount {
-            font-size: 36px;
-            font-weight: 600;
-            line-height: 1;
-            color: #1d1d1f;
-        }
-
-        .price-unit {
-            font-size: 13px;
-            color: #86868b;
-            margin-top: 4px;
-        }
-
-        .specs {
-            display: flex;
-            gap: 24px;
-            padding: 16px 0;
-            border-top: 1px solid #e5e5e7;
-            border-bottom: 1px solid #e5e5e7;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
-            font-size: 13px;
-            color: #6e6e73;
-            font-weight: 500;
-        }
-
-        .suitability {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 12px;
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
             margin-bottom: 20px;
         }
 
-        .suitability-item {
-            background: #f9f9f9;
-            border-radius: 12px;
-            padding: 16px;
-            border: 1px solid #e8e8ed;
-            transition: all 0.3s ease;
+        .hero h1 em {
+            font-style: normal;
+            color: #f9a500;
         }
 
-        .suitability-item:hover {
-            background: #ffffff;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-            transform: translateY(-2px);
-        }
-
-        .suitability-item:first-child {
-            background: linear-gradient(135deg, #f0fdf4 0%, #f9f9f9 100%);
-            border: 1.5px solid #34C759;
-        }
-
-        .suitability-item:first-child:hover {
-            background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
-            box-shadow: 0 4px 20px rgba(52, 199, 89, 0.15);
-        }
-
-        .suitability-item:nth-child(2) {
-            background: linear-gradient(135deg, #fef2f2 0%, #f9f9f9 100%);
-            border: 1.5px solid #ef4444;
-        }
-
-        .suitability-item:nth-child(2):hover {
-            background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%);
-            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15);
-        }
-
-        .suitability-item h4 {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 8px;
-        }
-
-        .suitability-item:first-child h4 {
-            color: #059669;
-        }
-
-        .suitability-item:nth-child(2) h4 {
-            color: #dc2626;
-        }
-
-        .suitability-item:nth-child(3) h4 {
-            color: #6366f1;
-        }
-
-        .suitability-item p {
-            font-size: 14px;
-            color: #1d1d1f;
+        .hero-sub {
+            font-size: 19px;
+            color: #a8a8a8;
+            max-width: 620px;
+            margin: 0 auto 36px;
             line-height: 1.5;
-            font-weight: 400;
         }
 
-        .button-group {
+        .hero-cta-group {
             display: flex;
             gap: 12px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 980px;
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
             border: none;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -510,174 +193,208 @@
         }
 
         .btn-primary {
-            background: #FFA500;
+            background: #f9a500;
             color: white;
-            flex: 1;
-            min-width: 200px;
         }
 
         .btn-primary:hover {
-            background: #FF8C00;
+            background: #e09400;
             transform: translateY(-1px);
         }
 
-        .btn-secondary {
-            background: white;
-            color: #1d1d1f;
-            border: 1px solid #d2d2d7;
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255,255,255,0.4);
         }
 
-        .btn-secondary:hover {
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* ── Stats bar ── */
+        .stats-bar {
+            background: #f5f5f7;
+            border-bottom: 1px solid #e5e5e7;
+            padding: 28px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 0 16px;
+            border-right: 1px solid #e5e5e7;
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1d1d1f;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #6e6e73;
+            margin-top: 4px;
+        }
+
+        /* ── Sections ── */
+        .section {
+            padding: 72px 0;
+        }
+
+        .section-alt {
             background: #f5f5f7;
         }
 
-        /* Measurement Card */
-        .measurement-card-single {
-            background: #1d1d1f;
-            border: none;
-            border-radius: 18px;
-            padding: 60px;
+        .section-header {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            color: white;
+            margin-bottom: 52px;
         }
 
-        .measurement-card-single .icon {
-            font-size: 64px;
-            margin-bottom: 24px;
-        }
-
-        .measurement-card-single h3 {
-            font-size: 32px;
+        .section-eyebrow {
+            font-size: 13px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #f9a500;
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
             margin-bottom: 16px;
         }
 
-        .measurement-card-single p {
+        .section-header p {
+            font-size: 17px;
+            color: #6e6e73;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ── City grid ── */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .city-card {
+            background: white;
+            border-radius: 18px;
+            padding: 36px 32px;
+            border: 1px solid #e5e5e7;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .city-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+            border-color: #f9a500;
+        }
+
+        .city-icon {
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+
+        .city-info h3 {
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 6px;
+        }
+
+        .city-info .city-tagline {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .city-info .city-cta {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f9a500;
+        }
+
+        /* ── Benefits grid ── */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 18px;
+            padding: 32px 28px;
+            border: 1px solid #e5e5e7;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: #6e6e73;
+            line-height: 1.6;
+        }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+            border-radius: 24px;
+            padding: 64px 48px;
+            text-align: center;
+            color: white;
+            margin: 0 22px;
+        }
+
+        .cta-banner h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .cta-banner p {
             font-size: 17px;
             color: #a8a8a8;
             margin-bottom: 32px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .measurement-card-single .badge {
-            display: inline-block;
-            font-size: 14px;
-            color: #FFA500;
-            font-weight: 600;
-            margin-bottom: 32px;
-        }
-
-        /* Contact Form */
-        .contact-section {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 8px;
-            color: #1d1d1f;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px 16px;
-            background: #f5f5f7;
-            border: 1px solid transparent;
-            border-radius: 12px;
-            font-size: 15px;
-            font-family: inherit;
-            transition: all 0.2s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            background: white;
-            border-color: #1d1d1f;
-            box-shadow: 0 0 0 4px rgba(29, 29, 31, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-group small {
-            display: block;
-            margin-top: 6px;
-            font-size: 12px;
-            color: #6e6e73;
-        }
-
-        .error-message {
-            color: #ff3b30;
-            font-size: 13px;
-            margin-top: 6px;
-            display: none;
-        }
-
-        .form-group.error input,
-        .form-group.error textarea,
-        .form-group.error select {
-            border-color: #ff3b30;
-        }
-
-        .form-group.error .error-message {
-            display: block;
-        }
-
-        /* Success */
-        .success-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 60px 0;
-        }
-
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background: #1d1d1f;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px;
-        }
-
-        .success-icon svg {
-            width: 40px;
-            height: 40px;
-            stroke: white;
-            stroke-width: 3;
-            fill: none;
-        }
-
-        .contact-info {
-            background: #f5f5f7;
-            border-radius: 18px;
-            padding: 32px;
-            margin: 32px 0;
-        }
-
-        .contact-info p {
-            margin-bottom: 8px;
-            font-size: 15px;
-        }
-
-        /* Footer */
+        /* ── Footer ── */
         footer {
             border-top: 1px solid #e5e5e7;
             padding: 40px 0;
@@ -688,93 +405,121 @@
             text-align: center;
         }
 
-        .certifications {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
+        .footer-locations {
             margin-bottom: 24px;
+        }
+
+        .footer-locations h4 {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #86868b;
+            margin-bottom: 12px;
+        }
+
+        .footer-location-links {
+            display: flex;
             flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .footer-location-link {
             font-size: 13px;
             color: #6e6e73;
+            text-decoration: none;
+            padding: 5px 12px;
+            border: 1px solid #e5e5e7;
+            border-radius: 980px;
+            transition: all 0.2s ease;
+        }
+
+        .footer-location-link:hover {
+            border-color: #f9a500;
+            color: #f9a500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .social-links a {
+            color: #f9a500;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #FFA500;
         }
 
         .copyright {
             font-size: 12px;
             color: #86868b;
+            margin-top: 16px;
         }
 
-        /* Responsive */
+        /* ── Responsive ── */
         @media (max-width: 768px) {
-            .property-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .focus-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .film-header {
-                flex-direction: column;
-            }
-
-            .price {
-                text-align: left;
-            }
-
-            .button-group {
-                flex-direction: column;
-            }
-
-            .btn-primary {
-                min-width: 100%;
-            }
-
-            .step-header h1 {
+            .hero h1 {
                 font-size: 36px;
             }
 
-            .legend-grid {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid #e5e5e7;
+                padding-bottom: 16px;
+            }
+
+            .stat-item:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+
+            .city-grid {
                 grid-template-columns: 1fr;
             }
 
-            .suitability {
+            .benefits-grid {
                 grid-template-columns: 1fr;
             }
 
-            .measurement-card-single {
+            .section-header h2 {
+                font-size: 30px;
+            }
+
+            .cta-banner {
                 padding: 40px 24px;
+                margin: 0;
+                border-radius: 0;
             }
 
-            .measurement-card-single h3 {
-                font-size: 24px;
+            .cta-banner h2 {
+                font-size: 26px;
             }
         }
-            /* Social links icons */
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 24px;
-    }
-    .social-links a {
-        color: #f9a500;   /* base colour; adjust as needed */
-        font-size: 24px;
-        text-decoration: none;
-    }
-    .social-links a:hover {
-        color: #FFA500;  /* orange on hover to match your brand */
-    }
-
     </style>
 </head>
 <body>
+
+    <!-- ── Header ── -->
     <header>
         <div class="header-content">
             <div class="logo-container">
-                <img src="jdclogo.jpg" alt="JaiDee Clear Logo" style="height: 100px; width: auto; object-fit: contain;">
+                <a href="index.html">
+                    <img src="jdclogo.jpg" alt="JaiDee Clear Logo" style="height: 100px; width: auto; object-fit: contain;">
+                </a>
             </div>
             <div class="header-nav">
-                <a href="https://jaideeclear-p3lu8ro.gamma.site/" target="_blank" class="about-link">About Us</a>
+                <a href="schedule.html" class="nav-link">Schedule</a>
                 <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
                     <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -785,794 +530,228 @@
         </div>
     </header>
 
-    <div class="progress-container" id="progressBar" style="display: none;">
-        <div class="progress-bar">
-            <div class="progress-step" id="progress1"></div>
-            <div class="progress-step" id="progress2"></div>
-            <div class="progress-step" id="progress3"></div>
-            <div class="progress-step" id="progress4"></div>
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-eyebrow">Professional Window Film Installation</p>
+            <h1>Premium Window Tinting<br>Across <em>Thailand</em></h1>
+            <p class="hero-sub">
+                JaiDeeClear delivers professional UV-protection and heat-rejection window film directly to your property — homes, condos, villas, and offices in every major Thai city.
+            </p>
+            <div class="hero-cta-group">
+                <a href="schedule.html" class="btn btn-primary">Schedule a Free Quote</a>
+                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Stats bar ── -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">UV Rays Blocked</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Cities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30%</div>
+                    <div class="stat-label">Avg. Electricity Savings</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7 yrs</div>
+                    <div class="stat-label">Max Film Lifespan</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main>
+    <!-- ── City Locations ── -->
+    <section class="section">
         <div class="container">
-            <!-- Step 1: Property Type -->
-            <div class="step active" id="step1">
-                <div class="step-header">
-                    <h1>What type of property do you have?</h1>
-                    <p>Choose your space to get started</p>
-                </div>
-                <div class="property-grid">
-                    <button class="property-card" onclick="selectProperty('House')">
-                        <img src="house.jpg" alt="House" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">House</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Condo')">
-                        <img src="condo.jpg" alt="Condo" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Condo</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Villa')">
-                        <img src="villa.jpg" alt="Villa" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Villa</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Townhouse')">
-                        <img src="townhouse.jpg" alt="Townhouse" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Townhouse</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Office')">
-                        <img src="office.jpg" alt="Office" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Office</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Building')">
-                        <img src="building.jpg" alt="Building" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Building</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Cafe')">
-                        <img src="cafe.jpg" alt="Cafe" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Cafe</div>
-                    </button>
-                    <button class="property-card" onclick="selectProperty('Other')">
-                        <img src="other.jpg" alt="Other" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 12px;">
-                        <div class="label">Other</div>
-                    </button>
-                </div>
+            <div class="section-header">
+                <p class="section-eyebrow">Our Locations</p>
+                <h2>Find Window Tinting in Your City</h2>
+                <p>We provide on-site installation across Thailand's major cities. Select your location for local pricing, climate details, and service information.</p>
             </div>
-
-            <!-- Step 2: Main Concern -->
-            <div class="step" id="step2">
-                <a class="back-button" onclick="goToStep(1)">← Back</a>
-                <div class="step-header">
-                    <h1>What's your main concern?</h1>
-                    <p>Select your primary need</p>
-                </div>
-                <div class="focus-grid">
-                    <button class="focus-card" onclick="selectFocus('heat')">
-                        <div class="icon">☀️</div>
-                        <h3>Heat Reduction</h3>
-                        <p>Lower cooling costs & temperature</p>
-                    </button>
-                    <button class="focus-card" onclick="selectFocus('privacy')">
-                        <div class="icon">👁️</div>
-                        <h3>Privacy</h3>
-                        <p>Block outside view during daytime</p>
-                    </button>
-                    <button class="focus-card" onclick="selectFocus('uv')">
-                        <div class="icon">🛡️</div>
-                        <h3>UV Protection</h3>
-                        <p>Protect furniture & skin health</p>
-                    </button>
-                    <button class="focus-card" onclick="selectFocus('both')">
-                        <div class="icon">✨</div>
-                        <h3>Heat + Privacy</h3>
-                        <p>Comprehensive protection</p>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Step 3: Choose Film -->
-            <div class="step" id="step3">
-                <a class="back-button" onclick="goToStep(2)">← Back</a>
-                <div class="step-header">
-                    <h1>Choose your film</h1>
-                    <p>Select the protection level that fits your needs</p>
-                </div>
-
-                <div class="legend">
-                    <h3>Understanding Film Performance Ratings</h3>
-                    <div class="legend-grid">
-                        <div class="legend-item">
-                            <strong>UVR</strong> <span>— Ultraviolet Rejection: Percentage of harmful UV rays blocked</span>
-                        </div>
-                        <div class="legend-item">
-                            <strong>IRR</strong> <span>— Infrared Rejection: Percentage of heat-causing infrared blocked</span>
-                        </div>
-                        <div class="legend-item">
-                            <strong>TSER</strong> <span>— Total Solar Energy Rejected: Overall solar heat control capability</span>
-                        </div>
+            <div class="city-grid">
+                <a href="window-tinting-bangkok.html" class="city-card">
+                    <div class="city-icon">🏙️</div>
+                    <div class="city-info">
+                        <h3>Bangkok</h3>
+                        <p class="city-tagline">Thailand's capital — extreme UV index of 13, glass-heavy condos, and year-round cooling demand make window film essential.</p>
+                        <span class="city-cta">View Bangkok services →</span>
                     </div>
-                </div>
-
-                <div class="film-list">
-                    <!-- Carbon Series -->
-                    <article class="film-card">
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Carbon Series</h2>
-                                <p class="lifespan">Lifespan: 2-3 years</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿50-70</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; color: #6e6e73; margin-bottom: 16px; line-height: 1.6;">The Carbon Series is our most affordable entry-level option, offering solid basic UV protection for temporary or budget-friendly needs.</p>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Budget-conscious customers, short-term window film needs, basic UV protection projects</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Long-term installations (5+ years), heat-intensive environments, premium aesthetic preferences, commercial buildings requiring durability</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Carbon Series', 60, '฿50-70 per sq.ft', '2-3 years')">Schedule On-Site Measurement</button>
-                            <a href="https://online.fliphtml5.com/uuelh/kasv/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="trackCatalogueOpen('carbon', 'https://online.fliphtml5.com/uuelh/kasv/')">
-                                View Catalogue
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Metallic Series -->
-                    <article class="film-card">
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Metallic Series</h2>
-                                <p class="lifespan">Lifespan: 2-3 years</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿75-90</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; color: #6e6e73; margin-bottom: 16px; line-height: 1.6;">This series uses reflective technology for effective heat rejection and a distinctive metallic finish, offering good value for mid-range budgets.</p>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Reflective heat rejection, customers prioritizing solar control, building aesthetics with metallic appearance</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Areas needing long-term durability, customers sensitive to a reflective appearance, premium UV protection needs</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Metallic Series', 83, '฿75-90 per sq.ft', '2-3 years')">Schedule On-Site Measurement</button>
-                            <a href="https://online.fliphtml5.com/qacii/cpsf/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="trackCatalogueOpen('metallic', 'https://online.fliphtml5.com/qacii/cpsf/')">
-                                View Catalogue
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Ceramic Nano -->
-                    <article class="film-card popular">
-                        <div class="popular-badge">Most Popular</div>
-                        <div class="recommended-badge">Recommended</div>
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Ceramic Nano</h2>
-                                <p class="lifespan">Lifespan: 5-7 years</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿90-110</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; color: #6e6e73; margin-bottom: 16px; line-height: 1.6;">Our most popular choice, Ceramic Nano offers excellent value with nano-ceramic technology for heat and glare reduction without a metallic look.</p>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Residential homes wanting quality, mid-range budget customers, natural light and visibility important, heat reduction with modern appearance</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Extreme heat environments, maximum UV blocking requirements, very tight budgets</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Ceramic Nano', 100, '฿90-110 per sq.ft', '5-7 years')">Schedule On-Site Measurement</button>
-                            <a href="https://online.fliphtml5.com/qacii/cqfp/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="trackCatalogueOpen('ceramic_nano', 'https://online.fliphtml5.com/qacii/cqfp/')">
-                                View Catalogue
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Ceramic UV400 -->
-                    <article class="film-card">
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Ceramic UV400</h2>
-                                <p class="lifespan">Lifespan: 7-9 years</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿110-130</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; color: #6e6e73; margin-bottom: 16px; line-height: 1.6;">Designed to block the widest spectrum of harmful UV rays, this film is perfect for preserving valuable interiors and ensuring optimal protection.</p>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Protecting furniture and interiors from fading, homes with valuable furnishings, premium UV protection priority, commercial offices with sensitive equipment</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Budget-conscious customers, properties where UV blocking is not critical</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Ceramic UV400', 120, '฿110-130 per sq.ft', '7-9 years')">Schedule On-Site Measurement</button>
-                            <a href="https://online.fliphtml5.com/uuelh/egmo/#p=4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="trackCatalogueOpen('ceramic_uv400', 'https://online.fliphtml5.com/uuelh/egmo/#p=4')">
-                                View Catalogue
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Titanium Series -->
-                    <article class="film-card">
-                        <div class="recommended-badge">Recommended</div>
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Titanium Series</h2>
-                                <p class="lifespan">Lifespan: 7-9 years</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿130-150</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; color: #6e6e73; margin-bottom: 16px; line-height: 1.6;">For top-tier performance, the Titanium Series provides maximum heat and UV rejection, ideal for Thailand's intense tropical heat and superior durability.</p>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Extreme heat rejection needs, high-end residential properties, commercial buildings in hot climates, maximum energy efficiency priority</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Budget-conscious customers, properties with basic protection needs</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Titanium Series', 140, '฿130-150 per sq.ft', '7-9 years')">Schedule On-Site Measurement</button>
-                            <a href="https://online.fliphtml5.com/qacii/uawk/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="trackCatalogueOpen('titanium', 'https://online.fliphtml5.com/qacii/uawk/')">
-                                View Catalogue
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Sputtering Series -->
-                    <article class="film-card">
-                        <div class="recommended-badge">Recommended</div>
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Sputtering Film</h2>
-                                <p class="lifespan">Lifespan: 9+ years</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿155-170</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <p style="font-size: 14px; color: #6e6e73; margin-bottom: 16px; line-height: 1.6;">The premium choice, Sputtering Film combines beautiful optical clarity with superior heat and UV rejection, offering unmatched quality and the longest lifespan.</p>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Aesthetic + performance priority, premium residential properties, high-end commercial buildings, customers wanting the best</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Budget-conscious customers, short-term temporary needs</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Sputtering Film', 163, '฿155-170 per sq.ft', '9+ years')">Schedule On-Site Measurement</button>
-                            <a href="https://online.fliphtml5.com/qacii/zzpb/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" onclick="trackCatalogueOpen('sputtering', 'https://online.fliphtml5.com/qacii/zzpb/')">
-                                View Catalogue
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Safety Films -->
-                    <article class="film-card">
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Safety Film 0.4mm</h2>
-                                <p class="lifespan">Lifespan: Varies</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿70</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Basic glass protection, sliding doors, storefront windows, child-safe environments</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>High-security areas, locations requiring ballistic protection</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Commonly used in</h4>
-                                <p>Family homes, kindergartens, retail stores, restaurants, residential balconies</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Safety Film 0.4mm', 70, '฿70 per sq.ft', 'Varies')">Schedule On-Site Measurement</button>
-                        </div>
-                    </article>
-
-                    <article class="film-card">
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Safety Film 0.8mm</h2>
-                                <p class="lifespan">Lifespan: Varies</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿90</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Enhanced security, ground floor windows, jewelry stores, high-value property protection</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Standard residential use where cost is concern, areas without security risks</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Commonly used in</h4>
-                                <p>Banks, jewelry stores, pharmacies, electronics stores, cash-handling businesses</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Safety Film 0.8mm', 90, '฿90 per sq.ft', 'Varies')">Schedule On-Site Measurement</button>
-                        </div>
-                    </article>
-
-                    <article class="film-card">
-                        <div class="film-header">
-                            <div class="film-info">
-                                <h2>Safety UV Film 0.4mm</h2>
-                                <p class="lifespan">Lifespan: Varies</p>
-                            </div>
-                            <div class="price">
-                                <div class="price-amount">฿120</div>
-                                <div class="price-unit">per sq.ft</div>
-                            </div>
-                        </div>
-                        <div class="suitability">
-                            <div class="suitability-item">
-                                <h4>Best for</h4>
-                                <p>Protection plus UV blocking, retail displays, museums, galleries with valuable items</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Not recommended for</h4>
-                                <p>Areas needing maximum security without UV concerns, budget-constrained projects</p>
-                            </div>
-                            <div class="suitability-item">
-                                <h4>Commonly used in</h4>
-                                <p>Art galleries, museums, antique shops, luxury retail, exhibition spaces</p>
-                            </div>
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="selectFilm('Safety UV Film 0.4mm', 120, '฿120 per sq.ft', 'Varies')">Schedule On-Site Measurement</button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <!-- Step 4: Schedule Measurement -->
-            <div class="step" id="step4">
-                <a class="back-button" onclick="goToStep(3)">← Back</a>
-                <div class="step-header">
-                    <h1>Schedule Your Free Measurement</h1>
-                    <p>Our team will visit your location for accurate assessment</p>
-                </div>
-                <div class="measurement-card-single">
-                    <div class="icon">🏠</div>
-                    <h3>Professional On-Site Measurement</h3>
-                    <p>Free service • Expert consultation • Accurate quote</p>
-                    <div class="badge">✓ Recommended for Best Results</div>
-                    <button class="btn btn-primary" onclick="goToStep(5)" style="background: #FFA500; border: none;">
-                        Continue to Contact Details
-                    </button>
-                </div>
-            </div>
-
-            <!-- Step 5: Contact Form -->
-            <div class="step" id="step5">
-                <a class="back-button" onclick="goToStep(4)">← Back</a>
-                <div class="step-header">
-                    <h1>Almost done!</h1>
-                    <p>Let us know how to reach you</p>
-                </div>
-                <div class="contact-section">
-                    <!--
-                        Contact form
-                        The action and method attributes below point to your Formspree endpoint.  When the
-                        user submits the form, our custom JavaScript handler will gather the form data and
-                        POST it to Formspree via fetch(), then display the success step once the submission
-                        completes successfully.
-                    -->
-                    <form id="contactForm" action="https://formspree.io/f/xovkoeap" method="POST" novalidate>
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message">Please enter your full name</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message">Please enter a valid email address</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+66 XX-XXX-XXXX">
-                            <small>Optional - we'll use email if not provided</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="location">Installation Location (include Google Maps link) *</label>
-                            <textarea id="location" name="location" required placeholder="e.g., 123 Sukhumvit Soi 21, Bangkok 10110&#10;Google Maps: https://maps.app.goo.gl/..."></textarea>
-                            <span class="error-message">Please enter your installation location with Google Maps link</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="datetime">Preferred Date/Time</label>
-                            <input type="text" id="datetime" name="datetime" placeholder="e.g., Monday June 5th, morning or 2-4pm">
-                            <small>We'll contact you to confirm availability</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="film">Film of Interest *</label>
-                            <select id="film" name="film" required>
-                                <option value="">Select a film</option>
-                                <option value="Carbon Series">Carbon Series - ฿50/sq.ft</option>
-                                <option value="Metallic Series">Metallic Series - ฿75/sq.ft</option>
-                                <option value="Ceramic Nano">Ceramic Nano - ฿90/sq.ft</option>
-                                <option value="Ceramic UV400">Ceramic UV400 - ฿110/sq.ft</option>
-                                <option value="Titanium Series">Titanium Series - ฿130/sq.ft</option>
-                                <option value="Sputtering Series">Sputtering Series - ฿155/sq.ft</option>
-                                <option value="Safety Film 0.4mm">Safety Film 0.4mm - ฿70/sq.ft</option>
-                                <option value="Safety Film 0.8mm">Safety Film 0.8mm - ฿90/sq.ft</option>
-                                <option value="Safety UV Film 0.4mm">Safety UV Film 0.4mm - ฿120/sq.ft</option>
-                            </select>
-                            <span class="error-message">Please select a film type</span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="notes">Additional Notes</label>
-                            <textarea id="notes" name="notes" placeholder="Any specific requirements, window measurements you already have, or questions..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 24px;">
-                            Submit Request
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Step 6: Success -->
-            <div class="step" id="step6">
-                <div class="success-content">
-                    <div class="success-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M5 12l5 5L20 7" stroke="white" stroke-width="3" fill="none"/>
-                        </svg>
+                </a>
+                <a href="window-tinting-chiang-mai.html" class="city-card">
+                    <div class="city-icon">⛰️</div>
+                    <div class="city-info">
+                        <h3>Chiang Mai</h3>
+                        <p class="city-tagline">Northern Thailand's cultural hub — intense hot-season heat and a growing expat community with villas and modern condos.</p>
+                        <span class="city-cta">View Chiang Mai services →</span>
                     </div>
-                    <h1 style="font-size: 48px; font-weight: 600; margin-bottom: 16px;">Quote Request Received!</h1>
-                    <p style="font-size: 19px; color: #6e6e73; margin-bottom: 32px;">
-                        Our team will contact you shortly with your detailed quotation
-                    </p>
-                    <div class="contact-info">
-                        <p><strong>Contact Us:</strong></p>
-                        <p>📞 +66 84-365-9664</p>
-                        <p>📱@jaideeclear</p>
-                        <p>✉️ jaideeclear@gmail.com</p>
+                </a>
+                <a href="window-tinting-phuket.html" class="city-card">
+                    <div class="city-icon">🏝️</div>
+                    <div class="city-info">
+                        <h3>Phuket</h3>
+                        <p class="city-tagline">Tropical island living — relentless sun, salt-air corrosion, and luxury villas with floor-to-ceiling glass demand premium film.</p>
+                        <span class="city-cta">View Phuket services →</span>
                     </div>
-                    <button class="btn btn-primary" onclick="resetForm()" style="margin-top: 32px;">
-                        Start New Quote Request
-                    </button>
+                </a>
+                <a href="window-tinting-pattaya.html" class="city-card">
+                    <div class="city-icon">🌊</div>
+                    <div class="city-info">
+                        <h3>Pattaya</h3>
+                        <p class="city-tagline">Coastal resort city — beachfront condos and retirement homes face intense solar glare and humidity year-round.</p>
+                        <span class="city-cta">View Pattaya services →</span>
+                    </div>
+                </a>
+                <a href="window-tinting-nonthaburi.html" class="city-card">
+                    <div class="city-icon">🏘️</div>
+                    <div class="city-info">
+                        <h3>Nonthaburi</h3>
+                        <p class="city-tagline">Bangkok's largest suburb — rapidly growing housing estates and riverside condos with the same extreme heat as the capital.</p>
+                        <span class="city-cta">View Nonthaburi services →</span>
+                    </div>
+                </a>
+                <a href="window-tinting-khon-kaen.html" class="city-card">
+                    <div class="city-icon">🌾</div>
+                    <div class="city-info">
+                        <h3>Khon Kaen</h3>
+                        <p class="city-tagline">Isan's commercial capital — scorching dry-season temperatures above 40°C and a booming property market.</p>
+                        <span class="city-cta">View Khon Kaen services →</span>
+                    </div>
+                </a>
+                <a href="window-tinting-hat-yai.html" class="city-card">
+                    <div class="city-icon">🌴</div>
+                    <div class="city-info">
+                        <h3>Hat Yai (Songkhla)</h3>
+                        <p class="city-tagline">Southern Thailand's commercial hub — tropical humidity, intense sun, and a mix of shophouses and modern developments.</p>
+                        <span class="city-cta">View Hat Yai services →</span>
+                    </div>
+                </a>
+                <a href="window-tinting-udon-thani.html" class="city-card">
+                    <div class="city-icon">🏡</div>
+                    <div class="city-info">
+                        <h3>Udon Thani</h3>
+                        <p class="city-tagline">Upper Isan gateway — a popular expat base with extreme seasonal heat and growing residential developments.</p>
+                        <span class="city-cta">View Udon Thani services →</span>
+                    </div>
+                </a>
+                <a href="window-tinting-nakhon-ratchasima.html" class="city-card">
+                    <div class="city-icon">🏛️</div>
+                    <div class="city-info">
+                        <h3>Nakhon Ratchasima (Korat)</h3>
+                        <p class="city-tagline">Gateway to Isan — Thailand's largest province by area, with fierce dry-season sun and rapid urban expansion.</p>
+                        <span class="city-cta">View Korat services →</span>
+                    </div>
+                </a>
+                <a href="window-tinting-chiang-rai.html" class="city-card">
+                    <div class="city-icon">🏔️</div>
+                    <div class="city-info">
+                        <h3>Chiang Rai</h3>
+                        <p class="city-tagline">Thailand's northernmost city — hot-season temperatures rival Bangkok, and a growing community of retirees and digital nomads.</p>
+                        <span class="city-cta">View Chiang Rai services →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Why JaiDeeClear ── -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Why JaiDeeClear</p>
+                <h2>Why Thousands Choose Our Window Film</h2>
+                <p>Professional installation, premium materials, and real results — delivered to your door.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">☀️</div>
+                    <h3>99% UV Rejection</h3>
+                    <p>Protect your skin, furniture, and flooring from Thailand's extreme ultraviolet radiation with films that block up to 99% of UV rays.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">❄️</div>
+                    <h3>Slash Cooling Costs</h3>
+                    <p>High infrared rejection reduces indoor temperatures by up to 10°C, cutting air-conditioning electricity bills by 20–30% on average.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👁️</div>
+                    <h3>Daytime Privacy</h3>
+                    <p>See out while blocking the view in — ideal for ground-floor units, street-facing offices, and dense urban neighbourhoods.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Safety Film</h3>
+                    <p>Our 0.4 mm and 0.8 mm safety films hold shattered glass in place, protecting against break-ins, storms, and accidents.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>On-Site Service</h3>
+                    <p>We come to your property — no need to remove windows or visit a workshop. Free measurement included with every quote.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📋</div>
+                    <h3>Wide Film Range</h3>
+                    <p>From budget Carbon Series (฿50/sq.ft) to premium Sputtering Series (฿155/sq.ft) — a solution for every property and budget.</p>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- ── CTA Banner ── -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="cta-banner">
+            <h2>Ready to Protect Your Property?</h2>
+            <p>Get a free on-site measurement and no-obligation quote. We serve all major cities across Thailand.</p>
+            <div class="hero-cta-group">
+                <a href="schedule.html" class="btn btn-primary">Schedule a Free Quote</a>
+                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                                <div class="social-links">
-                    <a href="https://www.facebook.com/Jaideeclear"
-                       target="_blank"
-                       aria-label="Facebook">
+                <div class="footer-locations">
+                    <h4>Service Locations</h4>
+                    <div class="footer-location-links">
+                        <a href="window-tinting-bangkok.html" class="footer-location-link">Bangkok</a>
+                        <a href="window-tinting-chiang-mai.html" class="footer-location-link">Chiang Mai</a>
+                        <a href="window-tinting-phuket.html" class="footer-location-link">Phuket</a>
+                        <a href="window-tinting-pattaya.html" class="footer-location-link">Pattaya</a>
+                        <a href="window-tinting-nonthaburi.html" class="footer-location-link">Nonthaburi</a>
+                        <a href="window-tinting-khon-kaen.html" class="footer-location-link">Khon Kaen</a>
+                        <a href="window-tinting-hat-yai.html" class="footer-location-link">Hat Yai</a>
+                        <a href="window-tinting-udon-thani.html" class="footer-location-link">Udon Thani</a>
+                        <a href="window-tinting-nakhon-ratchasima.html" class="footer-location-link">Nakhon Ratchasima</a>
+                        <a href="window-tinting-chiang-rai.html" class="footer-location-link">Chiang Rai</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Jaideeclear" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/jaideeclear"
-                       target="_blank"
-                       aria-label="Instagram">
+                    <a href="https://www.instagram.com/jaideeclear" target="_blank" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-
                 <p class="copyright">© 2025 JaiDeeClear. On-site service throughout Thailand</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Seline tracking helpers
-        let quoteStarted = false;
-        
-        function ensureQuoteStarted() {
-            if (!quoteStarted && typeof seline === 'function') {
-                seline('event', 'quote: started');
-                quoteStarted = true;
-            }
-        }
-        
-        function trackFilmSelected(series, priceRange, lifespan) {
-            ensureQuoteStarted();
-            if (typeof seline === 'function') {
-                seline('event', 'quote: film_selected', {
-                    film: series.toLowerCase().replace(/\s+/g, '_'),
-                    price_range: priceRange,
-                    lifespan: lifespan
-                });
-            }
-        }
-        
-        function trackScheduleCTA() {
-            ensureQuoteStarted();
-            if (typeof seline === 'function') {
-                seline('event', 'quote: schedule_cta_clicked');
-            }
-        }
-        
-        function trackCatalogueOpen(series, url) {
-            if (typeof seline === 'function') {
-                seline('event', 'catalogue: opened', {
-                    series: series,
-                    url: url
-                });
-            }
-        }
-        
-        function trackCTA(label) {
-            if (typeof seline === 'function') {
-                seline('event', 'cta: clicked', { label: label });
-            }
-        }
-        
-        let formData = {
-            propertyType: '',
-            focus: '',
-            film: '',
-            filmPrice: 0
-        };
-
-        function goToStep(stepNumber) {
-            document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
-            document.getElementById('step' + stepNumber).classList.add('active');
-            
-            if (stepNumber > 1 && stepNumber < 6) {
-                document.getElementById('progressBar').style.display = 'block';
-                for (let i = 1; i <= 4; i++) {
-                    document.getElementById('progress' + i).classList.toggle('active', i < stepNumber);
-                }
-            } else {
-                document.getElementById('progressBar').style.display = 'none';
-            }
-            
-            // Track funnel step with Seline events
-            const stepNames = {
-                1: 'property',
-                2: 'concern',
-                3: 'film',
-                4: 'schedule',
-                5: 'contact',
-                6: 'received'
-            };
-            
-            if (stepNames[stepNumber]) {
-                ensureQuoteStarted();
-                if (stepNumber === 6) {
-                    // Final confirmation step
-                    if (typeof seline === 'function') {
-                        seline('event', 'quote: received');
-                    }
-                } else {
-                    // Track step view
-                    if (typeof seline === 'function') {
-                        seline('event', 'quote: step_viewed', { step: stepNames[stepNumber] });
-                    }
-                }
-            }
-            
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function selectProperty(type) {
-            formData.propertyType = type;
-            goToStep(2);
-        }
-
-        function selectFocus(focus) {
-            formData.focus = focus;
-            
-            // Remove all existing recommended badges
-            document.querySelectorAll('.film-card').forEach(card => {
-                card.classList.remove('recommended');
-            });
-            
-            // Define recommendations based on concern
-            const recommendations = {
-                'heat': ['Ceramic Nano', 'Sputtering Series', 'Titanium Series'],
-                'privacy': ['Ceramic Nano', 'Sputtering Series', 'Titanium Series'],
-                'uv': ['Ceramic Nano', 'Sputtering Series', 'Titanium Series'],
-                'both': ['Sputtering Series', 'Titanium Series']
-            };
-            
-            // Get recommended films for this concern
-            const recommendedFilms = recommendations[focus] || [];
-            
-            // Add recommended class to matching film cards
-            document.querySelectorAll('.film-card').forEach(card => {
-                const filmName = card.querySelector('h2').textContent;
-                if (recommendedFilms.includes(filmName)) {
-                    card.classList.add('recommended');
-                }
-            });
-            
-            goToStep(3);
-        }
-
-        function selectFilm(filmName, price, priceRange, lifespan) {
-            formData.film = filmName;
-            formData.filmPrice = price;
-            document.getElementById('film').value = filmName;
-            
-            // Track film selection
-            if (priceRange && lifespan) {
-                trackFilmSelected(filmName, priceRange, lifespan);
-            }
-            
-            // Track schedule CTA click
-            trackScheduleCTA();
-            
-            goToStep(4);
-        }
-
-        function validateEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        function validateForm() {
-            let isValid = true;
-            const formGroups = document.querySelectorAll('#contactForm .form-group');
-            
-            formGroups.forEach(group => {
-                group.classList.remove('error');
-            });
-
-            const name = document.getElementById('name');
-            if (!name.value.trim()) {
-                name.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            const email = document.getElementById('email');
-            if (!email.value.trim() || !validateEmail(email.value)) {
-                email.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            const location = document.getElementById('location');
-            if (!location.value.trim()) {
-                location.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            const film = document.getElementById('film');
-            if (!film.value) {
-                film.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            return isValid;
-        }
-
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            // Validate required fields before attempting submission
-            if (!validateForm()) {
-                const firstError = document.querySelector('#contactForm .form-group.error');
-                if (firstError) {
-                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    firstError.querySelector('input, textarea, select').focus();
-                }
-                return;
-            }
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.textContent = 'Submitting...';
-            submitBtn.disabled = true;
-            const formData = new FormData(this);
-            try {
-                const response = await fetch(this.action, {
-                    method: this.method,
-                    headers: { 'Accept': 'application/json' },
-                    body: formData
-                });
-                if (response.ok) {
-                    // Track successful quote submission
-                    const data = new FormData(this);
-                    const filmValue = data.get('film') || '';
-                    if (typeof seline === 'function') {
-                        seline('event', 'quote: submitted', {
-                            name_provided: !!data.get('full_name'),
-                            email_provided: !!data.get('email'),
-                            phone_provided: !!data.get('phone'),
-                            film: filmValue.toLowerCase().replace(/\s+/g, '_')
-                        });
-                    }
-                    
-                    // On success, show the success step and reset the form
-                    goToStep(6);
-                    this.reset();
-                } else {
-                    alert('There was an error submitting the form. Please try again.');
-                }
-            } catch (err) {
-                alert('There was an error submitting the form. Please check your connection and try again.');
-            }
-            submitBtn.textContent = 'Submit Request';
-            submitBtn.disabled = false;
-        });
-
-        document.getElementById('email').addEventListener('blur', function() {
-            const group = this.closest('.form-group');
-            if (this.value && !validateEmail(this.value)) {
-                group.classList.add('error');
-            } else {
-                group.classList.remove('error');
-            }
-        });
-
-        document.querySelectorAll('#contactForm input[required], #contactForm textarea[required], #contactForm select[required]').forEach(input => {
-            input.addEventListener('input', function() {
-                if (this.value.trim()) {
-                    this.closest('.form-group').classList.remove('error');
-                }
-            });
-        });
-
-        function resetForm() {
-            formData = {
-                propertyType: '',
-                focus: '',
-                film: '',
-                filmPrice: 0
-            };
-            document.getElementById('contactForm').reset();
-            goToStep(1);
-        }
-    </script>
 </body>
 </html>
