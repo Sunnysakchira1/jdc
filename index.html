@@ -37,11 +37,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -51,460 +47,267 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
+        .container { max-width: 980px; margin: 0 auto; padding: 0 22px; }
 
         /* ── Header ── */
         header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
+            position: sticky; top: 0;
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid #e5e5e7;
-            z-index: 100;
-            padding: 20px 0;
+            z-index: 100; padding: 20px 0;
         }
-
         .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 22px;
+            display: flex; justify-content: space-between; align-items: center;
+            max-width: 980px; margin: 0 auto; padding: 0 22px;
         }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-container a {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-container a { display: flex; align-items: center; }
+        .header-nav { display: flex; align-items: center; gap: 24px; }
         .nav-link {
-            font-size: 14px;
-            color: #1d1d1f;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.2s ease;
+            font-size: 14px; color: #1d1d1f; text-decoration: none;
+            font-weight: 500; transition: opacity 0.2s ease;
         }
-
-        .nav-link:hover {
-            opacity: 0.7;
-        }
-
+        .nav-link:hover { opacity: 0.7; }
         .whatsapp-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 24px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+            display: flex; align-items: center; gap: 8px;
+            background: #25D366; color: white; padding: 10px 20px;
+            border-radius: 24px; text-decoration: none; font-size: 14px;
+            font-weight: 600; transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(37,211,102,0.3);
         }
-
         .whatsapp-btn:hover {
-            background: #20BA5A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            background: #20BA5A; transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37,211,102,0.4);
         }
-
-        .whatsapp-icon {
-            width: 20px;
-            height: 20px;
-        }
+        .whatsapp-icon { width: 20px; height: 20px; }
 
         /* ── Hero ── */
         .hero {
             background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
-            color: white;
-            padding: 80px 0 72px;
-            text-align: center;
+            color: white; padding: 80px 0 72px; text-align: center;
         }
-
         .hero-eyebrow {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #f9a500;
-            margin-bottom: 16px;
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #f9a500; margin-bottom: 16px;
         }
-
         .hero h1 {
-            font-size: 52px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 20px;
+            font-size: 52px; font-weight: 700; letter-spacing: -0.03em;
+            line-height: 1.1; margin-bottom: 20px;
         }
-
-        .hero h1 em {
-            font-style: normal;
-            color: #f9a500;
-        }
-
+        .hero h1 em { font-style: normal; color: #f9a500; }
         .hero-sub {
-            font-size: 19px;
-            color: #a8a8a8;
-            max-width: 620px;
-            margin: 0 auto 36px;
-            line-height: 1.5;
+            font-size: 19px; color: #a8a8a8; max-width: 620px;
+            margin: 0 auto 36px; line-height: 1.5;
         }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
+        .hero-cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
         .btn {
-            padding: 14px 28px;
-            border-radius: 980px;
-            font-size: 15px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            padding: 14px 28px; border-radius: 980px; font-size: 15px;
+            font-weight: 600; border: none; cursor: pointer;
+            transition: all 0.2s ease; text-decoration: none;
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
         }
-
-        .btn-primary {
-            background: #f9a500;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #e09400;
-            transform: translateY(-1px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 1.5px solid rgba(255,255,255,0.4);
-        }
-
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.08);
-        }
+        .btn-primary { background: #f9a500; color: white; }
+        .btn-primary:hover { background: #e09400; transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.4); }
+        .btn-outline:hover { background: rgba(255,255,255,0.08); }
 
         /* ── Stats bar ── */
-        .stats-bar {
-            background: #f5f5f7;
-            border-bottom: 1px solid #e5e5e7;
-            padding: 28px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 0 16px;
-            border-right: 1px solid #e5e5e7;
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1d1d1f;
-            letter-spacing: -0.02em;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: #6e6e73;
-            margin-top: 4px;
-        }
+        .stats-bar { background: #f5f5f7; border-bottom: 1px solid #e5e5e7; padding: 28px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); text-align: center; }
+        .stat-item { padding: 0 16px; border-right: 1px solid #e5e5e7; }
+        .stat-item:last-child { border-right: none; }
+        .stat-number { font-size: 32px; font-weight: 700; color: #1d1d1f; letter-spacing: -0.02em; }
+        .stat-label { font-size: 13px; color: #6e6e73; margin-top: 4px; }
 
         /* ── Sections ── */
-        .section {
-            padding: 72px 0;
-        }
-
-        .section-alt {
-            background: #f5f5f7;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 52px;
-        }
-
+        .section { padding: 72px 0; }
+        .section-alt { background: #f5f5f7; }
+        .section-header { text-align: center; margin-bottom: 48px; }
         .section-eyebrow {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #f9a500;
-            margin-bottom: 12px;
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #f9a500; margin-bottom: 12px;
         }
+        .section-header h2 { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+        .section-header p { font-size: 17px; color: #6e6e73; max-width: 560px; margin: 0 auto; }
 
-        .section-header h2 {
-            font-size: 40px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 17px;
-            color: #6e6e73;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-
-        /* ── City grid ── */
-        .city-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .city-card {
-            background: white;
-            border-radius: 18px;
-            padding: 36px 32px;
-            border: 1px solid #e5e5e7;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s ease;
+        /* ── Map + City List layout ── */
+        .map-wrapper {
             display: flex;
+            gap: 48px;
             align-items: flex-start;
-            gap: 20px;
         }
 
-        .city-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            transform: translateY(-2px);
+        /* Thailand SVG map */
+        .map-container {
+            flex: 0 0 auto;
+            width: 260px;
+            position: relative;
+        }
+        .map-container svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            overflow: visible;
+        }
+
+        /* Pin styles */
+        .map-pin { cursor: pointer; }
+        .map-pin .pin-pulse {
+            fill: #f9a500;
+            opacity: 0.2;
+            transition: r 0.25s ease, opacity 0.25s ease;
+        }
+        .map-pin .pin-core {
+            fill: #f9a500;
+            transition: fill 0.2s ease, r 0.2s ease;
+        }
+        .map-pin:hover .pin-pulse { opacity: 0.45; r: 13; }
+        .map-pin:hover .pin-core { fill: #e09400; r: 7; }
+        .map-pin.pin-lit .pin-pulse { opacity: 0.5; r: 13; }
+        .map-pin.pin-lit .pin-core { fill: #1d1d1f; }
+
+        /* Tooltip */
+        #map-tooltip {
+            pointer-events: none;
+            display: none;
+        }
+        #tooltip-bg {
+            fill: #1d1d1f;
+            rx: 5; ry: 5;
+        }
+        #tooltip-text {
+            fill: white;
+            font-size: 10.5px;
+            font-family: -apple-system, sans-serif;
+            font-weight: 600;
+        }
+
+        /* City list panel */
+        .city-list-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .city-list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 11px 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1d1d1f;
+            border: 1px solid transparent;
+            transition: background 0.15s ease, border-color 0.15s ease;
+            position: relative;
+        }
+        .city-list-item:hover {
+            background: #fff;
             border-color: #f9a500;
         }
+        .city-list-item.item-lit {
+            background: #fff;
+            border-color: #1d1d1f;
+        }
 
-        .city-icon {
-            font-size: 36px;
+        .city-num {
+            font-size: 10px;
+            font-weight: 700;
+            color: #c7c7cc;
+            width: 16px;
+            text-align: right;
             flex-shrink: 0;
         }
+        .city-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #f9a500;
+            flex-shrink: 0;
+            transition: background 0.15s ease;
+        }
+        .city-list-item.item-lit .city-dot { background: #1d1d1f; }
 
-        .city-info h3 {
-            font-size: 22px;
-            font-weight: 600;
+        .city-list-name {
+            font-size: 15px;
+            font-weight: 500;
+            flex: 1;
             letter-spacing: -0.01em;
-            margin-bottom: 6px;
         }
-
-        .city-info .city-tagline {
+        .city-list-arrow {
             font-size: 14px;
-            color: #6e6e73;
-            line-height: 1.5;
-            margin-bottom: 12px;
+            color: #c7c7cc;
+            transition: transform 0.15s ease, color 0.15s ease;
         }
-
-        .city-info .city-cta {
-            font-size: 14px;
-            font-weight: 600;
+        .city-list-item:hover .city-list-arrow {
+            transform: translateX(3px);
             color: #f9a500;
+        }
+
+        /* Two-column list layout */
+        .city-list-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 12px;
         }
 
         /* ── Benefits grid ── */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
+        .benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
         .benefit-card {
-            background: white;
-            border-radius: 18px;
-            padding: 32px 28px;
-            border: 1px solid #e5e5e7;
-            text-align: center;
+            background: white; border-radius: 18px; padding: 32px 28px;
+            border: 1px solid #e5e5e7; text-align: center;
         }
-
-        .benefit-icon {
-            font-size: 40px;
-            margin-bottom: 16px;
-        }
-
-        .benefit-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .benefit-card p {
-            font-size: 14px;
-            color: #6e6e73;
-            line-height: 1.6;
-        }
+        .benefit-icon { font-size: 40px; margin-bottom: 16px; }
+        .benefit-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+        .benefit-card p { font-size: 14px; color: #6e6e73; line-height: 1.6; }
 
         /* ── CTA Banner ── */
         .cta-banner {
             background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
-            border-radius: 24px;
-            padding: 64px 48px;
-            text-align: center;
-            color: white;
-            margin: 0 22px;
+            border-radius: 24px; padding: 64px 48px; text-align: center;
+            color: white; margin: 0 22px;
         }
-
-        .cta-banner h2 {
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
+        .cta-banner h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
         .cta-banner p {
-            font-size: 17px;
-            color: #a8a8a8;
-            margin-bottom: 32px;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 17px; color: #a8a8a8; margin-bottom: 32px;
+            max-width: 480px; margin-left: auto; margin-right: auto;
         }
 
         /* ── Footer ── */
-        footer {
-            border-top: 1px solid #e5e5e7;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-locations {
-            margin-bottom: 24px;
-        }
-
+        footer { border-top: 1px solid #e5e5e7; padding: 40px 0; margin-top: 60px; }
+        .footer-content { text-align: center; }
+        .footer-locations { margin-bottom: 24px; }
         .footer-locations h4 {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #86868b;
-            margin-bottom: 12px;
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; color: #86868b; margin-bottom: 12px;
         }
-
-        .footer-location-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
-
+        .footer-location-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
         .footer-location-link {
-            font-size: 13px;
-            color: #6e6e73;
-            text-decoration: none;
-            padding: 5px 12px;
-            border: 1px solid #e5e5e7;
-            border-radius: 980px;
-            transition: all 0.2s ease;
+            font-size: 13px; color: #6e6e73; text-decoration: none;
+            padding: 5px 12px; border: 1px solid #e5e5e7;
+            border-radius: 980px; transition: all 0.2s ease;
         }
-
-        .footer-location-link:hover {
-            border-color: #f9a500;
-            color: #f9a500;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .social-links a {
-            color: #f9a500;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: #FFA500;
-        }
-
-        .copyright {
-            font-size: 12px;
-            color: #86868b;
-            margin-top: 16px;
-        }
+        .footer-location-link:hover { border-color: #f9a500; color: #f9a500; }
+        .social-links { display: flex; justify-content: center; gap: 16px; margin-top: 24px; }
+        .social-links a { color: #f9a500; font-size: 24px; text-decoration: none; }
+        .social-links a:hover { color: #FFA500; }
+        .copyright { font-size: 12px; color: #86868b; margin-top: 16px; }
 
         /* ── Responsive ── */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-
-            .stat-item {
-                border-right: none;
-                border-bottom: 1px solid #e5e5e7;
-                padding-bottom: 16px;
-            }
-
-            .stat-item:nth-last-child(-n+2) {
-                border-bottom: none;
-            }
-
-            .city-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header h2 {
-                font-size: 30px;
-            }
-
-            .cta-banner {
-                padding: 40px 24px;
-                margin: 0;
-                border-radius: 0;
-            }
-
-            .cta-banner h2 {
-                font-size: 26px;
-            }
+            .hero h1 { font-size: 36px; }
+            .stats-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
+            .stat-item { border-right: none; border-bottom: 1px solid #e5e5e7; padding-bottom: 16px; }
+            .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+            .map-wrapper { flex-direction: column; gap: 28px; align-items: center; }
+            .map-container { width: 220px; }
+            .city-list-cols { grid-template-columns: 1fr; }
+            .benefits-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 30px; }
+            .cta-banner { padding: 40px 24px; margin: 0; border-radius: 0; }
+            .cta-banner h2 { font-size: 26px; }
+            .header-nav .nav-link { display: none; }
         }
     </style>
 </head>
@@ -577,90 +380,247 @@
             <div class="section-header">
                 <p class="section-eyebrow">Our Locations</p>
                 <h2>Find Window Tinting in Your City</h2>
-                <p>We provide on-site installation across Thailand's major cities. Select your location for local pricing, climate details, and service information.</p>
+                <p>On-site installation across Thailand's major cities. Select your location for local pricing, climate details, and service information.</p>
             </div>
-            <div class="city-grid">
-                <a href="window-tinting-bangkok.html" class="city-card">
-                    <div class="city-icon">🏙️</div>
-                    <div class="city-info">
-                        <h3>Bangkok</h3>
-                        <p class="city-tagline">Thailand's capital — extreme UV index of 13, glass-heavy condos, and year-round cooling demand make window film essential.</p>
-                        <span class="city-cta">View Bangkok services →</span>
+
+            <div class="map-wrapper">
+
+                <!-- ── Thailand SVG map with interactive city pins ── -->
+                <div class="map-container">
+                    <!--
+                        Simplified Thailand silhouette.
+                        ViewBox: 0 0 200 520
+                        North is top. Approximate pin positions based on geographic lat/lon.
+                        Lat range: ~5.5°N (southernmost) to ~20.5°N (northernmost) → 15° span → 1° ≈ 33.3px
+                        Lon range: ~97.5°E to ~105.5°E → 8° span → 1° ≈ 25px
+                        Origin offset: lon 97.5°E = x:0, lat 20.5°N = y:0
+                    -->
+                    <svg viewBox="0 0 200 520" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Thailand with service city pins">
+
+                        <!-- Thailand outline: main body + southern peninsula -->
+                        <!-- Main northern body (roughly trapezoidal) -->
+                        <path d="
+                            M 55 10
+                            L 145 10
+                            L 158 60
+                            L 162 110
+                            L 155 155
+                            L 148 190
+                            L 140 220
+                            L 130 240
+                            L 118 255
+                            L 108 265
+                            L 100 272
+                            L 90 268
+                            L 80 258
+                            L 68 245
+                            L 55 228
+                            L 46 205
+                            L 40 175
+                            L 38 140
+                            L 42 95
+                            L 48 50
+                            Z
+                        " fill="#ebebf0" stroke="#d1d1d6" stroke-width="1.2"/>
+
+                        <!-- Southern peninsula -->
+                        <path d="
+                            M 100 272
+                            L 108 265
+                            L 115 272
+                            L 118 290
+                            L 116 320
+                            L 112 355
+                            L 108 390
+                            L 104 425
+                            L 100 460
+                            L 96 490
+                            L 92 510
+                            L 88 510
+                            L 84 490
+                            L 80 460
+                            L 76 425
+                            L 72 390
+                            L 68 355
+                            L 64 320
+                            L 62 290
+                            L 65 272
+                            L 72 265
+                            L 80 258
+                            L 90 268
+                            Z
+                        " fill="#ebebf0" stroke="#d1d1d6" stroke-width="1.2"/>
+
+                        <!-- ── City pins ──
+                             Formula: x = (lon - 97.5) * 25,  y = (20.5 - lat) * 33.3
+                             Chiang Rai:         19.91°N, 99.83°E  → x=(99.83-97.5)*25=58,  y=(20.5-19.91)*33.3=20
+                             Chiang Mai:         18.79°N, 98.98°E  → x=(98.98-97.5)*25=37,  y=(20.5-18.79)*33.3=57
+                             Udon Thani:         17.41°N, 102.79°E → x=(102.79-97.5)*25=132, y=(20.5-17.41)*33.3=103
+                             Khon Kaen:          16.43°N, 102.83°E → x=(102.83-97.5)*25=133, y=(20.5-16.43)*33.3=136
+                             Nakhon Ratchasima:  14.97°N, 102.10°E → x=(102.10-97.5)*25=115, y=(20.5-14.97)*33.3=184
+                             Nonthaburi:         13.86°N, 100.52°E → x=(100.52-97.5)*25=76,  y=(20.5-13.86)*33.3=221
+                             Bangkok:            13.75°N, 100.52°E → x=76,                   y=(20.5-13.75)*33.3=225
+                             Pattaya:            12.93°N, 100.88°E → x=(100.88-97.5)*25=85,  y=(20.5-12.93)*33.3=252
+                             Phuket:              7.88°N,  98.40°E → x=(98.40-97.5)*25=23,   y=(20.5-7.88)*33.3=420
+                             Hat Yai:             7.01°N, 100.47°E → x=(100.47-97.5)*25=74,  y=(20.5-7.01)*33.3=449
+                        -->
+
+                        <!-- Chiang Rai -->
+                        <a href="window-tinting-chiang-rai.html">
+                            <g class="map-pin" id="pin-chiang-rai" data-city="Chiang Rai">
+                                <circle class="pin-pulse" cx="72" cy="20" r="10"/>
+                                <circle class="pin-core" cx="72" cy="20" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Chiang Mai -->
+                        <a href="window-tinting-chiang-mai.html">
+                            <g class="map-pin" id="pin-chiang-mai" data-city="Chiang Mai">
+                                <circle class="pin-pulse" cx="50" cy="57" r="10"/>
+                                <circle class="pin-core" cx="50" cy="57" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Udon Thani -->
+                        <a href="window-tinting-udon-thani.html">
+                            <g class="map-pin" id="pin-udon-thani" data-city="Udon Thani">
+                                <circle class="pin-pulse" cx="140" cy="103" r="10"/>
+                                <circle class="pin-core" cx="140" cy="103" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Khon Kaen -->
+                        <a href="window-tinting-khon-kaen.html">
+                            <g class="map-pin" id="pin-khon-kaen" data-city="Khon Kaen">
+                                <circle class="pin-pulse" cx="140" cy="136" r="10"/>
+                                <circle class="pin-core" cx="140" cy="136" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Nakhon Ratchasima -->
+                        <a href="window-tinting-nakhon-ratchasima.html">
+                            <g class="map-pin" id="pin-korat" data-city="Nakhon Ratchasima">
+                                <circle class="pin-pulse" cx="122" cy="184" r="10"/>
+                                <circle class="pin-core" cx="122" cy="184" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Nonthaburi -->
+                        <a href="window-tinting-nonthaburi.html">
+                            <g class="map-pin" id="pin-nonthaburi" data-city="Nonthaburi">
+                                <circle class="pin-pulse" cx="82" cy="218" r="10"/>
+                                <circle class="pin-core" cx="82" cy="218" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Bangkok (slightly larger pin) -->
+                        <a href="window-tinting-bangkok.html">
+                            <g class="map-pin" id="pin-bangkok" data-city="Bangkok">
+                                <circle class="pin-pulse" cx="82" cy="228" r="12"/>
+                                <circle class="pin-core" cx="82" cy="228" r="7"/>
+                            </g>
+                        </a>
+
+                        <!-- Pattaya -->
+                        <a href="window-tinting-pattaya.html">
+                            <g class="map-pin" id="pin-pattaya" data-city="Pattaya">
+                                <circle class="pin-pulse" cx="90" cy="252" r="10"/>
+                                <circle class="pin-core" cx="90" cy="252" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Phuket -->
+                        <a href="window-tinting-phuket.html">
+                            <g class="map-pin" id="pin-phuket" data-city="Phuket">
+                                <circle class="pin-pulse" cx="78" cy="420" r="10"/>
+                                <circle class="pin-core" cx="78" cy="420" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Hat Yai -->
+                        <a href="window-tinting-hat-yai.html">
+                            <g class="map-pin" id="pin-hat-yai" data-city="Hat Yai">
+                                <circle class="pin-pulse" cx="88" cy="449" r="10"/>
+                                <circle class="pin-core" cx="88" cy="449" r="5"/>
+                            </g>
+                        </a>
+
+                        <!-- Tooltip overlay (shown on hover) -->
+                        <g id="map-tooltip" style="display:none; pointer-events:none;">
+                            <rect id="tooltip-bg" rx="5" ry="5" fill="#1d1d1f" opacity="0.9"/>
+                            <text id="tooltip-text" fill="white" font-size="10" font-family="-apple-system, sans-serif" font-weight="600"/>
+                        </g>
+
+                    </svg>
+                </div><!-- end .map-container -->
+
+                <!-- ── Compact two-column city list ── -->
+                <div class="city-list-panel">
+                    <div class="city-list-cols">
+                        <a href="window-tinting-bangkok.html" class="city-list-item" data-pin="pin-bangkok">
+                            <span class="city-num">1</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Bangkok</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-chiang-mai.html" class="city-list-item" data-pin="pin-chiang-mai">
+                            <span class="city-num">2</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Chiang Mai</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-phuket.html" class="city-list-item" data-pin="pin-phuket">
+                            <span class="city-num">3</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Phuket</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-pattaya.html" class="city-list-item" data-pin="pin-pattaya">
+                            <span class="city-num">4</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Pattaya</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-nonthaburi.html" class="city-list-item" data-pin="pin-nonthaburi">
+                            <span class="city-num">5</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Nonthaburi</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-khon-kaen.html" class="city-list-item" data-pin="pin-khon-kaen">
+                            <span class="city-num">6</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Khon Kaen</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-hat-yai.html" class="city-list-item" data-pin="pin-hat-yai">
+                            <span class="city-num">7</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Hat Yai</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-udon-thani.html" class="city-list-item" data-pin="pin-udon-thani">
+                            <span class="city-num">8</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Udon Thani</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-nakhon-ratchasima.html" class="city-list-item" data-pin="pin-korat">
+                            <span class="city-num">9</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Nakhon Ratchasima</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
+                        <a href="window-tinting-chiang-rai.html" class="city-list-item" data-pin="pin-chiang-rai">
+                            <span class="city-num">10</span>
+                            <span class="city-dot"></span>
+                            <span class="city-list-name">Chiang Rai</span>
+                            <span class="city-list-arrow">›</span>
+                        </a>
                     </div>
-                </a>
-                <a href="window-tinting-chiang-mai.html" class="city-card">
-                    <div class="city-icon">⛰️</div>
-                    <div class="city-info">
-                        <h3>Chiang Mai</h3>
-                        <p class="city-tagline">Northern Thailand's cultural hub — intense hot-season heat and a growing expat community with villas and modern condos.</p>
-                        <span class="city-cta">View Chiang Mai services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-phuket.html" class="city-card">
-                    <div class="city-icon">🏝️</div>
-                    <div class="city-info">
-                        <h3>Phuket</h3>
-                        <p class="city-tagline">Tropical island living — relentless sun, salt-air corrosion, and luxury villas with floor-to-ceiling glass demand premium film.</p>
-                        <span class="city-cta">View Phuket services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-pattaya.html" class="city-card">
-                    <div class="city-icon">🌊</div>
-                    <div class="city-info">
-                        <h3>Pattaya</h3>
-                        <p class="city-tagline">Coastal resort city — beachfront condos and retirement homes face intense solar glare and humidity year-round.</p>
-                        <span class="city-cta">View Pattaya services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-nonthaburi.html" class="city-card">
-                    <div class="city-icon">🏘️</div>
-                    <div class="city-info">
-                        <h3>Nonthaburi</h3>
-                        <p class="city-tagline">Bangkok's largest suburb — rapidly growing housing estates and riverside condos with the same extreme heat as the capital.</p>
-                        <span class="city-cta">View Nonthaburi services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-khon-kaen.html" class="city-card">
-                    <div class="city-icon">🌾</div>
-                    <div class="city-info">
-                        <h3>Khon Kaen</h3>
-                        <p class="city-tagline">Isan's commercial capital — scorching dry-season temperatures above 40°C and a booming property market.</p>
-                        <span class="city-cta">View Khon Kaen services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-hat-yai.html" class="city-card">
-                    <div class="city-icon">🌴</div>
-                    <div class="city-info">
-                        <h3>Hat Yai (Songkhla)</h3>
-                        <p class="city-tagline">Southern Thailand's commercial hub — tropical humidity, intense sun, and a mix of shophouses and modern developments.</p>
-                        <span class="city-cta">View Hat Yai services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-udon-thani.html" class="city-card">
-                    <div class="city-icon">🏡</div>
-                    <div class="city-info">
-                        <h3>Udon Thani</h3>
-                        <p class="city-tagline">Upper Isan gateway — a popular expat base with extreme seasonal heat and growing residential developments.</p>
-                        <span class="city-cta">View Udon Thani services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-nakhon-ratchasima.html" class="city-card">
-                    <div class="city-icon">🏛️</div>
-                    <div class="city-info">
-                        <h3>Nakhon Ratchasima (Korat)</h3>
-                        <p class="city-tagline">Gateway to Isan — Thailand's largest province by area, with fierce dry-season sun and rapid urban expansion.</p>
-                        <span class="city-cta">View Korat services →</span>
-                    </div>
-                </a>
-                <a href="window-tinting-chiang-rai.html" class="city-card">
-                    <div class="city-icon">🏔️</div>
-                    <div class="city-info">
-                        <h3>Chiang Rai</h3>
-                        <p class="city-tagline">Thailand's northernmost city — hot-season temperatures rival Bangkok, and a growing community of retirees and digital nomads.</p>
-                        <span class="city-cta">View Chiang Rai services →</span>
-                    </div>
-                </a>
-            </div>
+                </div><!-- end .city-list-panel -->
+
+            </div><!-- end .map-wrapper -->
         </div>
     </section>
 
@@ -752,6 +712,68 @@
             </div>
         </div>
     </footer>
+
+    <!-- ── Map interactivity ── -->
+    <script>
+    (function () {
+        var pins = document.querySelectorAll('.map-pin');
+        var listItems = document.querySelectorAll('.city-list-item[data-pin]');
+        var tooltip = document.getElementById('map-tooltip');
+        var tooltipBg = document.getElementById('tooltip-bg');
+        var tooltipText = document.getElementById('tooltip-text');
+
+        /* Show SVG tooltip near a pin */
+        function showTip(pin) {
+            var inner = pin.querySelector('.pin-core');
+            var cx = parseFloat(inner.getAttribute('cx'));
+            var cy = parseFloat(inner.getAttribute('cy'));
+            var city = pin.getAttribute('data-city');
+            tooltipText.textContent = city;
+
+            /* Measure text width (approx 6.2px per char + 14px padding) */
+            var w = city.length * 6.2 + 14;
+            var h = 18;
+            var tx = cx - w / 2;
+            var ty = cy - inner.getAttribute('r') * 1 - h - 6;
+
+            tooltipBg.setAttribute('x', tx);
+            tooltipBg.setAttribute('y', ty);
+            tooltipBg.setAttribute('width', w);
+            tooltipBg.setAttribute('height', h);
+            tooltipText.setAttribute('x', tx + 7);
+            tooltipText.setAttribute('y', ty + 13);
+            tooltip.style.display = 'block';
+        }
+
+        function hideTip() {
+            tooltip.style.display = 'none';
+        }
+
+        /* Pin hover */
+        pins.forEach(function (pin) {
+            pin.addEventListener('mouseenter', function () { showTip(pin); });
+            pin.addEventListener('mouseleave', hideTip);
+        });
+
+        /* List item hover → light up matching pin */
+        listItems.forEach(function (item) {
+            var pinId = item.getAttribute('data-pin');
+            var pin = document.getElementById(pinId);
+            if (!pin) return;
+
+            item.addEventListener('mouseenter', function () {
+                pin.classList.add('pin-lit');
+                item.classList.add('item-lit');
+                showTip(pin);
+            });
+            item.addEventListener('mouseleave', function () {
+                pin.classList.remove('pin-lit');
+                item.classList.remove('item-lit');
+                hideTip();
+            });
+        });
+    })();
+    </script>
 
 </body>
 </html>
