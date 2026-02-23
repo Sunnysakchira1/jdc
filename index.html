@@ -49,32 +49,33 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 980px; margin: 0 auto; padding: 0 22px; }
+        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
         /* ── Header ── */
         header {
             position: sticky; top: 0;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255,255,255,0.97);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid #e5e5e7;
-            z-index: 100; padding: 20px 0;
+            z-index: 100; padding: 14px 0;
         }
         .header-content {
             display: flex; justify-content: space-between; align-items: center;
-            max-width: 980px; margin: 0 auto; padding: 0 22px;
+            max-width: 1080px; margin: 0 auto; padding: 0 24px;
         }
         .logo-container { display: flex; align-items: center; gap: 12px; }
-        .logo-container a { display: flex; align-items: center; }
-        .header-nav { display: flex; align-items: center; gap: 24px; }
+        .logo-container a { display: flex; align-items: center; text-decoration: none; }
+        .header-nav { display: flex; align-items: center; gap: 28px; }
         .nav-link {
-            font-size: 14px; color: #1d1d1f; text-decoration: none;
-            font-weight: 500; transition: opacity 0.2s ease;
+            font-size: 15px; color: #1d1d1f; text-decoration: none;
+            font-weight: 500; transition: color 0.2s ease;
         }
-        .nav-link:hover { opacity: 0.7; }
+        .nav-link:hover { color: #f9a500; }
         .whatsapp-btn {
             display: flex; align-items: center; gap: 8px;
-            background: #25D366; color: white; padding: 10px 20px;
-            border-radius: 24px; text-decoration: none; font-size: 14px;
+            background: #25D366; color: white; padding: 10px 22px;
+            border-radius: 980px; text-decoration: none; font-size: 14px;
             font-weight: 600; transition: all 0.2s ease;
             box-shadow: 0 2px 8px rgba(37,211,102,0.3);
         }
@@ -82,7 +83,7 @@
             background: #20BA5A; transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(37,211,102,0.4);
         }
-        .whatsapp-icon { width: 20px; height: 20px; }
+        .whatsapp-icon { width: 18px; height: 18px; }
 
         /* ── Hero ── */
         .hero {
@@ -114,7 +115,98 @@
         .btn-outline { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.4); }
         .btn-outline:hover { background: rgba(255,255,255,0.08); }
 
-        /* ── Stats bar ── */
+        /* ══ Trusted By ══ */
+        .trusted-bar {
+            background: #fff;
+            border-top: 1px solid #e5e5e7;
+            border-bottom: 1px solid #e5e5e7;
+            padding: 32px 0;
+            overflow: hidden;
+        }
+        .trusted-label {
+            font-size: 12px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.12em; color: #aeaeb2; text-align: center;
+            margin-bottom: 24px;
+        }
+        .trusted-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .trusted-logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            filter: grayscale(1) opacity(0.45);
+            transition: filter 0.3s ease;
+            cursor: default;
+        }
+        .trusted-logo-item:hover { filter: grayscale(0) opacity(1); }
+        .trusted-logo-icon {
+            width: 44px; height: 44px;
+            background: #f5f5f7;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+        }
+        .trusted-logo-name {
+            font-size: 12px; font-weight: 600; color: #1d1d1f;
+            white-space: nowrap; letter-spacing: -0.01em;
+        }
+
+        /* ══ Instagram Showcase ══ */
+        .insta-section { padding: 72px 0; background: #fff; }
+        .insta-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+        .insta-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            background: #f5f5f7;
+            display: block;
+            text-decoration: none;
+        }
+        .insta-card img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .insta-card:hover img { transform: scale(1.06); }
+        .insta-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex; align-items: flex-end; padding: 14px;
+        }
+        .insta-card:hover .insta-overlay { opacity: 1; }
+        .insta-overlay-icon {
+            color: white; font-size: 18px;
+        }
+        .insta-follow {
+            text-align: center; margin-top: 28px;
+        }
+        .insta-follow a {
+            display: inline-flex; align-items: center; gap: 8px;
+            color: #1d1d1f; text-decoration: none; font-size: 15px;
+            font-weight: 600; border: 1.5px solid #e5e5e7;
+            padding: 12px 24px; border-radius: 980px;
+            transition: all 0.2s ease;
+        }
+        .insta-follow a:hover {
+            border-color: #f9a500; color: #f9a500;
+            box-shadow: 0 2px 10px rgba(249,165,0,0.15);
+        }
+
+        /* ══ Stats bar ══ */
         .stats-bar { background: #f5f5f7; border-bottom: 1px solid #e5e5e7; padding: 28px 0; }
         .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); text-align: center; }
         .stat-item { padding: 0 16px; border-right: 1px solid #e5e5e7; }
@@ -131,144 +223,257 @@
             letter-spacing: 0.1em; color: #f9a500; margin-bottom: 12px;
         }
         .section-header h2 { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
-        .section-header p { font-size: 17px; color: #6e6e73; max-width: 560px; margin: 0 auto; }
+        .section-header p { font-size: 17px; color: #6e6e73; max-width: 600px; margin: 0 auto; }
 
-        /* ── Map + City List layout ── */
-        .map-wrapper {
-            display: flex;
-            gap: 48px;
-            align-items: flex-start;
+        /* ══════════════════════════════════════════════
+           CITY PILLS GRID
+           ══════════════════════════════════════════════ */
+        .city-pills-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
         }
-
-        /* Thailand SVG map */
-        .map-container {
-            flex: 0 0 auto;
-            width: 260px;
-            position: relative;
-        }
-        .map-container svg {
-            width: 100%;
-            height: auto;
-            display: block;
-            overflow: visible;
-        }
-
-        /* Pin styles */
-        .map-pin { cursor: pointer; }
-        .map-pin .pin-pulse {
-            fill: #f9a500;
-            opacity: 0.2;
-            transition: r 0.25s ease, opacity 0.25s ease;
-        }
-        .map-pin .pin-core {
-            fill: #f9a500;
-            transition: fill 0.2s ease, r 0.2s ease;
-        }
-        .map-pin:hover .pin-pulse { opacity: 0.45; r: 13; }
-        .map-pin:hover .pin-core { fill: #e09400; r: 7; }
-        .map-pin.pin-lit .pin-pulse { opacity: 0.5; r: 13; }
-        .map-pin.pin-lit .pin-core { fill: #1d1d1f; }
-
-        /* Tooltip */
-        #map-tooltip {
-            pointer-events: none;
-            display: none;
-        }
-        #tooltip-bg {
-            fill: #1d1d1f;
-            rx: 5; ry: 5;
-        }
-        #tooltip-text {
-            fill: white;
-            font-size: 10.5px;
-            font-family: -apple-system, sans-serif;
-            font-weight: 600;
-        }
-
-        /* City list panel */
-        .city-list-panel {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .city-list-item {
+        .city-pill {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 11px 14px;
-            border-radius: 10px;
+            gap: 10px;
+            padding: 16px 18px;
+            border-radius: 14px;
             text-decoration: none;
             color: #1d1d1f;
-            border: 1px solid transparent;
-            transition: background 0.15s ease, border-color 0.15s ease;
-            position: relative;
-        }
-        .city-list-item:hover {
             background: #fff;
-            border-color: #f9a500;
-        }
-        .city-list-item.item-lit {
-            background: #fff;
-            border-color: #1d1d1f;
-        }
-
-        .city-num {
-            font-size: 10px;
-            font-weight: 700;
-            color: #c7c7cc;
-            width: 16px;
-            text-align: right;
-            flex-shrink: 0;
-        }
-        .city-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #f9a500;
-            flex-shrink: 0;
-            transition: background 0.15s ease;
-        }
-        .city-list-item.item-lit .city-dot { background: #1d1d1f; }
-
-        .city-list-name {
+            border: 1.5px solid #e5e5e7;
+            transition: all 0.2s ease;
             font-size: 15px;
             font-weight: 500;
-            flex: 1;
-            letter-spacing: -0.01em;
         }
-        .city-list-arrow {
-            font-size: 14px;
+        .city-pill:hover {
+            border-color: #f9a500;
+            background: #fffbf0;
+            box-shadow: 0 4px 14px rgba(249,165,0,0.15);
+            transform: translateY(-2px);
+        }
+        .city-pill-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #f9a500; flex-shrink: 0;
+        }
+        .city-pill-arrow {
+            margin-left: auto;
+            font-size: 16px;
             color: #c7c7cc;
-            transition: transform 0.15s ease, color 0.15s ease;
+            transition: transform 0.2s ease, color 0.2s ease;
         }
-        .city-list-item:hover .city-list-arrow {
+        .city-pill:hover .city-pill-arrow {
             transform: translateX(3px);
             color: #f9a500;
         }
 
-        /* Two-column list layout */
-        .city-list-cols {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0 12px;
+        /* ══════════════════════════════════════════════
+           PROPERTIES WE SERVE — horizontal scroll
+           ══════════════════════════════════════════════ */
+        .properties-section {
+            padding: 72px 0;
+        }
+        .properties-wrapper {
+            background: linear-gradient(135deg, #fdf0d5 0%, #fce4a8 50%, #f9d67a 100%);
+            border-radius: 28px;
+            padding: 48px 0 48px 40px;
+            overflow: hidden;
+        }
+        .properties-header {
+            margin-bottom: 32px;
+            padding-right: 40px;
+        }
+        .properties-header .section-eyebrow { text-align: left; }
+        .properties-header h2 {
+            font-size: 36px; font-weight: 700; letter-spacing: -0.02em;
+            margin-bottom: 8px; color: #1d1d1f;
+        }
+        .properties-header p {
+            font-size: 16px; color: #5a5a5e; max-width: 500px;
+        }
+        .properties-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 16px;
+            padding-right: 40px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .properties-scroll::-webkit-scrollbar { height: 6px; }
+        .properties-scroll::-webkit-scrollbar-track { background: transparent; }
+        .properties-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 3px; }
+
+        .property-card {
+            flex: 0 0 180px;
+            background: white;
+            border-radius: 20px;
+            padding: 28px 20px;
+            text-align: center;
+            scroll-snap-align: start;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .property-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .property-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+            display: block;
+        }
+        .property-card h3 {
+            font-size: 16px; font-weight: 600; margin-bottom: 6px;
+            color: #1d1d1f;
+        }
+        .property-card p {
+            font-size: 12px; color: #6e6e73; line-height: 1.5;
         }
 
-        /* ── Benefits grid ── */
-        .benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-        .benefit-card {
-            background: white; border-radius: 18px; padding: 32px 28px;
-            border: 1px solid #e5e5e7; text-align: center;
+        /* ══════════════════════════════════════════════
+           WHY JAIDEECLEAR — Bento Grid
+           ══════════════════════════════════════════════ */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
         }
-        .benefit-icon { font-size: 40px; margin-bottom: 16px; }
-        .benefit-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
-        .benefit-card p { font-size: 14px; color: #6e6e73; line-height: 1.6; }
+        .bento-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px 28px;
+            border: 1px solid #e5e5e7;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .bento-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+        .bento-card.bento-wide {
+            grid-column: span 2;
+        }
+        .bento-card.bento-tall {
+            grid-row: span 2;
+        }
+        .bento-visual {
+            width: 100%;
+            height: 140px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        .bento-visual-uv { background: linear-gradient(135deg, #fff7e6 0%, #ffe8b3 100%); }
+        .bento-visual-cool { background: linear-gradient(135deg, #e8f4fd 0%, #b3d9f2 100%); }
+        .bento-visual-privacy { background: linear-gradient(135deg, #f0e8fd 0%, #d4b3f2 100%); }
+        .bento-visual-safety { background: linear-gradient(135deg, #e8fde8 0%, #b3f2b3 100%); }
+        .bento-visual-onsite { background: linear-gradient(135deg, #fde8e8 0%, #f2b3b3 100%); }
+        .bento-visual-range { background: linear-gradient(135deg, #e8f0fd 0%, #b3c9f2 100%); }
+
+        .bento-card h3 {
+            font-size: 20px; font-weight: 700; margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+        .bento-card p {
+            font-size: 14px; color: #6e6e73; line-height: 1.6;
+            flex: 1;
+        }
+        .bento-stat {
+            font-size: 42px; font-weight: 800; color: #f9a500;
+            letter-spacing: -0.03em; margin-bottom: 4px;
+        }
+
+        /* ══════════════════════════════════════════════
+           HOW IT WORKS — Pastel Step Cards
+           ══════════════════════════════════════════════ */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .step-card {
+            border-radius: 24px;
+            padding: 36px 28px;
+            display: flex;
+            flex-direction: column;
+            min-height: 380px;
+            position: relative;
+            overflow: hidden;
+        }
+        .step-card-yellow { background: #fdf6e3; }
+        .step-card-purple { background: #f0e6f6; }
+        .step-card-green { background: #e6f5e8; }
+
+        .step-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(8px);
+            padding: 6px 14px;
+            border-radius: 980px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            width: fit-content;
+        }
+        .step-pill-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+        }
+        .step-pill-dot-yellow { background: #f9a500; }
+        .step-pill-dot-purple { background: #9b59b6; }
+        .step-pill-dot-green { background: #27ae60; }
+
+        .step-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6e6e73;
+            margin-bottom: 24px;
+        }
+        .step-tag i { font-size: 11px; }
+
+        .step-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            color: #1d1d1f;
+        }
+        .step-card p {
+            font-size: 15px;
+            color: #4a4a4e;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .step-visual {
+            margin-top: auto;
+            width: 100%;
+            height: 160px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            background: rgba(255,255,255,0.5);
+        }
 
         /* ── CTA Banner ── */
         .cta-banner {
             background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
             border-radius: 24px; padding: 64px 48px; text-align: center;
-            color: white; margin: 0 22px;
+            color: white; margin: 0 24px;
         }
         .cta-banner h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
         .cta-banner p {
@@ -296,31 +501,51 @@
         .social-links a:hover { color: #FFA500; }
         .copyright { font-size: 12px; color: #86868b; margin-top: 16px; }
 
-        /* ── Responsive ── */
+        /* ══════════════════════════════════════════════
+           RESPONSIVE
+           ══════════════════════════════════════════════ */
+        @media (max-width: 900px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .bento-card.bento-wide { grid-column: span 1; }
+            .steps-grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+            .step-card { min-height: auto; }
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 36px; }
             .stats-grid { grid-template-columns: repeat(2,1fr); gap: 16px; }
             .stat-item { border-right: none; border-bottom: 1px solid #e5e5e7; padding-bottom: 16px; }
             .stat-item:nth-last-child(-n+2) { border-bottom: none; }
-            .map-wrapper { flex-direction: column; gap: 28px; align-items: center; }
-            .map-container { width: 220px; }
-            .city-list-cols { grid-template-columns: 1fr; }
-            .benefits-grid { grid-template-columns: 1fr; }
+
+            .city-pills-grid { grid-template-columns: repeat(2, 1fr); }
+
+            .properties-wrapper { padding: 36px 0 36px 24px; border-radius: 20px; }
+            .properties-header { padding-right: 24px; }
+            .properties-header h2 { font-size: 28px; }
+            .property-card { flex: 0 0 160px; }
+
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-card.bento-wide { grid-column: span 1; }
+
             .section-header h2 { font-size: 30px; }
             .cta-banner { padding: 40px 24px; margin: 0; border-radius: 0; }
             .cta-banner h2 { font-size: 26px; }
-            .header-nav .nav-link { display: none; }
+            .header-nav .nav-link { font-size: 13px; }
+            .insta-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .trusted-logos { gap: 28px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ── Header ── -->
+    <!-- ══════════════════════════════════════════════
+         HEADER
+         ══════════════════════════════════════════════ -->
     <header>
         <div class="header-content">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="jdclogo.jpg" alt="JaiDee Clear Logo" style="height: 100px; width: auto; object-fit: contain;">
+                    <img src="jdclogo.jpg" alt="JaiDeeClear Logo" style="height: 80px; width: auto; object-fit: contain;">
                 </a>
             </div>
             <div class="header-nav">
@@ -336,7 +561,9 @@
         </div>
     </header>
 
-    <!-- ── Hero ── -->
+    <!-- ══════════════════════════════════════════════
+         HERO
+         ══════════════════════════════════════════════ -->
     <section class="hero">
         <div class="container">
             <p class="hero-eyebrow">Professional Window Film Installation</p>
@@ -353,7 +580,40 @@
         </div>
     </section>
 
-    <!-- ── Stats bar ── -->
+    <!-- ══════════════════════════════════════════════
+         TRUSTED BY
+         ══════════════════════════════════════════════ -->
+    <div class="trusted-bar">
+        <div class="container">
+            <p class="trusted-label">Trusted by leading properties across Thailand</p>
+            <div class="trusted-logos">
+                <div class="trusted-logo-item">
+                    <div class="trusted-logo-icon">🏖️</div>
+                    <span class="trusted-logo-name">Sava Beach Villas</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <div class="trusted-logo-icon">🏙️</div>
+                    <span class="trusted-logo-name">The Cube Amaze</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <div class="trusted-logo-icon">🌺</div>
+                    <span class="trusted-logo-name">Anchan Flora</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <div class="trusted-logo-icon">🏢</div>
+                    <span class="trusted-logo-name">Trang Ruampattana</span>
+                </div>
+                <div class="trusted-logo-item">
+                    <div class="trusted-logo-icon">🏆</div>
+                    <span class="trusted-logo-name">Escent Trang</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         STATS BAR
+         ══════════════════════════════════════════════ -->
     <div class="stats-bar">
         <div class="container">
             <div class="stats-grid">
@@ -377,7 +637,9 @@
         </div>
     </div>
 
-    <!-- ── City Locations ── -->
+    <!-- ══════════════════════════════════════════════
+         CITY LOCATIONS
+         ══════════════════════════════════════════════ -->
     <section class="section">
         <div class="container">
             <div class="section-header">
@@ -385,249 +647,121 @@
                 <h2>Find Window Tinting in Your City</h2>
                 <p>On-site installation across Thailand's major cities. Select your location for local pricing, climate details, and service information.</p>
             </div>
-
-            <div class="map-wrapper">
-
-                <!-- ── Thailand SVG map with interactive city pins ── -->
-                <div class="map-container">
-                    <!--
-                        Simplified Thailand silhouette.
-                        ViewBox: 0 0 200 520
-                        North is top. Approximate pin positions based on geographic lat/lon.
-                        Lat range: ~5.5°N (southernmost) to ~20.5°N (northernmost) → 15° span → 1° ≈ 33.3px
-                        Lon range: ~97.5°E to ~105.5°E → 8° span → 1° ≈ 25px
-                        Origin offset: lon 97.5°E = x:0, lat 20.5°N = y:0
-                    -->
-                    <svg viewBox="0 0 200 520" xmlns="http://www.w3.org/2000/svg" aria-label="Map of Thailand with service city pins">
-
-                        <!-- Thailand outline: main body + southern peninsula -->
-                        <!-- Main northern body (roughly trapezoidal) -->
-                        <path d="
-                            M 55 10
-                            L 145 10
-                            L 158 60
-                            L 162 110
-                            L 155 155
-                            L 148 190
-                            L 140 220
-                            L 130 240
-                            L 118 255
-                            L 108 265
-                            L 100 272
-                            L 90 268
-                            L 80 258
-                            L 68 245
-                            L 55 228
-                            L 46 205
-                            L 40 175
-                            L 38 140
-                            L 42 95
-                            L 48 50
-                            Z
-                        " fill="#ebebf0" stroke="#d1d1d6" stroke-width="1.2"/>
-
-                        <!-- Southern peninsula -->
-                        <path d="
-                            M 100 272
-                            L 108 265
-                            L 115 272
-                            L 118 290
-                            L 116 320
-                            L 112 355
-                            L 108 390
-                            L 104 425
-                            L 100 460
-                            L 96 490
-                            L 92 510
-                            L 88 510
-                            L 84 490
-                            L 80 460
-                            L 76 425
-                            L 72 390
-                            L 68 355
-                            L 64 320
-                            L 62 290
-                            L 65 272
-                            L 72 265
-                            L 80 258
-                            L 90 268
-                            Z
-                        " fill="#ebebf0" stroke="#d1d1d6" stroke-width="1.2"/>
-
-                        <!-- ── City pins ──
-                             Formula: x = (lon - 97.5) * 25,  y = (20.5 - lat) * 33.3
-                             Chiang Rai:         19.91°N, 99.83°E  → x=(99.83-97.5)*25=58,  y=(20.5-19.91)*33.3=20
-                             Chiang Mai:         18.79°N, 98.98°E  → x=(98.98-97.5)*25=37,  y=(20.5-18.79)*33.3=57
-                             Udon Thani:         17.41°N, 102.79°E → x=(102.79-97.5)*25=132, y=(20.5-17.41)*33.3=103
-                             Khon Kaen:          16.43°N, 102.83°E → x=(102.83-97.5)*25=133, y=(20.5-16.43)*33.3=136
-                             Nakhon Ratchasima:  14.97°N, 102.10°E → x=(102.10-97.5)*25=115, y=(20.5-14.97)*33.3=184
-                             Nonthaburi:         13.86°N, 100.52°E → x=(100.52-97.5)*25=76,  y=(20.5-13.86)*33.3=221
-                             Bangkok:            13.75°N, 100.52°E → x=76,                   y=(20.5-13.75)*33.3=225
-                             Pattaya:            12.93°N, 100.88°E → x=(100.88-97.5)*25=85,  y=(20.5-12.93)*33.3=252
-                             Phuket:              7.88°N,  98.40°E → x=(98.40-97.5)*25=23,   y=(20.5-7.88)*33.3=420
-                             Hat Yai:             7.01°N, 100.47°E → x=(100.47-97.5)*25=74,  y=(20.5-7.01)*33.3=449
-                        -->
-
-                        <!-- Chiang Rai -->
-                        <a href="window-tinting-chiang-rai.html">
-                            <g class="map-pin" id="pin-chiang-rai" data-city="Chiang Rai">
-                                <circle class="pin-pulse" cx="72" cy="20" r="10"/>
-                                <circle class="pin-core" cx="72" cy="20" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Chiang Mai -->
-                        <a href="window-tinting-chiang-mai.html">
-                            <g class="map-pin" id="pin-chiang-mai" data-city="Chiang Mai">
-                                <circle class="pin-pulse" cx="50" cy="57" r="10"/>
-                                <circle class="pin-core" cx="50" cy="57" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Udon Thani -->
-                        <a href="window-tinting-udon-thani.html">
-                            <g class="map-pin" id="pin-udon-thani" data-city="Udon Thani">
-                                <circle class="pin-pulse" cx="140" cy="103" r="10"/>
-                                <circle class="pin-core" cx="140" cy="103" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Khon Kaen -->
-                        <a href="window-tinting-khon-kaen.html">
-                            <g class="map-pin" id="pin-khon-kaen" data-city="Khon Kaen">
-                                <circle class="pin-pulse" cx="140" cy="136" r="10"/>
-                                <circle class="pin-core" cx="140" cy="136" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Nakhon Ratchasima -->
-                        <a href="window-tinting-nakhon-ratchasima.html">
-                            <g class="map-pin" id="pin-korat" data-city="Nakhon Ratchasima">
-                                <circle class="pin-pulse" cx="122" cy="184" r="10"/>
-                                <circle class="pin-core" cx="122" cy="184" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Nonthaburi -->
-                        <a href="window-tinting-nonthaburi.html">
-                            <g class="map-pin" id="pin-nonthaburi" data-city="Nonthaburi">
-                                <circle class="pin-pulse" cx="82" cy="218" r="10"/>
-                                <circle class="pin-core" cx="82" cy="218" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Bangkok (slightly larger pin) -->
-                        <a href="window-tinting-bangkok.html">
-                            <g class="map-pin" id="pin-bangkok" data-city="Bangkok">
-                                <circle class="pin-pulse" cx="82" cy="228" r="12"/>
-                                <circle class="pin-core" cx="82" cy="228" r="7"/>
-                            </g>
-                        </a>
-
-                        <!-- Pattaya -->
-                        <a href="window-tinting-pattaya.html">
-                            <g class="map-pin" id="pin-pattaya" data-city="Pattaya">
-                                <circle class="pin-pulse" cx="90" cy="252" r="10"/>
-                                <circle class="pin-core" cx="90" cy="252" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Phuket -->
-                        <a href="window-tinting-phuket.html">
-                            <g class="map-pin" id="pin-phuket" data-city="Phuket">
-                                <circle class="pin-pulse" cx="78" cy="420" r="10"/>
-                                <circle class="pin-core" cx="78" cy="420" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Hat Yai -->
-                        <a href="window-tinting-hat-yai.html">
-                            <g class="map-pin" id="pin-hat-yai" data-city="Hat Yai">
-                                <circle class="pin-pulse" cx="88" cy="449" r="10"/>
-                                <circle class="pin-core" cx="88" cy="449" r="5"/>
-                            </g>
-                        </a>
-
-                        <!-- Tooltip overlay (shown on hover) -->
-                        <g id="map-tooltip" style="display:none; pointer-events:none;">
-                            <rect id="tooltip-bg" rx="5" ry="5" fill="#1d1d1f" opacity="0.9"/>
-                            <text id="tooltip-text" fill="white" font-size="10" font-family="-apple-system, sans-serif" font-weight="600"/>
-                        </g>
-
-                    </svg>
-                </div><!-- end .map-container -->
-
-                <!-- ── Compact two-column city list ── -->
-                <div class="city-list-panel">
-                    <div class="city-list-cols">
-                        <a href="window-tinting-bangkok.html" class="city-list-item" data-pin="pin-bangkok">
-                            <span class="city-num">1</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Bangkok</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-chiang-mai.html" class="city-list-item" data-pin="pin-chiang-mai">
-                            <span class="city-num">2</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Chiang Mai</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-phuket.html" class="city-list-item" data-pin="pin-phuket">
-                            <span class="city-num">3</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Phuket</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-pattaya.html" class="city-list-item" data-pin="pin-pattaya">
-                            <span class="city-num">4</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Pattaya</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-nonthaburi.html" class="city-list-item" data-pin="pin-nonthaburi">
-                            <span class="city-num">5</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Nonthaburi</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-khon-kaen.html" class="city-list-item" data-pin="pin-khon-kaen">
-                            <span class="city-num">6</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Khon Kaen</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-hat-yai.html" class="city-list-item" data-pin="pin-hat-yai">
-                            <span class="city-num">7</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Hat Yai</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-udon-thani.html" class="city-list-item" data-pin="pin-udon-thani">
-                            <span class="city-num">8</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Udon Thani</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-nakhon-ratchasima.html" class="city-list-item" data-pin="pin-korat">
-                            <span class="city-num">9</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Nakhon Ratchasima</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                        <a href="window-tinting-chiang-rai.html" class="city-list-item" data-pin="pin-chiang-rai">
-                            <span class="city-num">10</span>
-                            <span class="city-dot"></span>
-                            <span class="city-list-name">Chiang Rai</span>
-                            <span class="city-list-arrow">›</span>
-                        </a>
-                    </div>
-                </div><!-- end .city-list-panel -->
-
-            </div><!-- end .map-wrapper -->
+            <div class="city-pills-grid">
+                <a href="window-tinting-bangkok.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Bangkok
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-chiang-mai.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Chiang Mai
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-phuket.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Phuket
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-pattaya.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Pattaya
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-nonthaburi.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Nonthaburi
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-khon-kaen.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Khon Kaen
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-hat-yai.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Hat Yai
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-udon-thani.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Udon Thani
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-nakhon-ratchasima.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Nakhon Ratchasima
+                    <span class="city-pill-arrow">›</span>
+                </a>
+                <a href="window-tinting-chiang-rai.html" class="city-pill">
+                    <span class="city-pill-dot"></span>
+                    Chiang Rai
+                    <span class="city-pill-arrow">›</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- ── Why JaiDeeClear ── -->
+    <!-- ══════════════════════════════════════════════
+         PROPERTIES WE SERVE — Horizontal Scroll
+         ══════════════════════════════════════════════ -->
+    <section class="properties-section">
+        <div class="container">
+            <div class="properties-wrapper">
+                <div class="properties-header">
+                    <p class="section-eyebrow">Properties We Serve</p>
+                    <h2>Window Film for Every Property Type</h2>
+                    <p>From high-rise condos to beachfront villas — we install premium window film on any building.</p>
+                </div>
+                <div class="properties-scroll">
+                    <div class="property-card">
+                        <span class="property-icon">🏢</span>
+                        <h3>Condos</h3>
+                        <p>High-rise units with full sun exposure</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🏡</span>
+                        <h3>Villas</h3>
+                        <p>Luxury homes with large glass facades</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🏨</span>
+                        <h3>Hotels</h3>
+                        <p>Guest comfort and energy savings</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🏫</span>
+                        <h3>Schools</h3>
+                        <p>UV protection for classrooms</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🏥</span>
+                        <h3>Hospitals</h3>
+                        <p>Glare reduction and patient comfort</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🏬</span>
+                        <h3>Offices</h3>
+                        <p>Reduce heat and boost productivity</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🍽️</span>
+                        <h3>Restaurants</h3>
+                        <p>Comfortable dining, lower bills</p>
+                    </div>
+                    <div class="property-card">
+                        <span class="property-icon">🏘️</span>
+                        <h3>Shophouses</h3>
+                        <p>Street-level privacy and UV block</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         WHY JAIDEECLEAR — Bento Grid
+         ══════════════════════════════════════════════ -->
     <section class="section section-alt">
         <div class="container">
             <div class="section-header">
@@ -635,56 +769,168 @@
                 <h2>Why Thousands Choose Our Window Film</h2>
                 <p>Professional installation, premium materials, and real results — delivered to your door.</p>
             </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">☀️</div>
-                    <h3>99% UV Rejection</h3>
+            <div class="bento-grid">
+                <!-- Card 1: UV — wide -->
+                <div class="bento-card bento-wide">
+                    <div class="bento-visual bento-visual-uv">☀️</div>
+                    <div class="bento-stat">99%</div>
+                    <h3>UV Rejection</h3>
                     <p>Protect your skin, furniture, and flooring from Thailand's extreme ultraviolet radiation with films that block up to 99% of UV rays.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">❄️</div>
+                <!-- Card 2: Cooling -->
+                <div class="bento-card">
+                    <div class="bento-visual bento-visual-cool">❄️</div>
                     <h3>Slash Cooling Costs</h3>
-                    <p>High infrared rejection reduces indoor temperatures by up to 10°C, cutting air-conditioning electricity bills by 20–30% on average.</p>
+                    <p>High infrared rejection reduces indoor temperatures by up to 10°C, cutting air-conditioning electricity bills by 20–30%.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">👁️</div>
+                <!-- Card 3: Privacy -->
+                <div class="bento-card">
+                    <div class="bento-visual bento-visual-privacy">👁️</div>
                     <h3>Daytime Privacy</h3>
                     <p>See out while blocking the view in — ideal for ground-floor units, street-facing offices, and dense urban neighbourhoods.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🛡️</div>
+                <!-- Card 4: Safety -->
+                <div class="bento-card">
+                    <div class="bento-visual bento-visual-safety">🛡️</div>
                     <h3>Safety Film</h3>
                     <p>Our 0.4 mm and 0.8 mm safety films hold shattered glass in place, protecting against break-ins, storms, and accidents.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏠</div>
-                    <h3>On-Site Service</h3>
-                    <p>We come to your property — no need to remove windows or visit a workshop. Free measurement included with every quote.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📋</div>
-                    <h3>Wide Film Range</h3>
-                    <p>From budget Carbon Series (฿50/sq.ft) to premium Sputtering Series (฿155/sq.ft) — a solution for every property and budget.</p>
+                <!-- Card 5: On-Site — wide -->
+                <div class="bento-card bento-wide">
+                    <div class="bento-visual bento-visual-onsite">🏠</div>
+                    <h3>On-Site Service Across Thailand</h3>
+                    <p>We come to your property — no need to remove windows or visit a workshop. Free measurement included with every quote. Serving 10+ major cities from Bangkok to Chiang Mai.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── CTA Banner ── -->
-    <section class="section" style="padding-bottom: 0;">
-        <div class="cta-banner">
-            <h2>Ready to Protect Your Property?</h2>
-            <p>Get a free on-site measurement and no-obligation quote. We serve all major cities across Thailand.</p>
-            <div class="hero-cta-group">
-                <a href="schedule.html" class="btn btn-primary">Schedule a Free Quote</a>
-                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">
-                    WhatsApp Us
+    <!-- ══════════════════════════════════════════════
+         HOW IT WORKS — Pastel Step Cards
+         ══════════════════════════════════════════════ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">How It Works</p>
+                <h2>Three Simple Steps</h2>
+                <p>From first contact to finished installation — we make it effortless.</p>
+            </div>
+            <div class="steps-grid">
+                <!-- Step 1 — Yellow -->
+                <div class="step-card step-card-yellow">
+                    <div class="step-pill">
+                        <span class="step-pill-dot step-pill-dot-yellow"></span>
+                        1st Step
+                    </div>
+                    <div class="step-tag">
+                        <i class="fas fa-clock"></i> 2–3 minutes
+                    </div>
+                    <h3>Get a Free Quote</h3>
+                    <p>Tell us about your property and windows. We'll send you a detailed quote with film options and pricing — no obligation.</p>
+                    <div class="step-visual">📋</div>
+                </div>
+                <!-- Step 2 — Purple -->
+                <div class="step-card step-card-purple">
+                    <div class="step-pill">
+                        <span class="step-pill-dot step-pill-dot-purple"></span>
+                        2nd Step
+                    </div>
+                    <div class="step-tag">
+                        <i class="fas fa-calendar-check"></i> Scheduled visit
+                    </div>
+                    <h3>We Come to You</h3>
+                    <p>Our certified technicians arrive at your property with all materials and tools. Professional installation with zero disruption to your day.</p>
+                    <div class="step-visual">🚐</div>
+                </div>
+                <!-- Step 3 — Green -->
+                <div class="step-card step-card-green">
+                    <div class="step-pill">
+                        <span class="step-pill-dot step-pill-dot-green"></span>
+                        3rd Step
+                    </div>
+                    <div class="step-tag">
+                        <i class="fas fa-check-circle"></i> Immediate results
+                    </div>
+                    <h3>Enjoy the Results</h3>
+                    <p>Feel the difference instantly — cooler rooms, lower bills, UV protection, and enhanced privacy. Backed by our quality warranty.</p>
+                    <div class="step-visual">🏠</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         INSTAGRAM SHOWCASE
+         ══════════════════════════════════════════════ -->
+    <section class="insta-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Follow Our Work</p>
+                <h2>Real Installs. Real Results.</h2>
+                <p>See our latest window film projects across Thailand on Instagram.</p>
+            </div>
+            <div class="insta-grid">
+                <a href="https://www.instagram.com/p/DOTc8duj-a-/" target="_blank" class="insta-card">
+                    <img src="insta1.jpeg" alt="JaiDeeClear window tinting installation at Anchan Flora villa, Phuket" loading="lazy">
+                    <div class="insta-overlay">
+                        <span class="insta-overlay-icon"><i class="fab fa-instagram"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DO704wUj9Wc/" target="_blank" class="insta-card">
+                    <img src="insta2.jpeg" alt="JaiDeeClear technician installing UV protection film" loading="lazy">
+                    <div class="insta-overlay">
+                        <span class="insta-overlay-icon"><i class="fab fa-instagram"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DNhwqW-PHUX/" target="_blank" class="insta-card">
+                    <img src="insta3.jpeg" alt="JaiDeeClear window film at Intira Villas, Rawai Phuket" loading="lazy">
+                    <div class="insta-overlay">
+                        <span class="insta-overlay-icon"><i class="fab fa-instagram"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DNXtl8gvIyE/?img_index=1" target="_blank" class="insta-card">
+                    <img src="insta4.jpeg" alt="JaiDeeClear window tinting at The Cube Amaze Phuket" loading="lazy">
+                    <div class="insta-overlay">
+                        <span class="insta-overlay-icon"><i class="fab fa-instagram"></i></span>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/p/DJ8567LvCMR/" target="_blank" class="insta-card">
+                    <img src="insta5.jpeg" alt="JaiDeeClear UV film installation at Escent Trang" loading="lazy">
+                    <div class="insta-overlay">
+                        <span class="insta-overlay-icon"><i class="fab fa-instagram"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div class="insta-follow">
+                <a href="https://www.instagram.com/jaideeclear" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    @jaideeclear on Instagram
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- ── Footer ── -->
+    <!-- ══════════════════════════════════════════════
+         CTA BANNER
+         ══════════════════════════════════════════════ -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Ready to Protect Your Property?</h2>
+                <p>Get a free on-site measurement and no-obligation quote. We serve all major cities across Thailand.</p>
+                <div class="hero-cta-group">
+                    <a href="schedule.html" class="btn btn-primary">Schedule a Free Quote</a>
+                    <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+         FOOTER
+         ══════════════════════════════════════════════ -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -711,72 +957,12 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
-                <p class="copyright">© 2025 JaiDeeClear. On-site service throughout Thailand</p>
+                <p class="copyright">&copy; 2025 JaiDeeClear. On-site service throughout Thailand.</p>
             </div>
         </div>
     </footer>
 
-    <!-- ── Map interactivity ── -->
-    <script>
-    (function () {
-        var pins = document.querySelectorAll('.map-pin');
-        var listItems = document.querySelectorAll('.city-list-item[data-pin]');
-        var tooltip = document.getElementById('map-tooltip');
-        var tooltipBg = document.getElementById('tooltip-bg');
-        var tooltipText = document.getElementById('tooltip-text');
 
-        /* Show SVG tooltip near a pin */
-        function showTip(pin) {
-            var inner = pin.querySelector('.pin-core');
-            var cx = parseFloat(inner.getAttribute('cx'));
-            var cy = parseFloat(inner.getAttribute('cy'));
-            var city = pin.getAttribute('data-city');
-            tooltipText.textContent = city;
-
-            /* Measure text width (approx 6.2px per char + 14px padding) */
-            var w = city.length * 6.2 + 14;
-            var h = 18;
-            var tx = cx - w / 2;
-            var ty = cy - inner.getAttribute('r') * 1 - h - 6;
-
-            tooltipBg.setAttribute('x', tx);
-            tooltipBg.setAttribute('y', ty);
-            tooltipBg.setAttribute('width', w);
-            tooltipBg.setAttribute('height', h);
-            tooltipText.setAttribute('x', tx + 7);
-            tooltipText.setAttribute('y', ty + 13);
-            tooltip.style.display = 'block';
-        }
-
-        function hideTip() {
-            tooltip.style.display = 'none';
-        }
-
-        /* Pin hover */
-        pins.forEach(function (pin) {
-            pin.addEventListener('mouseenter', function () { showTip(pin); });
-            pin.addEventListener('mouseleave', hideTip);
-        });
-
-        /* List item hover → light up matching pin */
-        listItems.forEach(function (item) {
-            var pinId = item.getAttribute('data-pin');
-            var pin = document.getElementById(pinId);
-            if (!pin) return;
-
-            item.addEventListener('mouseenter', function () {
-                pin.classList.add('pin-lit');
-                item.classList.add('item-lit');
-                showTip(pin);
-            });
-            item.addEventListener('mouseleave', function () {
-                pin.classList.remove('pin-lit');
-                item.classList.remove('item-lit');
-                hideTip();
-            });
-        });
-    })();
-    </script>
 
 </body>
 </html>
