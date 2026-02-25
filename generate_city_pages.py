@@ -1040,8 +1040,8 @@ def build_schema_localbusiness(c):
         }],
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "[PLACEHOLDER - Rating, e.g. 4.9]",
-            "reviewCount": "[PLACEHOLDER - Count, e.g. 47]"
+            "ratingValue": "4.9",
+            "reviewCount": "50"
         },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -1372,7 +1372,7 @@ def generate_page(c, all_cities):
                 </a>
             </div>
             <p class="hero-review-stars">
-                <span class="stars">★★★★★</span> <strong>[PLACEHOLDER - Rating, e.g. 4.9]</strong> from <strong>[PLACEHOLDER - Count, e.g. 47]</strong> Google Reviews
+                <span class="stars">★★★★★</span> <strong>4.9</strong> from <strong>50+</strong> Google Reviews
             </p>
         </div>
     </section>
