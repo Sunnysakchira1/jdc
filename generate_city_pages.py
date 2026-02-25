@@ -1350,7 +1350,7 @@ def generate_page(c, all_cities):
             <ol class="breadcrumb-list">
                 <li><a href="index.html">Home</a></li>
                 <li class="separator">›</li>
-                <li><a href="index.html#locations">Locations</a></li>
+                <li><a href="locations.html">Locations</a></li>
                 <li class="separator">›</li>
                 <li class="current">Window Tinting in {c['name']}</li>
             </ol>
