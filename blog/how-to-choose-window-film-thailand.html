@@ -211,6 +211,28 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
   .sticky-cta{display:block}
   body{padding-bottom:72px}
   .gold-banner{border-radius:0}
+  /* Comp tables: edge-to-edge on mobile */
+  .comp-table-wrap{margin-left:calc(-1 * clamp(16px,4vw,32px));margin-right:calc(-1 * clamp(16px,4vw,32px));border-radius:0}
+  /* Mid CTA button full width */
+  .mid-cta .btn{width:100%;justify-content:center}
+  /* Hero meta: tighter on mobile */
+  .hero-meta{gap:10px}
+  .hero-meta span{font-size:11.5px}
+  /* Sidebar cards: cap width when stacked */
+  .sb-card{max-width:560px;margin-left:auto;margin-right:auto}
+  /* Gold banner: full width padding adjustment */
+  .gold-banner h3{font-size:clamp(22px,5vw,34px)}
+  /* Callout: full bleed on mobile */
+  .callout{border-radius:0 10px 10px 0}
+}
+@media(max-width:480px){
+  /* Stack hero meta vertically on very small screens */
+  .hero-meta{flex-direction:column;align-items:center;gap:6px}
+  .hero-meta span::before{display:none}
+  /* Stat row: 2-col enforced */
+  .stat-row{grid-template-columns:repeat(2,1fr)}
+  /* Article h2: slightly tighter */
+  .article-body h2{margin-top:clamp(24px,5vw,36px)}
 }
 @media(max-width:480px){
   .stat-row{grid-template-columns:1fr 1fr}

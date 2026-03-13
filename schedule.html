@@ -810,6 +810,12 @@
             .measurement-card-single h3 {
                 font-size: 24px;
             }
+            /* Trust strip wraps to column */
+            #trust-strip { flex-direction: column; gap: 10px; align-items: flex-start; padding: 0 16px; }
+            /* Review grid: single column */
+            .sc-review-grid { grid-template-columns: 1fr !important; }
+            /* Quick-links wrap */
+            .sc-quick-links { flex-direction: column; align-items: center; gap: 8px !important; }
         }
             /* Social links icons */
     .social-links {
@@ -1406,7 +1412,7 @@
                 <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,4vw,36px);font-weight:700;letter-spacing:-.02em;color:#0A0805;margin-bottom:6px">4.9★ from 670+ verified reviews</h2>
                 <p style="font-size:15px;color:#7A6A50;font-weight:300">On-site service across Thailand — Bangkok, Phuket, Pattaya, Hua Hin, and more.</p>
             </div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px">
+            <div class="sc-review-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px">
                 <div style="background:#fff;border-radius:18px;padding:26px;border:1px solid rgba(249,165,0,0.14);position:relative">
                     <div style="position:absolute;top:14px;left:18px;font-family:'Cormorant Garamond',Georgia,serif;font-size:72px;color:rgba(249,165,0,0.12);line-height:1">"</div>
                     <div style="color:#FFB800;font-size:13px;letter-spacing:2px;margin-bottom:12px">★★★★★</div>

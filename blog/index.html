@@ -198,9 +198,23 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
   .sticky-cta{display:block}
   body{padding-bottom:72px}
   .gold-banner{border-radius:0;margin:0}
+  /* Featured post: stack image above content */
+  .post-featured .post-vis{min-height:160px;font-size:56px}
+  .post-featured .post-body{padding:clamp(20px,4vw,28px)}
+  .post-featured h2{font-size:clamp(20px,4.5vw,26px)}
+  /* City tags wrap cleanly */
+  .cities-strip{gap:7px}
+  .city-tag{font-size:12.5px;padding:7px 14px}
+  /* Gold banner */
+  .gold-banner h3{font-size:clamp(22px,5vw,34px)}
+  .gold-banner p{font-size:14px}
 }
 @media(max-width:500px){
   .post-grid-3{grid-template-columns:1fr}
+  /* Section heading */
+  .sec-hd{margin-bottom:clamp(28px,5vw,40px)}
+  /* Hero padding on very small screens */
+  .hero{padding:clamp(52px,12vw,80px) 0 clamp(44px,9vw,64px)}
 }
 </style>
 </head>
