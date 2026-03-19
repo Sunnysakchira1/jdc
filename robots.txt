@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow draft/test pages
+Disallow: /window-tinting-bangkok-v2.html
+
+Sitemap: https://jaideeclear.com/sitemap.xml
