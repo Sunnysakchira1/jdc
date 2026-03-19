@@ -548,8 +548,9 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
 const hdr=document.getElementById('hdr'),hburg=document.getElementById('hburg'),mmenu=document.getElementById('mmenu');
 window.addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',window.scrollY>20)});
 hburg.addEventListener('click',()=>{hburg.classList.toggle('open');mmenu.classList.toggle('open')});
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.12});
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:0,rootMargin:'0px 0px -10px 0px'});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+setTimeout(()=>document.querySelectorAll('.r').forEach(el=>el.classList.add('in')),1000);
 </script>
 </body>
 </html>
