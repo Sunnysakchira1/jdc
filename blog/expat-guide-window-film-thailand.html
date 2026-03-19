@@ -165,6 +165,23 @@ header.scrolled .hburg span{background:var(--ink)}
 .stat-card{background:#fff;border:1px solid var(--border-card);border-radius:16px;padding:20px 16px;text-align:center}
 .stat-num{font-family:var(--ff-d);font-size:clamp(28px,4vw,38px);font-weight:700;color:var(--gold-deep);line-height:1;margin-bottom:6px}
 .stat-label{font-size:12.5px;color:var(--muted);line-height:1.4;font-weight:400}
+.company-rank{display:flex;flex-direction:column;gap:20px;margin:clamp(24px,3vw,36px) 0}
+.company-card{background:#fff;border:1px solid var(--border-card);border-radius:18px;padding:clamp(18px,3vw,28px);display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:start;transition:box-shadow .28s cubic-bezier(.16,1,.3,1)}
+.company-card:hover{box-shadow:0 8px 32px rgba(249,165,0,.10)}
+.company-card.top{border-color:rgba(249,165,0,.4);background:linear-gradient(135deg,#FFFAED 0%,#fff 60%)}
+.rank-num{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--ff-d);font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.rank-num.gold{background:linear-gradient(135deg,var(--gold-light),var(--gold-deep));color:var(--ink)}
+.company-name{font-family:var(--ff-d);font-size:clamp(18px,2.2vw,22px);font-weight:700;margin-bottom:4px;color:var(--ink);line-height:1.15}
+.company-badge{display:inline-flex;align-items:center;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.10em;color:var(--gold-deep);background:var(--gold-faint);border:1px solid rgba(249,165,0,.3);padding:2px 9px;border-radius:980px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+.company-desc{font-size:clamp(14px,1.6vw,15.5px);color:var(--ink-soft);line-height:1.72;font-weight:300;margin:8px 0 12px;overflow-wrap:break-word;word-break:break-word}
+.company-facts{display:flex;flex-wrap:wrap;gap:7px}
+.company-fact{font-size:11.5px;color:var(--muted);background:var(--gold-faint);padding:4px 11px;border-radius:980px;font-weight:500;white-space:nowrap}
+.choose-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:clamp(24px,3vw,36px) 0}
+.choose-card{background:#fff;border:1px solid var(--border-card);border-radius:16px;padding:clamp(18px,2.5vw,24px)}
+.choose-card h4{font-family:var(--ff-d);font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.choose-card p{font-size:13.5px;color:var(--muted);line-height:1.65;font-weight:300;margin:0;overflow-wrap:break-word;word-break:break-word}
+.choose-card .icon{font-size:24px;margin-bottom:10px;display:block}
+@media(max-width:600px){.choose-grid{grid-template-columns:1fr}.company-card{grid-template-columns:38px 1fr;gap:12px}.rank-num{width:36px;height:36px;font-size:16px}}
 .related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:clamp(40px,6vw,56px)}
 .rel-card{background:#fff;border-radius:18px;border:1px solid var(--border-card);padding:clamp(20px,2.5vw,28px);transition:all .28s cubic-bezier(.16,1,.3,1);text-decoration:none;color:inherit;display:block}
 .rel-card:hover{box-shadow:0 10px 36px rgba(249,165,0,.10);transform:translateY(-3px)}
@@ -306,6 +323,8 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
             <li><a href="#costs">How Much Does Window Film Cost in Thailand?</a></li>
             <li><a href="#roi">Does Window Film Reduce Electricity Bills in Thailand?</a></li>
             <li><a href="#brands">Which Window Film Brands Are Available in Thailand?</a></li>
+            <li><a href="#best-companies">Best Window Tinting Companies in Thailand</a></li>
+            <li><a href="#how-to-choose">How to Choose a Window Tinting Company</a></li>
             <li><a href="#installation">What to Expect During Installation</a></li>
             <li><a href="#condo">Do You Need Condo Juristic Approval for Window Film?</a></li>
             <li><a href="#faq">Frequently Asked Questions</a></li>
@@ -468,6 +487,12 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
         </div>
 
         <p>If you want maximum light with strong heat protection, ask about <strong>spectrally selective films</strong> — products like V-Kool iQUE and 3M Prestige are engineered to let through high visible light (65–70% VLT) while specifically targeting and blocking infrared wavelengths. These achieve impressive TSER numbers at light VLTs that seem counterintuitive.</p>
+
+        <div class="mid-cta">
+          <h3>Not Sure Which VLT Is Right for Your Unit?</h3>
+          <p>Direction, floor level, and your personal light preference all affect the ideal choice. During your free on-site visit, we assess your specific windows and recommend the right film before you commit to anything.</p>
+          <a href="../schedule.html" class="btn btn-gold">Book Free Assessment</a>
+        </div>
 
         <h2 id="costs">How Much Does Window Film Cost in Thailand?</h2>
 
@@ -634,6 +659,12 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
           <p><strong>Villa owners see the fastest ROI.</strong> Large glass facades and higher AC load mean bigger absolute savings. Phuket and Koh Samui villa owners with extensive west-facing glass report monthly savings of 2,000–4,000 baht during hot season.</p>
         </div>
 
+        <div class="mid-cta">
+          <h3>Find Out How Much You Could Save</h3>
+          <p>We calculate your estimated monthly electricity saving based on your actual glass area during the free on-site measurement — at no cost or obligation.</p>
+          <a href="../schedule.html" class="btn btn-gold">Get My Free Savings Estimate</a>
+        </div>
+
         <h2 id="brands">Which Window Film Brands Are Available in Thailand?</h2>
 
         <p>The Thai market includes both international premium brands and established local suppliers. Here's what's operating in Thailand and what you should know about each.</p>
@@ -667,6 +698,135 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
           <li>Ask whether the film is IWFA (International Window Film Association) certified</li>
           <li>Reputable brands offer minimum 5-year warranty; premium products 10+ years or lifetime</li>
         </ul>
+
+        <h2 id="best-companies">Best Window Tinting Companies in Thailand (2026)</h2>
+
+        <p>Choosing a window film company in Thailand is harder than in most countries — there are dozens of small operators, minimal industry regulation, and quality varies enormously. Based on coverage, film quality, communication for English-speaking expats, and service track record, here are the top companies operating across Thailand.</p>
+
+        <div class="company-rank">
+
+          <div class="company-card top">
+            <div class="rank-num gold">1</div>
+            <div>
+              <div class="company-name">JaiDeeClear <span class="company-badge">Our Pick</span></div>
+              <p class="company-desc">The only window film company serving all 7 major expat cities in Thailand — Bangkok, Phuket, Pattaya, Hua Hin, Koh Samui, Krabi, and Chiang Rai — with a single team and consistent quality. JaiDeeClear specialises in premium nano-ceramic film for residential properties and takes an English-first approach: clear pricing, detailed written quotes broken down by room, and a free on-site measurement before you commit to anything. No franchise inconsistency — the same installation standards, film specs, and warranty documentation across every city. Rated highly by expats for transparent communication and reliable scheduling.</p>
+              <div class="company-facts">
+                <span class="company-fact">7 cities covered</span>
+                <span class="company-fact">Premium nano-ceramic film</span>
+                <span class="company-fact">Free on-site measurement</span>
+                <span class="company-fact">English-first service</span>
+                <span class="company-fact">Written quotes &amp; warranty</span>
+              </div>
+              <div style="margin-top:16px">
+                <a href="../schedule.html" class="btn btn-gold" style="font-size:13px;padding:10px 22px">Book Free Measurement with JaiDeeClear</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div class="rank-num">2</div>
+            <div>
+              <div class="company-name">Solarkool Thailand</div>
+              <p class="company-desc">One of Thailand's oldest window film suppliers with 20+ years in the market. Operates through a franchise network covering Bangkok, Pattaya, Hua Hin, Koh Samui, and Phuket. English-language website with accessible pricing information. Positioned at mid-market with a range from budget to premium. Quality and communication can vary between franchise locations. A reasonable option for expats in cities not covered by specialist providers.</p>
+              <div class="company-facts">
+                <span class="company-fact">20+ years operating</span>
+                <span class="company-fact">5 cities (franchise)</span>
+                <span class="company-fact">Mid-market pricing</span>
+                <span class="company-fact">English website</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div class="rank-num">3</div>
+            <div>
+              <div class="company-name">3M Goodfilm (Bangkok)</div>
+              <p class="company-desc">Authorised Thai distributor for 3M architectural and residential film. If you want the global 3M brand guarantee with 10–15 year residential warranties and proven product consistency, Goodfilm is the Bangkok-based route. Pricing is at the premium end of the market. Primarily Bangkok-focused; coverage in other cities is through third-party dealers of variable quality.</p>
+              <div class="company-facts">
+                <span class="company-fact">3M brand film</span>
+                <span class="company-fact">10–15 year warranty</span>
+                <span class="company-fact">Bangkok primary</span>
+                <span class="company-fact">Premium pricing</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div class="rank-num">4</div>
+            <div>
+              <div class="company-name">Topfilm Thailand</div>
+              <p class="company-desc">Thai residential installer offering solar, frosted, and decorative film at competitive pricing (100–350 baht per sqft). Warranties up to 10 years. Primarily serves Bangkok and central Thailand. Less English-language support than the top options but accessible via WhatsApp. Good value option for budget-conscious buyers not requiring multi-city coverage.</p>
+              <div class="company-facts">
+                <span class="company-fact">Competitive pricing</span>
+                <span class="company-fact">10-year warranty</span>
+                <span class="company-fact">Bangkok / Central Thailand</span>
+                <span class="company-fact">Solar + frosted film</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div class="rank-num">5</div>
+            <div>
+              <div class="company-name">Solar Gard Thailand</div>
+              <p class="company-desc">Bangkok distributor for Solar Gard film (owned by French multinational Saint-Gobain). Good mid-to-premium range with both metallic and nano-ceramic options; 10-year warranties standard. Distributor is based in Thalingchan, Bangkok. More commercial/office oriented but handles residential. Often more competitively priced than 3M for comparable ceramic film specifications.</p>
+              <div class="company-facts">
+                <span class="company-fact">Saint-Gobain brand</span>
+                <span class="company-fact">10-year warranty</span>
+                <span class="company-fact">Bangkok-based</span>
+                <span class="company-fact">Nano-ceramic available</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <h2 id="how-to-choose">How to Choose a Window Tinting Company in Thailand</h2>
+
+        <p>The difference between a good and bad window film installation is not just the film — it's the installer. Poorly applied film bubbles, peels at the edges, and fails well before the warranty period. Here is what to look for and what to avoid.</p>
+
+        <div class="choose-grid">
+          <div class="choose-card">
+            <span class="icon">📋</span>
+            <h4>They Measure On-Site First</h4>
+            <p>Any reputable company visits your property and measures every window before quoting. A quote over the phone based on square footage is a red flag — glass area varies hugely between properties of the same size.</p>
+          </div>
+          <div class="choose-card">
+            <span class="icon">📄</span>
+            <h4>Written Quote with Film Specs</h4>
+            <p>The quote should state the specific film (brand, series, VLT, TSER, UV%) and warranty period in writing — not just a price. If a company won't specify the film, you have no way to verify what was installed.</p>
+          </div>
+          <div class="choose-card">
+            <span class="icon">🏆</span>
+            <h4>Warranty Documentation</h4>
+            <p>A verbal warranty means nothing. Quality installers provide a written warranty document at completion. Ask upfront: "Will I receive a warranty certificate?" If the answer is vague, walk away.</p>
+          </div>
+          <div class="choose-card">
+            <span class="icon">🌏</span>
+            <h4>Multi-City or Consistent Coverage</h4>
+            <p>If you rent or own in multiple cities — or may relocate — a company with consistent quality across Thailand is worth more than a single-city specialist with no accountability elsewhere.</p>
+          </div>
+          <div class="choose-card">
+            <span class="icon">💬</span>
+            <h4>Responsive English Communication</h4>
+            <p>As an expat, you need to clearly understand what film you're getting and what the warranty covers. If a company can't communicate this clearly in English before the sale, they won't handle warranty claims clearly either.</p>
+          </div>
+          <div class="choose-card">
+            <span class="icon">🚩</span>
+            <h4>Red Flags to Avoid</h4>
+            <p>No on-site visit before quoting. No film brand or specs named. Warranty is verbal only. Significantly lower price than market rate (likely dyed film). No physical presence or office address. Cash only with no receipt.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p><strong>The right question to ask any installer:</strong> "What is the TSER rating of the film you're recommending, and can you show me the manufacturer's data sheet?" A professional installer answers this immediately. Someone selling unbranded film cannot.</p>
+        </div>
+
+        <div class="mid-cta">
+          <h3>Ready to Book with Thailand's #1 Rated Service?</h3>
+          <p>JaiDeeClear serves Bangkok, Phuket, Pattaya, Hua Hin, Koh Samui, Krabi, and Chiang Rai. Free on-site measurement, written quote with full film specs, and warranty documentation included.</p>
+          <a href="../schedule.html" class="btn btn-gold">Schedule My Free Measurement</a>
+        </div>
 
         <h2 id="installation">What to Expect During Installation</h2>
 
@@ -713,6 +873,13 @@ footer{border-top:1px solid var(--border);padding:clamp(36px,5vw,52px) 0;backgro
         </div>
 
         <p>Reputable window film installers operating in Thailand are familiar with this process and can advise on which film specifications are least likely to trigger juristic objections for your specific building.</p>
+
+        <div class="mid-cta">
+          <h3>Questions About Your Specific Building?</h3>
+          <p>We've installed in condos across Bangkok, Phuket, and Pattaya and know how most major developments' juristic committees handle window film. WhatsApp us or book a free visit — we'll give you an honest answer before you spend anything.</p>
+          <a href="../schedule.html" class="btn btn-gold" style="margin-right:10px">Book Free Visit</a>
+          <a href="https://wa.me/+66655079694" target="_blank" class="btn" style="background:#25D366;color:#fff;padding:13px 28px;border-radius:980px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:7px">WhatsApp Us</a>
+        </div>
 
         <h2 id="faq">Frequently Asked Questions</h2>
 
