@@ -1703,9 +1703,8 @@
                         });
                     }
                     
-                    // On success, show the success step and reset the form
-                    goToStep(6);
-                    this.reset();
+                    // On success, redirect to thank-you page for conversion tracking
+                    window.location.href = 'thank-you.html';
                 } else {
                     alert('There was an error submitting the form. Please try again.');
                 }
