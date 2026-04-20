@@ -16,7 +16,7 @@ FORMSPREE = "https://formspree.io/f/xovkoeap"
 LINE_URL = "https://line.me/ti/p/[PLACEHOLDER-LINE-ID]"
 FACEBOOK = "https://www.facebook.com/Jaideeclear"
 INSTAGRAM = "https://www.instagram.com/jaideeclear"
-SELINE_TOKEN = "900711a10bdeff9"
+GTM_ID = "GTM-PKRC2QVZ"
 LOGO = "jdclogo.jpg"
 
 # WhatsApp SVG icon path (shared across header + mobile menu)
@@ -1269,6 +1269,13 @@ def generate_page(c, all_cities):
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    }})(window,document,'script','dataLayer','{GTM_ID}');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -1301,9 +1308,6 @@ def generate_page(c, all_cities):
     {schema_bc}
     </script>
 
-    <!-- Seline Analytics -->
-    <script async src="https://cdn.seline.com/seline.js" data-token="{SELINE_TOKEN}"></script>
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -1311,6 +1315,10 @@ def generate_page(c, all_cities):
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- HEADER -->
     <header>

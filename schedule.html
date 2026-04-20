@@ -14,15 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium window tinting services in Thailand. Block 99% UV rays, reduce electricity costs, enhance privacy & security. Perfect for expats in villas, condos, commercial properties.">
     <title>JaiDeeClear - UV Protection Film </title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17263999567"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-17263999567');
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         /* ══════════════════════════════════════════════
@@ -1506,47 +1497,42 @@
     </footer>
 
     <script>
-        // Seline tracking helpers
+        // GTM dataLayer tracking helpers
+        window.dataLayer = window.dataLayer || [];
         let quoteStarted = false;
-        
+
         function ensureQuoteStarted() {
-            if (!quoteStarted && typeof seline === 'function') {
-                seline('event', 'quote: started');
+            if (!quoteStarted) {
+                dataLayer.push({ event: 'quote_started' });
                 quoteStarted = true;
             }
         }
-        
+
         function trackFilmSelected(series, priceRange, lifespan) {
             ensureQuoteStarted();
-            if (typeof seline === 'function') {
-                seline('event', 'quote: film_selected', {
-                    film: series.toLowerCase().replace(/\s+/g, '_'),
-                    price_range: priceRange,
-                    lifespan: lifespan
-                });
-            }
+            dataLayer.push({
+                event: 'quote_film_selected',
+                film: series.toLowerCase().replace(/\s+/g, '_'),
+                price_range: priceRange,
+                lifespan: lifespan
+            });
         }
-        
+
         function trackScheduleCTA() {
             ensureQuoteStarted();
-            if (typeof seline === 'function') {
-                seline('event', 'quote: schedule_cta_clicked');
-            }
+            dataLayer.push({ event: 'quote_schedule_cta_clicked' });
         }
-        
+
         function trackCatalogueOpen(series, url) {
-            if (typeof seline === 'function') {
-                seline('event', 'catalogue: opened', {
-                    series: series,
-                    url: url
-                });
-            }
+            dataLayer.push({
+                event: 'catalogue_opened',
+                series: series,
+                url: url
+            });
         }
-        
+
         function trackCTA(label) {
-            if (typeof seline === 'function') {
-                seline('event', 'cta: clicked', { label: label });
-            }
+            dataLayer.push({ event: 'cta_clicked', label: label });
         }
         
         let formData = {
@@ -1569,7 +1555,6 @@
                 document.getElementById('progressBar').style.display = 'none';
             }
             
-            // Track funnel step with Seline events
             const stepNames = {
                 1: 'property',
                 2: 'concern',
@@ -1578,19 +1563,13 @@
                 5: 'contact',
                 6: 'received'
             };
-            
+
             if (stepNames[stepNumber]) {
                 ensureQuoteStarted();
                 if (stepNumber === 6) {
-                    // Final confirmation step
-                    if (typeof seline === 'function') {
-                        seline('event', 'quote: received');
-                    }
+                    dataLayer.push({ event: 'quote_received' });
                 } else {
-                    // Track step view
-                    if (typeof seline === 'function') {
-                        seline('event', 'quote: step_viewed', { step: stepNames[stepNumber] });
-                    }
+                    dataLayer.push({ event: 'quote_step_viewed', step: stepNames[stepNumber] });
                 }
             }
             
@@ -1710,19 +1689,23 @@
                     body: formData
                 });
                 if (response.ok) {
-                    // Track successful quote submission
                     const data = new FormData(this);
                     const filmValue = data.get('film') || '';
-                    if (typeof seline === 'function') {
-                        seline('event', 'quote: submitted', {
-                            name_provided: !!data.get('full_name'),
-                            email_provided: !!data.get('email'),
-                            phone_provided: !!data.get('phone'),
-                            film: filmValue.toLowerCase().replace(/\s+/g, '_')
-                        });
-                    }
-                    
-                    // On success, redirect to thank-you page for conversion tracking
+                    dataLayer.push({
+                        event: 'quote_submitted',
+                        name_provided: !!data.get('name'),
+                        email_provided: !!data.get('email'),
+                        phone_provided: !!data.get('phone'),
+                        film: filmValue.toLowerCase().replace(/\s+/g, '_')
+                    });
+
+                    sessionStorage.setItem('ec_data', JSON.stringify({
+                        email: data.get('email') || '',
+                        phone_number: data.get('phone') || '',
+                        first_name: (data.get('name') || '').split(' ')[0] || '',
+                        last_name: (data.get('name') || '').split(' ').slice(1).join(' ') || ''
+                    }));
+
                     window.location.href = 'thank-you.html';
                 } else {
                     alert('There was an error submitting the form. Please try again.');
