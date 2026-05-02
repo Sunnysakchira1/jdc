@@ -46,7 +46,7 @@
         }
         .header-content {
             display: flex; justify-content: space-between; align-items: center;
-            max-width: 1100px; margin: 0 auto; padding: 0 32px; height: 72px;
+            max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 72px;
         }
         .logo-container { display: flex; align-items: center; }
         .logo-container a { display: flex; align-items: center; }
@@ -105,7 +105,7 @@
             background: #fff; color: #1d1d1f; line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
-        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         .hero {
             background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
@@ -286,6 +286,18 @@
             .comparison-table th, .comparison-table td { padding: 10px 10px; }
             .cta-banner { padding: 40px 24px; border-radius: 0; }
             .cta-banner h2 { font-size: 26px; }
+        }
+
+        /* ── Desktop enhancements ────────────────────────────────────── */
+        @media (min-width: 1200px) {
+            .hero h1 { font-size: 60px; }
+            .hero-sub { font-size: 20px; max-width: 680px; }
+            .section-header h2 { font-size: 44px; }
+            .catalogue-banner { padding: 44px 56px; }
+            .rec-bar { padding: 28px 40px; }
+        }
+        @media (min-width: 1300px) {
+            .films-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
 </head>

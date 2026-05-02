@@ -84,7 +84,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 32px;
             height: 72px;
@@ -205,7 +205,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* ── Header ── */
 
@@ -641,6 +641,28 @@
             .header-nav
             .insta-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .trusted-logos { gap: 28px; }
+        }
+
+        /* ── Desktop enhancements (1200px+) ─────────────────────────── */
+        @media (min-width: 1200px) {
+            .hero { padding: 104px 0 96px; }
+            .hero h1 { font-size: 68px; }
+            .hero-sub { font-size: 21px; max-width: 740px; }
+            .stat-number { font-size: 44px; }
+            .stat-label { font-size: 14px; }
+            .section-header h2 { font-size: 48px; }
+            .section-header p { font-size: 18px; }
+            .bento-stat { font-size: 52px; }
+            .bento-card h3 { font-size: 22px; }
+            .step-card { padding: 44px 36px; }
+            .step-card h3 { font-size: 30px; }
+            .properties-wrapper { padding: 56px 0 56px 56px; }
+            .property-card { flex: 0 0 210px; padding: 32px 24px; }
+            .property-icon { font-size: 40px; }
+            .city-pill { padding: 20px 22px; font-size: 16px; }
+            .insta-grid { gap: 16px; }
+            .cta-banner { padding: 80px 64px; }
+            .cta-banner h2 { font-size: 42px; }
         }
     </style>
 </head>
