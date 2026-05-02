@@ -9,26 +9,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/about.html</loc>
+    <loc>https://jaideeclear.com/about</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/schedule.html</loc>
+    <loc>https://jaideeclear.com/schedule</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/locations.html</loc>
+    <loc>https://jaideeclear.com/locations</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://jaideeclear.com/films.html</loc>
+    <loc>https://jaideeclear.com/films</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -36,99 +35,99 @@
 
   <!-- Location Pages -->
   <url>
-    <loc>https://jaideeclear.com/window-tinting-bangkok.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-bangkok</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/window-tinting-phuket.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-phuket</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/window-tinting-pattaya.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-pattaya</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/window-tinting-hua-hin.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-hua-hin</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/window-tinting-samui.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-samui</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/window-tinting-krabi.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-krabi</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/window-tinting-chiang-rai.html</loc>
+    <loc>https://jaideeclear.com/window-tinting-chiang-rai</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- Blog -->
   <url>
-    <loc>https://jaideeclear.com/blog/</loc>
+    <loc>https://jaideeclear.com/blog</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/how-to-choose-window-film-thailand.html</loc>
+    <loc>https://jaideeclear.com/blog/how-to-choose-window-film-thailand</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/uv-protection-windows-thailand.html</loc>
+    <loc>https://jaideeclear.com/blog/uv-protection-windows-thailand</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/window-tinting-cost-thailand.html</loc>
+    <loc>https://jaideeclear.com/blog/window-tinting-cost-thailand</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/window-tinting-hot-season-thailand.html</loc>
+    <loc>https://jaideeclear.com/blog/window-tinting-hot-season-thailand</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/hot-season-window-tinting-phuket-villas.html</loc>
+    <loc>https://jaideeclear.com/blog/hot-season-window-tinting-phuket-villas</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/hot-season-window-tinting-bangkok-homes.html</loc>
+    <loc>https://jaideeclear.com/blog/hot-season-window-tinting-bangkok-homes</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/hot-season-window-tinting-schools-bangkok.html</loc>
+    <loc>https://jaideeclear.com/blog/hot-season-window-tinting-schools-bangkok</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://jaideeclear.com/blog/expat-guide-window-film-thailand.html</loc>
+    <loc>https://jaideeclear.com/blog/expat-guide-window-film-thailand</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
