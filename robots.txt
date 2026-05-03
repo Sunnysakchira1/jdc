@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /window-tinting-bangkok-v2.html
+Disallow: /index-v2.html
 
 # OpenAI
 User-agent: GPTBot
