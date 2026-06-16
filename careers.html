@@ -597,6 +597,36 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jaideeclear.com/"},{"@type":"ListItem","position":2,"name":"Careers","item":"https://jaideeclear.com/careers"}]}
     </script>
+    <style id="nav-dropdown-css">
+        .nav-dropdown { position: relative; display: inline-flex; align-items: center; height: 72px; }
+        .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 5px; }
+        .nav-caret { font-size: 10px; transition: transform 0.2s ease; }
+        .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
+        .nav-dropdown-menu {
+            position: absolute; top: 100%; left: 50%;
+            transform: translateX(-50%) translateY(-6px);
+            background: rgba(255,255,255,0.98);
+            -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+            border: 1px solid #e5e5e7; border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            padding: 8px; min-width: 170px;
+            display: flex; flex-direction: column; gap: 2px;
+            opacity: 0; visibility: hidden; pointer-events: none;
+            transition: opacity 0.18s ease, transform 0.18s ease; z-index: 1001;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu {
+            opacity: 1; visibility: visible; pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+        .nav-dropdown-menu a {
+            font-size: 14px; font-weight: 500; color: #1d1d1f; text-decoration: none;
+            padding: 10px 16px; border-radius: 9px; white-space: nowrap; letter-spacing: -0.01em;
+        }
+        .nav-dropdown-menu a:hover { background: #f5f5f7; color: #f9a500; }
+        .nav-dropdown-menu a.active { color: #f9a500; font-weight: 600; }
+        @media (max-width: 768px) { .nav-dropdown { display: none; } }
+    </style>
 </head>
 <body>
 
@@ -616,7 +646,14 @@
             <nav class="header-nav">
                 <a href="/films" class="nav-link">Our Films</a>
                 <a href="/locations" class="nav-link">Locations</a>
-                <a href="/about" class="nav-link">About</a>
+                <div class="nav-dropdown">
+                    <a href="/about" class="nav-link nav-dropdown-toggle">About <span class="nav-caret">▾</span></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/about">About</a>
+                        <a href="/careers" class="active">Careers</a>
+                        <a href="/affiliates">Affiliates</a>
+                    </div>
+                </div>
                 <a href="/schedule" class="nav-link">Schedule</a>
                 <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
                     <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -635,6 +672,8 @@
         <a href="/films" class="nav-link">Our Films</a>
         <a href="/locations" class="nav-link">Locations</a>
         <a href="/about" class="nav-link">About</a>
+        <a href="/careers" class="nav-link active">Careers</a>
+        <a href="/affiliates" class="nav-link">Affiliates</a>
         <a href="/schedule" class="nav-link">Schedule</a>
         <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
             <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -834,6 +873,7 @@
                 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px">
                     <a href="/blog" class="footer-location-link">Blog</a>
                     <a href="/careers" class="footer-location-link active">Careers</a>
+                    <a href="/affiliates" class="footer-location-link">Affiliates</a>
                 </div>
                 <div class="social-links">
                     <a href="https://www.facebook.com/Jaideeclear" target="_blank" aria-label="Facebook">
