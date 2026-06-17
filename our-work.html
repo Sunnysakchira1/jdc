@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PKRC2QVZ');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See JaiDeeClear's premium window film projects across Phuket — luxury villas and estates in Layan, Surin and Bang Tao, beachfront resorts, hotels, and commercial venues. 40+ completed installations.">
+    <title>Our Work — Premium Window Film Projects in Phuket | JaiDeeClear</title>
+
+    <link rel="canonical" href="https://jaideeclear.com/our-work">
+
+    <meta property="og:title" content="Our Work — JaiDeeClear Premium Window Film Projects">
+    <meta property="og:description" content="40+ premium window film installations across Phuket — luxury villas, beachfront resorts, hotels, and commercial venues.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaideeclear.com/our-work">
+    <meta property="og:image" content="https://jaideeclear.com/jdclogo.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ══════════════════════════════════════════════
+           NAV BAR
+           ══════════════════════════════════════════════ */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e7;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 72px;
+        }
+        .logo-container { display: flex; align-items: center; }
+        .logo-container a { display: flex; align-items: center; }
+        .header-nav { display: flex; align-items: center; gap: 36px; }
+        .nav-link {
+            font-size: 15px;
+            font-weight: 500;
+            color: #1d1d1f;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+        .nav-link:hover { color: #f9a500; }
+        .nav-link.active { color: #f9a500; font-weight: 600; }
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 980px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(37,211,102,0.25);
+        }
+        .whatsapp-btn:hover {
+            background: #20BA5A;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+        }
+        .whatsapp-icon { width: 18px; height: 18px; flex-shrink: 0; }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            z-index: 1100;
+        }
+        .hamburger:hover { background: #f5f5f7; }
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #1d1d1f;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid #e5e5e7;
+            padding: 20px 24px 28px;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 999;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu .nav-link {
+            font-size: 17px;
+            font-weight: 500;
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f0f2;
+            color: #1d1d1f;
+        }
+        .mobile-menu .nav-link:last-of-type { border-bottom: none; }
+        .mobile-menu .whatsapp-btn {
+            margin-top: 12px;
+            justify-content: center;
+            padding: 14px 22px;
+            font-size: 15px;
+        }
+
+        /* ── About dropdown ── */
+        .nav-dropdown { position: relative; display: inline-flex; align-items: center; height: 72px; }
+        .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 5px; }
+        .nav-caret { font-size: 10px; transition: transform 0.2s ease; }
+        .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
+        .nav-dropdown-menu {
+            position: absolute; top: 100%; left: 50%;
+            transform: translateX(-50%) translateY(-6px);
+            background: rgba(255,255,255,0.98);
+            -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
+            border: 1px solid #e5e5e7; border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            padding: 8px; min-width: 170px;
+            display: flex; flex-direction: column; gap: 2px;
+            opacity: 0; visibility: hidden; pointer-events: none;
+            transition: opacity 0.18s ease, transform 0.18s ease; z-index: 1001;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu {
+            opacity: 1; visibility: visible; pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+        }
+        .nav-dropdown-menu a {
+            font-size: 14px; font-weight: 500; color: #1d1d1f; text-decoration: none;
+            padding: 10px 16px; border-radius: 9px; white-space: nowrap; letter-spacing: -0.01em;
+        }
+        .nav-dropdown-menu a:hover { background: #f5f5f7; color: #f9a500; }
+        .nav-dropdown-menu a.active { color: #f9a500; font-weight: 600; }
+
+        @media (max-width: 768px) {
+            .header-content { padding: 0 20px; height: 64px; }
+            .header-nav { display: none; }
+            .hamburger { display: flex; }
+            .mobile-menu { top: 64px; }
+            .nav-dropdown { display: none; }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #1d1d1f;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+            color: white;
+            padding: 80px 0 72px;
+            text-align: center;
+        }
+        .hero-eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #f9a500;
+            margin-bottom: 16px;
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero h1 em { font-style: normal; color: #f9a500; }
+        .hero-sub {
+            font-size: 19px;
+            color: #a8a8a8;
+            max-width: 660px;
+            margin: 0 auto 36px;
+            line-height: 1.5;
+        }
+        .hero-cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 980px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-primary { background: #f9a500; color: white; }
+        .btn-primary:hover { background: #e09400; transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.4); }
+        .btn-outline:hover { background: rgba(255,255,255,0.08); }
+
+        /* ── Stats bar ── */
+        .stats-bar { background: #f5f5f7; border-bottom: 1px solid #e5e5e7; padding: 28px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; text-align: center; }
+        .stat-item { padding: 0 16px; border-right: 1px solid #e5e5e7; }
+        .stat-item:last-child { border-right: none; }
+        .stat-number { font-size: 32px; font-weight: 700; color: #1d1d1f; letter-spacing: -0.02em; }
+        .stat-label { font-size: 13px; color: #6e6e73; margin-top: 4px; }
+
+        /* ── Sections ── */
+        .section { padding: 64px 0; }
+        .section-alt { background: #f5f5f7; }
+        .group-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 28px; }
+        .group-head h2 {
+            font-size: 28px; font-weight: 700; letter-spacing: -0.02em;
+            display: flex; align-items: center; gap: 12px;
+        }
+        .group-head h2 .g-icon { font-size: 24px; }
+        .group-count {
+            font-size: 13px; font-weight: 600; color: #f9a500;
+            background: #fff9ec; border: 1px solid #f3dca6;
+            padding: 3px 12px; border-radius: 980px; white-space: nowrap;
+        }
+
+        .intro {
+            text-align: center; max-width: 720px; margin: 0 auto 8px;
+            font-size: 17px; color: #6e6e73; line-height: 1.7;
+        }
+
+        /* ── Project grid ── */
+        .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .project-card {
+            background: white;
+            border: 1px solid #e5e5e7;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        .project-card:hover {
+            border-color: #f9a500;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+            transform: translateY(-3px);
+        }
+        .project-thumb { height: 210px; background: #f0f0f2; overflow: hidden; }
+        .project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.45s ease; }
+        .project-card:hover .project-thumb img { transform: scale(1.05); }
+        .project-thumb.placeholder {
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+        }
+        .project-thumb.placeholder span {
+            color: #f9a500; font-weight: 700; font-size: 13px;
+            letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85;
+        }
+        .project-body { padding: 16px 18px; }
+        .project-body h3 {
+            font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+            margin-bottom: 6px; line-height: 1.3;
+        }
+        .project-body .area {
+            font-size: 13px; color: #86868b;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .project-body .area i { color: #f9a500; font-size: 12px; }
+
+        /* ── CTA Banner ── */
+        .cta-banner {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+            border-radius: 24px;
+            padding: 64px 48px;
+            text-align: center;
+            color: white;
+            margin: 0 22px;
+        }
+        .cta-banner h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+        .cta-banner p { font-size: 17px; color: #a8a8a8; margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto; }
+
+        /* ── Footer ── */
+        footer { border-top: 1px solid #e5e5e7; padding: 40px 0; margin-top: 60px; }
+        .footer-content { text-align: center; }
+        .footer-locations { margin-bottom: 24px; }
+        .footer-locations h4 {
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.08em; color: #86868b; margin-bottom: 12px;
+        }
+        .footer-location-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+        .footer-location-link {
+            font-size: 13px; color: #6e6e73; text-decoration: none;
+            padding: 5px 12px; border: 1px solid #e5e5e7; border-radius: 980px;
+            transition: all 0.2s ease;
+        }
+        .footer-location-link:hover { border-color: #f9a500; color: #f9a500; }
+        .footer-location-link.active { border-color: #f9a500; color: #f9a500; font-weight: 600; }
+        .social-links { display: flex; justify-content: center; gap: 16px; margin-top: 24px; }
+        .social-links a { color: #f9a500; font-size: 24px; text-decoration: none; }
+        .social-links a:hover { color: #FFA500; }
+        .copyright { font-size: 12px; color: #86868b; margin-top: 16px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 980px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .stat-item { border-right: none; border-bottom: 1px solid #e5e5e7; padding-bottom: 16px; }
+            .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+            .group-head { flex-direction: column; gap: 8px; align-items: flex-start; }
+            .group-head h2 { font-size: 23px; }
+            .cta-banner { padding: 40px 24px; margin: 0; border-radius: 0; }
+            .cta-banner h2 { font-size: 26px; }
+        }
+        @media (max-width: 460px) {
+            .project-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jaideeclear.com/"},{"@type":"ListItem","position":2,"name":"Our Work","item":"https://jaideeclear.com/our-work"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ItemList","name":"JaiDeeClear Window Film Projects","description":"Premium window film installations completed by JaiDeeClear across Phuket and southern Thailand.","numberOfItems":36,"itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Baan Bua"},
+    {"@type":"ListItem","position":2,"name":"Botanica Foresta"},
+    {"@type":"ListItem","position":3,"name":"Layan Estate"},
+    {"@type":"ListItem","position":4,"name":"Cohiba Villas Layan"},
+    {"@type":"ListItem","position":5,"name":"Apella Estate"},
+    {"@type":"ListItem","position":6,"name":"Villa Surin"},
+    {"@type":"ListItem","position":7,"name":"Surin Gate"},
+    {"@type":"ListItem","position":8,"name":"Wings Phuket Villa"},
+    {"@type":"ListItem","position":9,"name":"Anchan Flora"},
+    {"@type":"ListItem","position":10,"name":"Sava"},
+    {"@type":"ListItem","position":11,"name":"The Cube"},
+    {"@type":"ListItem","position":12,"name":"Clover Residence"},
+    {"@type":"ListItem","position":13,"name":"Villa Qabala"},
+    {"@type":"ListItem","position":14,"name":"Casa Signature"},
+    {"@type":"ListItem","position":15,"name":"Villa Baby Thai"},
+    {"@type":"ListItem","position":16,"name":"Kano Estate"},
+    {"@type":"ListItem","position":17,"name":"Lake House"},
+    {"@type":"ListItem","position":18,"name":"Seastone Private Pool Villa"},
+    {"@type":"ListItem","position":19,"name":"Mountain View Villa"},
+    {"@type":"ListItem","position":20,"name":"Hidden Loft Patong"},
+    {"@type":"ListItem","position":21,"name":"Bangtao Tropical Residence"},
+    {"@type":"ListItem","position":22,"name":"The Base Bukit"},
+    {"@type":"ListItem","position":23,"name":"The Nai Harn"},
+    {"@type":"ListItem","position":24,"name":"Lotus Bleu Hotel"},
+    {"@type":"ListItem","position":25,"name":"Veranda Resort Phuket"},
+    {"@type":"ListItem","position":26,"name":"The Ozone Bangtao"},
+    {"@type":"ListItem","position":27,"name":"Diva Patong Hotel"},
+    {"@type":"ListItem","position":28,"name":"Angsana Beachfront"},
+    {"@type":"ListItem","position":29,"name":"The Plantation"},
+    {"@type":"ListItem","position":30,"name":"Laguna Park 2"},
+    {"@type":"ListItem","position":31,"name":"Supalai Primo"},
+    {"@type":"ListItem","position":32,"name":"Crème Café"},
+    {"@type":"ListItem","position":33,"name":"MR Patong"},
+    {"@type":"ListItem","position":34,"name":"Punjabi Restro"},
+    {"@type":"ListItem","position":35,"name":"The Jungle Club"},
+    {"@type":"ListItem","position":36,"name":"BTC Space"}
+    ]}
+    </script>
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKRC2QVZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ── Header ── -->
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="/">
+                    <img src="jdclogo.jpg" alt="JaiDeeClear Logo" style="height: 64px; width: auto; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="header-nav">
+                <a href="/films" class="nav-link">Our Films</a>
+                <a href="/our-work" class="nav-link active">Our Work</a>
+                <a href="/locations" class="nav-link">Locations</a>
+                <div class="nav-dropdown">
+                    <a href="/about" class="nav-link nav-dropdown-toggle">About <span class="nav-caret">▾</span></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="/about">About</a>
+                        <a href="/careers">Careers</a>
+                        <a href="/affiliates">Affiliates</a>
+                    </div>
+                </div>
+                <a href="/schedule" class="nav-link">Schedule</a>
+                <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Chat with Us
+                </a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile menu drawer -->
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+        <a href="/films" class="nav-link">Our Films</a>
+        <a href="/our-work" class="nav-link active">Our Work</a>
+        <a href="/locations" class="nav-link">Locations</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/careers" class="nav-link">Careers</a>
+        <a href="/affiliates" class="nav-link">Affiliates</a>
+        <a href="/schedule" class="nav-link">Schedule</a>
+        <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Chat with Us
+        </a>
+    </div>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-eyebrow">Our Work</p>
+            <h1>Trusted Across <em>Phuket's</em> Finest Properties</h1>
+            <p class="hero-sub">
+                From luxury Layan estates to beachfront resorts and Patong hotels, JaiDeeClear has installed premium window film across 40+ of Phuket's most demanding properties.
+            </p>
+            <div class="hero-cta-group">
+                <a href="/schedule" class="btn btn-primary">Get a Free Quote</a>
+                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Stats bar ── -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Premium Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label">Luxury Villas &amp; Estates</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Hotels &amp; Resorts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">UV Blockage Delivered</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── Luxury Villas & Estates ── -->
+    <section class="section">
+        <div class="container">
+            <div class="group-head">
+                <h2><span class="g-icon">🏝️</span> Luxury Villas & Estates</h2>
+                <span class="group-count">22 Projects</span>
+            </div>
+            <div class="project-grid">
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/baan-bua.jpg" alt="Baan Bua — JaiDeeClear premium window film project in Nai Harn, Phuket" loading="lazy"></div><div class="project-body"><h3>Baan Bua</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Nai Harn, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/botanica-foresta.jpg" alt="Botanica Foresta — JaiDeeClear premium window film project in Layan, Phuket" loading="lazy"></div><div class="project-body"><h3>Botanica Foresta</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Layan, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/layan-estate.jpg" alt="Layan Estate — JaiDeeClear premium window film project in Layan, Phuket" loading="lazy"></div><div class="project-body"><h3>Layan Estate</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Layan, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/cohiba-villas-layan.jpg" alt="Cohiba Villas Layan — JaiDeeClear premium window film project in Layan, Phuket" loading="lazy"></div><div class="project-body"><h3>Cohiba Villas Layan</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Layan, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/apella-estate.jpg" alt="Apella Estate — JaiDeeClear premium window film project in Layan, Phuket" loading="lazy"></div><div class="project-body"><h3>Apella Estate</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Layan, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/villa-surin.jpg" alt="Villa Surin — JaiDeeClear premium window film project in Surin, Phuket" loading="lazy"></div><div class="project-body"><h3>Villa Surin</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Surin, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/surin-gate.jpg" alt="Surin Gate — JaiDeeClear premium window film project in Surin, Phuket" loading="lazy"></div><div class="project-body"><h3>Surin Gate</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Surin, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/wings-phuket-villa.jpg" alt="Wings Phuket Villa — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Wings Phuket Villa</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/anchan-flora.jpg" alt="Anchan Flora — JaiDeeClear premium window film project in Thalang, Phuket" loading="lazy"></div><div class="project-body"><h3>Anchan Flora</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Thalang, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/sava.jpg" alt="Sava — JaiDeeClear premium window film project in Natai Beach" loading="lazy"></div><div class="project-body"><h3>Sava</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Natai Beach</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/the-cube.jpg" alt="The Cube — JaiDeeClear premium window film project in Kalim, Phuket" loading="lazy"></div><div class="project-body"><h3>The Cube</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Kalim, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/clover-residence.jpg" alt="Clover Residence — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Clover Residence</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/villa-qabala.jpg" alt="Villa Qabala — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Villa Qabala</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/casa-signature.jpg" alt="Casa Signature — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Casa Signature</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/villa-baby-thai.jpg" alt="Villa Baby Thai — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Villa Baby Thai</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/kano-estate.jpg" alt="Kano Estate — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Kano Estate</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/lake-house.jpg" alt="Lake House — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Lake House</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/seastone-private-pool-villa.jpg" alt="Seastone Private Pool Villa — JaiDeeClear premium window film project in Bang Tao, Phuket" loading="lazy"></div><div class="project-body"><h3>Seastone Private Pool Villa</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Bang Tao, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/mountain-view-villa.jpg" alt="Mountain View Villa — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Mountain View Villa</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/hidden-loft.jpg" alt="Hidden Loft — JaiDeeClear premium window film project in Patong, Phuket" loading="lazy"></div><div class="project-body"><h3>Hidden Loft</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Patong, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/bangtao-tropical-residence.jpg" alt="Bangtao Tropical Residence — JaiDeeClear premium window film project in Bang Tao, Phuket" loading="lazy"></div><div class="project-body"><h3>Bangtao Tropical Residence</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Bang Tao, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/the-base-bukit.jpg" alt="The Base (Bukit) — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>The Base (Bukit)</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Hotels & Resorts ── -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="group-head">
+                <h2><span class="g-icon">🏨</span> Hotels & Resorts</h2>
+                <span class="group-count">7 Projects</span>
+            </div>
+            <div class="project-grid">
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/the-nai-harn.jpg" alt="The Nai Harn — JaiDeeClear premium window film project in Nai Harn, Phuket" loading="lazy"></div><div class="project-body"><h3>The Nai Harn</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Nai Harn, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/lotus-bleu-hotel.jpg" alt="Lotus Bleu Hotel — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Lotus Bleu Hotel</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/veranda-resort-phuket.jpg" alt="Veranda Resort Phuket — JaiDeeClear premium window film project in Mai Khao, Phuket" loading="lazy"></div><div class="project-body"><h3>Veranda Resort Phuket</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Mai Khao, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/the-ozone-bangtao.jpg" alt="The Ozone Bangtao — JaiDeeClear premium window film project in Bang Tao, Phuket" loading="lazy"></div><div class="project-body"><h3>The Ozone Bangtao</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Bang Tao, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/diva-patong-hotel.jpg" alt="Diva Patong Hotel — JaiDeeClear premium window film project in Patong, Phuket" loading="lazy"></div><div class="project-body"><h3>Diva Patong Hotel</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Patong, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/angsana-beachfront.jpg" alt="Angsana Beachfront — JaiDeeClear premium window film project in Laguna, Phuket" loading="lazy"></div><div class="project-body"><h3>Angsana Beachfront</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Laguna, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/the-plantation.jpg" alt="The Plantation — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>The Plantation</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Condominiums & Residences ── -->
+    <section class="section">
+        <div class="container">
+            <div class="group-head">
+                <h2><span class="g-icon">🏢</span> Condominiums & Residences</h2>
+                <span class="group-count">2 Projects</span>
+            </div>
+            <div class="project-grid">
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/laguna-park-2.jpg" alt="Laguna Park 2 — JaiDeeClear premium window film project in Laguna, Phuket" loading="lazy"></div><div class="project-body"><h3>Laguna Park 2</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Laguna, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/supalai-primo.jpg" alt="Supalai Primo — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Supalai Primo</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Restaurants, Bars & Commercial ── -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="group-head">
+                <h2><span class="g-icon">🍽️</span> Restaurants, Bars & Commercial</h2>
+                <span class="group-count">5 Projects</span>
+            </div>
+            <div class="project-grid">
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/creme-cafe.jpg" alt="Crème Café — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Crème Café</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/mr-patong.jpg" alt="MR Patong — JaiDeeClear premium window film project in Patong, Phuket" loading="lazy"></div><div class="project-body"><h3>MR Patong</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Patong, Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/punjabi-restro.jpg" alt="Punjabi Restro — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>Punjabi Restro</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/the-jungle-club.jpg" alt="The Jungle Club — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>The Jungle Club</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+                <div class="project-card"><div class="project-thumb"><img src="/images/work/btc-space.jpg" alt="BTC Space — JaiDeeClear premium window film project in Phuket" loading="lazy"></div><div class="project-body"><h3>BTC Space</h3><div class="area"><i class="fas fa-map-marker-alt"></i> Phuket</div></div></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ── CTA Banner ── -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="cta-banner">
+            <h2>Want Your Property on This List?</h2>
+            <p>Join the villas, resorts, and businesses across Phuket that trust JaiDeeClear for premium window film. Free on-site consultation.</p>
+            <div class="hero-cta-group">
+                <a href="/schedule" class="btn btn-primary">Get a Free Quote</a>
+                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-locations">
+                    <h4>Service Locations</h4>
+                    <div class="footer-location-links">
+                        <a href="/window-tinting-bangkok" class="footer-location-link">Bangkok</a>
+                        <a href="/window-tinting-phuket" class="footer-location-link">Phuket</a>
+                        <a href="/window-tinting-pattaya" class="footer-location-link">Pattaya</a>
+                        <a href="/window-tinting-chiang-rai" class="footer-location-link">Chiang Rai</a>
+                        <a href="/window-tinting-samui" class="footer-location-link">Koh Samui</a>
+                        <a href="/window-tinting-krabi" class="footer-location-link">Krabi</a>
+                        <a href="/window-tinting-hua-hin" class="footer-location-link">Hua Hin</a>
+                    </div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px">
+                    <a href="/our-work" class="footer-location-link active">Our Work</a>
+                    <a href="/blog" class="footer-location-link">Blog</a>
+                    <a href="/careers" class="footer-location-link">Careers</a>
+                    <a href="/affiliates" class="footer-location-link">Affiliates</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Jaideeclear" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/jaideeclear" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <p class="copyright">© 2026 JaiDeeClear. On-site service throughout Thailand</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            var btn = document.getElementById('hamburger');
+            var menu = document.getElementById('mobileMenu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function() {
+                var isOpen = menu.classList.toggle('open');
+                btn.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+            menu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    menu.classList.remove('open');
+                    btn.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+            });
+            document.addEventListener('click', function(e) {
+                if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                    menu.classList.remove('open');
+                    btn.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
