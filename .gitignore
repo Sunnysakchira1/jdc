@@ -1,0 +1,29 @@
+# OS / editor cruft
+.DS_Store
+**/.DS_Store
+
+# Scratch, scraping, and working dirs (not part of the shipped site)
+.firecrawl/
+screenshots/
+gov/
+
+# Large source-only asset projects — NOT referenced by any shipped page
+video-assets/
+remotion/
+
+# Standalone internal tool (depends on video-assets/ stills, unlinked)
+jdc-carousel-measurement.html
+
+# Loose marketing / source files (the site links catalogue.pdf instead)
+Blue Modern Doors And Windows Service Poster.png
+with price.png
+with price (1).png
+Jaidee Clear Catalog .pdf
+Jaidee-Clear-UV-Protection-Film.pdf
+
+# Working notes
+geo-page-template-v2.md
+location-page-feedback.md
+
+# Unreferenced stray image
+images/729561489_17903963559448947_6287226192220742100_n.jpg

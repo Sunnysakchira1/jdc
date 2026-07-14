@@ -1,1331 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PKRC2QVZ');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JaiDeeClear are Thailand's premium window film specialists. 30+ projects, 99% UV blockage, 5-year warranty. Serving Bangkok, Phuket, Pattaya, Chiang Rai & more.">
-    <title>JaiDeeClear — Window Film Specialists in Thailand | About Us</title>
-
-    <link rel="canonical" href="https://jaideeclear.com/about">
-
-    <meta property="og:title" content="About JaiDeeClear — Premium UV Protection Film Across Thailand">
-    <meta property="og:description" content="Trusted by property developers, luxury property owners and corporate buildings. 30+ premium projects, 99% UV blockage, 5-year warranty.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jaideeclear.com/about">
-    <meta property="og:image" content="https://jaideeclear.com/jdclogo.jpg">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        /* ══════════════════════════════════════════════
-           NAV BAR
-           ══════════════════════════════════════════════ */
-        header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid #e5e5e7;
-            z-index: 1000;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 32px;
-            height: 72px;
-        }
-        .logo-container { display: flex; align-items: center; }
-        .logo-container a { display: flex; align-items: center; }
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-        }
-        .nav-link {
-            font-size: 15px;
-            font-weight: 500;
-            color: #1d1d1f;
-            text-decoration: none;
-            letter-spacing: -0.01em;
-            transition: color 0.2s ease;
-            white-space: nowrap;
-        }
-        .nav-link:hover { color: #f9a500; }
-        .nav-link.active { color: #f9a500; font-weight: 600; }
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #25D366;
-            color: white;
-            padding: 10px 22px;
-            border-radius: 980px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            white-space: nowrap;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(37,211,102,0.25);
-        }
-        .whatsapp-btn:hover {
-            background: #20BA5A;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 14px rgba(37,211,102,0.35);
-        }
-        .whatsapp-icon { width: 18px; height: 18px; flex-shrink: 0; }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            width: 40px;
-            height: 40px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-            border-radius: 8px;
-            transition: background 0.2s;
-            z-index: 1100;
-        }
-        .hamburger:hover { background: #f5f5f7; }
-        .hamburger span {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: #1d1d1f;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            transform-origin: center;
-        }
-        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 72px;
-            left: 0;
-            right: 0;
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid #e5e5e7;
-            padding: 20px 24px 28px;
-            flex-direction: column;
-            gap: 4px;
-            z-index: 999;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-        }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu .nav-link {
-            font-size: 17px;
-            font-weight: 500;
-            padding: 14px 0;
-            border-bottom: 1px solid #f0f0f2;
-            color: #1d1d1f;
-        }
-        .mobile-menu .nav-link:last-of-type { border-bottom: none; }
-        .mobile-menu .whatsapp-btn {
-            margin-top: 12px;
-            justify-content: center;
-            padding: 14px 22px;
-            font-size: 15px;
-        }
-        @media (max-width: 768px) {
-            .header-content { padding: 0 20px; height: 64px; }
-            .header-nav { display: none; }
-            .hamburger { display: flex; }
-            .mobile-menu { top: 64px; }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #ffffff;
-            color: #1d1d1f;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ── Header ── */
-
-        /* ── Hero ── */
-        .hero {
-            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
-            color: white;
-            padding: 80px 0 72px;
-            text-align: center;
-        }
-
-        .hero-eyebrow {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #f9a500;
-            margin-bottom: 16px;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 em {
-            font-style: normal;
-            color: #f9a500;
-        }
-
-        .hero-sub {
-            font-size: 19px;
-            color: #a8a8a8;
-            max-width: 620px;
-            margin: 0 auto 36px;
-            line-height: 1.5;
-        }
-
-        .hero-cta-group {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 28px;
-            border-radius: 980px;
-            font-size: 15px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: #f9a500;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #e09400;
-            transform: translateY(-1px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: white;
-            border: 1.5px solid rgba(255,255,255,0.4);
-        }
-
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.08);
-        }
-
-        /* ── Stats bar ── */
-        .stats-bar {
-            background: #f5f5f7;
-            border-bottom: 1px solid #e5e5e7;
-            padding: 28px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 0 16px;
-            border-right: 1px solid #e5e5e7;
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1d1d1f;
-            letter-spacing: -0.02em;
-        }
-
-        .stat-label {
-            font-size: 13px;
-            color: #6e6e73;
-            margin-top: 4px;
-        }
-
-        /* ── Sections ── */
-        .section {
-            padding: 72px 0;
-        }
-
-        .section-alt {
-            background: #f5f5f7;
-        }
-
-        .section-
-
-        .section-eyebrow {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #f9a500;
-            margin-bottom: 12px;
-        }
-
-        .section-header h2 {
-            font-size: 40px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 17px;
-            color: #6e6e73;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-
-        /* ── Why Choose grid ── */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .benefit-card {
-            background: white;
-            border-radius: 18px;
-            padding: 32px 28px;
-            border: 1px solid #e5e5e7;
-            text-align: center;
-        }
-
-        .benefit-icon {
-            font-size: 40px;
-            margin-bottom: 16px;
-        }
-
-        .benefit-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .benefit-card p {
-            font-size: 14px;
-            color: #6e6e73;
-            line-height: 1.6;
-        }
-
-        /* ── Film Catalogue ── */
-        .film-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .film-card {
-            background: white;
-            border-radius: 18px;
-            padding: 28px 24px;
-            border: 1px solid #e5e5e7;
-            transition: all 0.2s ease;
-        }
-
-        .film-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-            transform: translateY(-2px);
-            border-color: #f9a500;
-        }
-
-        .film-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: #f9a500;
-            color: white;
-            border-radius: 50%;
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 14px;
-        }
-
-        .film-card h3 {
-            font-size: 17px;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            color: #1d1d1f;
-        }
-
-        .film-card p {
-            font-size: 14px;
-            color: #6e6e73;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        .film-card .film-note {
-            font-size: 13px;
-            color: #86868b;
-            font-style: italic;
-            border-left: 3px solid #f9a500;
-            padding-left: 12px;
-            margin-top: 10px;
-        }
-
-        /* ── UV Protection callout ── */
-        .uv-callout {
-            background: #fff9ec;
-            border: 1px solid #f9a500;
-            border-radius: 18px;
-            padding: 36px 40px;
-            margin-bottom: 0;
-        }
-
-        .uv-callout h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #1d1d1f;
-        }
-
-        .uv-callout ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-
-        .uv-callout ul li {
-            font-size: 15px;
-            color: #1d1d1f;
-            padding: 6px 0;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .uv-callout ul li::before {
-            content: "•";
-            color: #f9a500;
-            font-weight: 700;
-            position: absolute;
-            left: 0;
-        }
-
-        .uv-callout .uv-highlight {
-            background: #1d1d1f;
-            color: white;
-            border-radius: 12px;
-            padding: 16px 20px;
-            font-size: 15px;
-            font-family: monospace;
-            margin-bottom: 16px;
-        }
-
-        .uv-callout .uv-cta {
-            font-size: 16px;
-            font-weight: 600;
-            color: #1d1d1f;
-        }
-
-        /* ── Projects section ── */
-        .projects-intro {
-            font-size: 17px;
-            color: #6e6e73;
-            line-height: 1.7;
-            max-width: 720px;
-            margin: 0 auto 40px;
-            text-align: center;
-        }
-
-        .project-types-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        .project-type-item {
-            background: white;
-            border-radius: 14px;
-            padding: 20px 20px;
-            border: 1px solid #e5e5e7;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 15px;
-            font-weight: 500;
-            color: #1d1d1f;
-        }
-
-        .project-type-icon {
-            font-size: 24px;
-            flex-shrink: 0;
-        }
-
-        /* ── Recommendation Guide ── */
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-
-        .guide-card {
-            background: white;
-            border-radius: 14px;
-            padding: 24px 24px;
-            border: 1px solid #e5e5e7;
-            transition: all 0.2s ease;
-        }
-
-        .guide-card:hover {
-            border-color: #f9a500;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-        }
-
-        .guide-card h4 {
-            font-size: 15px;
-            font-weight: 600;
-            color: #6e6e73;
-            margin-bottom: 8px;
-        }
-
-        .guide-card p {
-            font-size: 15px;
-            color: #1d1d1f;
-            line-height: 1.5;
-        }
-
-        .guide-card .price-tag {
-            display: inline-block;
-            background: #f9a500;
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 980px;
-            margin-top: 8px;
-        }
-
-        /* ── Consultation section ── */
-        .consultation-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .consultation-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .consultation-list li {
-            font-size: 15px;
-            color: #1d1d1f;
-            padding: 10px 0;
-            padding-left: 28px;
-            position: relative;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .consultation-list li:last-child {
-            border-bottom: none;
-        }
-
-        .consultation-list li::before {
-            content: "✓";
-            color: #f9a500;
-            font-weight: 700;
-            position: absolute;
-            left: 0;
-        }
-
-        .contact-info-card {
-            background: #1d1d1f;
-            color: white;
-            border-radius: 18px;
-            padding: 36px 32px;
-        }
-
-        .contact-info-card h3 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 24px;
-            color: white;
-        }
-
-        .contact-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            margin-bottom: 18px;
-        }
-
-        .contact-row-icon {
-            font-size: 18px;
-            color: #f9a500;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .contact-row-text {
-            font-size: 15px;
-            color: #a8a8a8;
-            line-height: 1.5;
-        }
-
-        .contact-row-text strong {
-            color: white;
-            display: block;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            margin-bottom: 2px;
-        }
-
-        /* ── Important Notes ── */
-        .notes-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .note-item {
-            background: #f5f5f7;
-            border-radius: 14px;
-            padding: 20px 20px;
-            border-left: 4px solid #f9a500;
-        }
-
-        .note-item h4 {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #f9a500;
-            margin-bottom: 6px;
-        }
-
-        .note-item p {
-            font-size: 14px;
-            color: #6e6e73;
-            line-height: 1.5;
-        }
-
-        /* ── CTA Banner ── */
-        .cta-banner {
-            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
-            border-radius: 24px;
-            padding: 64px 48px;
-            text-align: center;
-            color: white;
-            margin: 0 22px;
-        }
-
-        .cta-banner h2 {
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-        }
-
-        .cta-banner p {
-            font-size: 17px;
-            color: #a8a8a8;
-            margin-bottom: 32px;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ── Footer ── */
-        footer {
-            border-top: 1px solid #e5e5e7;
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-locations {
-            margin-bottom: 24px;
-        }
-
-        .footer-locations h4 {
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #86868b;
-            margin-bottom: 12px;
-        }
-
-        .footer-location-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .footer-location-link {
-            font-size: 13px;
-            color: #6e6e73;
-            text-decoration: none;
-            padding: 5px 12px;
-            border: 1px solid #e5e5e7;
-            border-radius: 980px;
-            transition: all 0.2s ease;
-        }
-
-        .footer-location-link:hover {
-            border-color: #f9a500;
-            color: #f9a500;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 24px;
-        }
-
-        .social-links a {
-            color: #f9a500;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: #FFA500;
-        }
-
-        .copyright {
-            font-size: 12px;
-            color: #86868b;
-            margin-top: 16px;
-        }
-
-        /* ── Responsive ── */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-
-            .stat-item {
-                border-right: none;
-                border-bottom: 1px solid #e5e5e7;
-                padding-bottom: 16px;
-            }
-
-            .stat-item:nth-last-child(-n+2) {
-                border-bottom: none;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .film-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-types-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .guide-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .consultation-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .notes-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header h2 {
-                font-size: 30px;
-            }
-
-            .cta-banner {
-                padding: 40px 24px;
-                margin: 0;
-                border-radius: 0;
-            }
-
-            .cta-banner h2 {
-                font-size: 26px;
-            }
-
-            .uv-callout {
-                padding: 28px 24px;
-            }
-
-            .header-nav
-        }
-    </style>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","@id":"https://jaideeclear.com/#business","name":"JaiDeeClear","url":"https://jaideeclear.com","logo":{"@type":"ImageObject","url":"https://jaideeclear.com/jdclogo.jpg"},"telephone":"+66655079694","email":"jaideeclear@gmail.com","sameAs":["https://www.facebook.com/Jaideeclear","https://www.instagram.com/jaideeclear"],"description":"Professional window film installation across 7 cities in Thailand. Solar control, UV protection, privacy, and safety film for residential and commercial properties."}
-    </script>
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jaideeclear.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://jaideeclear.com/about"}]}
-    </script>
-    <style id="nav-dropdown-css">
-        .nav-dropdown { position: relative; display: inline-flex; align-items: center; height: 72px; }
-        .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 5px; }
-        .nav-caret { font-size: 10px; transition: transform 0.2s ease; }
-        .nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
-        .nav-dropdown-menu {
-            position: absolute; top: 100%; left: 50%;
-            transform: translateX(-50%) translateY(-6px);
-            background: rgba(255,255,255,0.98);
-            -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
-            border: 1px solid #e5e5e7; border-radius: 14px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-            padding: 8px; min-width: 170px;
-            display: flex; flex-direction: column; gap: 2px;
-            opacity: 0; visibility: hidden; pointer-events: none;
-            transition: opacity 0.18s ease, transform 0.18s ease; z-index: 1001;
-        }
-        .nav-dropdown:hover .nav-dropdown-menu,
-        .nav-dropdown:focus-within .nav-dropdown-menu {
-            opacity: 1; visibility: visible; pointer-events: auto;
-            transform: translateX(-50%) translateY(0);
-        }
-        .nav-dropdown-menu a {
-            font-size: 14px; font-weight: 500; color: #1d1d1f; text-decoration: none;
-            padding: 10px 16px; border-radius: 9px; white-space: nowrap; letter-spacing: -0.01em;
-        }
-        .nav-dropdown-menu a:hover { background: #f5f5f7; color: #f9a500; }
-        .nav-dropdown-menu a.active { color: #f9a500; font-weight: 600; }
-        @media (max-width: 768px) { .nav-dropdown { display: none; } }
-    </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PKRC2QVZ');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About JaiDeeClear — Window Film Specialists in Thailand</title>
+<meta name="description" content="JaiDeeClear are Thailand's professional window film specialists — 30+ premium projects, 99% UV blockage, 10+ years' experience. Fitted on-site across Bangkok, Phuket &amp; Chonburi.">
+<link rel="canonical" href="https://jaideeclear.com/about">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta property="og:title" content="About JaiDeeClear — Premium Window Film Across Thailand">
+<meta property="og:description" content="Trusted by property developers, luxury homeowners and corporate buildings. 30+ premium projects, 99% UV blockage, professional on-site installation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaideeclear.com/about">
+<meta property="og:image" content="https://jaideeclear.com/jdclogo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16120F; --ink-2:#241D18; --ink-3:#34291F;
+  --cream:#FAF6F0; --cream-2:#F3EBDF; --white:#fff;
+  --orange:#F5A623; --orange-d:#E0940A; --orange-soft:#FDEDCB; --brand-ink:#8A6300;
+  --muted:#7B6F62; --muted-2:#A89A8A; --line:#E9E0D2; --line-dk:#3A2F25;
+  --gold:#F6A609; --green:#25D366;
+  --sans:'Inter',system-ui,sans-serif; --head:'Plus Jakarta Sans',var(--sans); --serif:'Fraunces',Georgia,serif;
+  --shadow:0 18px 50px -22px rgba(22,18,15,.45); --shadow-sm:0 8px 24px -12px rgba(22,18,15,.30);
+  --r:18px; --r-sm:12px; --wrap:1180px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.08;letter-spacing:-.02em;color:var(--ink)}
+.acc{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--orange)}
+.eyebrow{font-family:var(--head);font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--head);font-weight:700;font-size:.95rem;padding:15px 26px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:.22s ease;white-space:nowrap}
+.btn-primary{background:var(--orange);color:var(--ink);box-shadow:0 12px 28px -10px rgba(245,166,35,.6)}
+.btn-primary:hover{background:var(--orange-d);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-dk)}
+.btn-ghost.on-dark{color:#fff;border-color:rgba(255,255,255,.28)}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+.btn-wa{background:var(--green);color:#fff}
+.btn-wa:hover{filter:brightness(.94);transform:translateY(-2px)}
+.phone{display:none!important}
+.ico{width:18px;height:18px;flex:none}
+
+/* ribbon + header (global) */
+.ribbon{background:var(--ink);color:#fff;text-align:center;font-size:.82rem;font-weight:500;padding:9px 16px;font-family:var(--head)}
+.ribbon b{color:var(--orange)}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,240,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:72px}
+.logo{height:34px;width:auto;border-radius:6px}
+.nav-links{display:flex;gap:26px;margin-left:8px}
+.nav-links a{font-family:var(--head);font-weight:600;font-size:.92rem;color:var(--ink-2)}
+.nav-links a:hover,.nav-links a.on{color:var(--orange)}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.burger{display:none;background:none;border:0;cursor:pointer}
+
+/* breadcrumb */
+.crumb{background:var(--cream-2);border-bottom:1px solid var(--line)}
+.crumb-in{display:flex;gap:8px;align-items:center;padding:12px 0;font-size:.82rem;color:var(--muted);font-family:var(--head);font-weight:600;flex-wrap:wrap}
+.crumb-in a:hover{color:var(--orange)}
+.crumb-in .sep{color:var(--muted-2)}
+.crumb-in .cur{color:var(--ink)}
+
+/* hero */
+.fhero{background:radial-gradient(120% 120% at 80% 0%,#34291F 0%,var(--ink) 55%);color:#fff;text-align:center;padding:66px 0 60px;position:relative;overflow:hidden}
+.fhero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 80% 10%,rgba(245,166,35,.18),transparent 60%);pointer-events:none}
+.fhero .wrap{position:relative;z-index:2}
+.fhero h1{font-size:3.2rem;color:#fff;margin:12px 0 14px}
+.fhero p{color:rgba(255,255,255,.78);font-size:1.12rem;max-width:60ch;margin:0 auto 26px}
+.fhero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.uv-note{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:.85rem;color:rgba(255,255,255,.7);font-weight:500}
+.uv-note b{color:var(--orange)}
+
+section{padding:64px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.sec-head h2{font-size:2.2rem;margin:10px 0 12px}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+
+/* recommendation bar */
+.recbar{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:-34px auto 0;position:relative;z-index:3;max-width:var(--wrap)}
+.rec{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;box-shadow:var(--shadow-sm)}
+.rec .lbl{font-family:var(--head);font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.rec .val{font-family:var(--head);font-weight:800;font-size:1.05rem;color:var(--ink)}
+.rec .val span{color:var(--muted);font-weight:600;font-size:.9rem}
+
+/* catalogue banner */
+.catbanner{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:var(--r);padding:30px 36px;box-shadow:var(--shadow)}
+.catbanner h3{color:#fff;font-size:1.4rem;margin-bottom:4px}
+.catbanner p{color:rgba(255,255,255,.65);font-size:.92rem;max-width:52ch}
+.catbanner .acts{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+
+/* films grid */
+.films-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.film-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:.2s}
+.film-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.film-card.popular{border-color:var(--orange);box-shadow:0 0 0 1px var(--orange),0 24px 50px -26px rgba(245,166,35,.5)}
+.film-card.premium{border-color:var(--line-dk);background:linear-gradient(180deg,#fff,#FCF7EF)}
+.film-tag{position:absolute;top:-12px;left:28px;font-family:var(--head);font-weight:700;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.film-tag.pop{background:var(--orange);color:var(--ink)}
+.film-tag.prem{background:var(--ink);color:var(--orange)}
+.film-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+.film-name{font-size:1.25rem}
+.film-life{display:inline-block;margin-top:4px;font-size:.76rem;font-weight:600;color:var(--brand-ink);background:var(--orange-soft);padding:3px 10px;border-radius:999px}
+.film-price{text-align:right;flex:none}
+.film-price b{font-family:var(--head);font-weight:800;font-size:1.5rem;color:var(--orange);display:block;line-height:1}
+.film-price small{font-size:.72rem;color:var(--muted)}
+.film-desc{color:var(--ink-2);font-size:.92rem;margin-bottom:18px}
+.film-suit{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line);margin-bottom:18px}
+.film-suit h4{font-family:var(--head);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.film-suit .for h4{color:var(--green)}
+.film-suit .not h4{color:#B4531E}
+.film-suit p{font-size:.85rem;color:var(--muted)}
+.film-actions{margin-top:auto;display:flex;gap:10px}
+.film-actions .btn{flex:1;justify-content:center;padding:12px 14px;font-size:.9rem}
+.film-actions .btn-ghost{flex:none;padding:12px 14px}
+
+/* cross-link band */
+.xband{background:var(--cream-2)}
+.xgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.xcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 32px;display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.xcard h3{font-size:1.3rem}
+.xcard p{color:var(--muted);font-size:.95rem;margin-bottom:8px}
+
+/* final cta */
+.final{background:radial-gradient(120% 120% at 20% 0%,#34291F,var(--ink));color:#fff;text-align:center}
+.final h2{color:#fff;font-size:2.4rem;margin-bottom:14px}
+.final p{color:rgba(255,255,255,.75);max-width:48ch;margin:0 auto 26px}
+.final .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* footer */
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 28px;border-top:1px solid var(--line-dk)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.5fr;gap:30px;padding-bottom:34px;border-bottom:1px solid var(--line-dk)}.foot-grid .foot-social{display:flex;gap:10px;margin-top:16px}.foot-grid .foot-social a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:0;border-radius:50%;background:rgba(255,255,255,.08);color:#fff}.foot-grid .foot-social a:hover{background:var(--orange);color:var(--ink)}.foot-grid .foot-social svg{width:18px;height:18px}.foot-contact{font-size:.86rem;line-height:1.55;color:rgba(255,255,255,.6);margin-bottom:12px}.foot-hours{font-size:.86rem;color:rgba(255,255,255,.6);margin-top:10px}@media(max-width:1024px){.foot-grid{grid-template-columns:repeat(3,1fr)}}
+.foot-grid h4{font-family:var(--head);color:#fff;font-size:.95rem;margin-bottom:14px}
+.foot-grid a{display:block;font-size:.88rem;padding:4px 0;color:rgba(255,255,255,.6)}
+.foot-grid a:hover{color:var(--orange)}
+.foot-grid .soon{color:rgba(255,255,255,.32)}
+.foot-logo{height:32px;margin-bottom:14px;border-radius:6px}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:22px;font-size:.8rem}
+.concept-tag{font-family:var(--head);color:var(--orange);font-weight:700}
+
+/* mobile bar */
+.mobile-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(22,18,15,.96);backdrop-filter:blur(8px);padding:10px 14px;gap:10px;border-top:1px solid var(--line-dk)}
+.mobile-bar .btn{flex:1;justify-content:center;padding:13px}
+
+@media(max-width:920px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .fhero h1{font-size:2.4rem}
+  .recbar{grid-template-columns:1fr;margin-top:24px}
+  .films-grid{grid-template-columns:1fr}
+  .xgrid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .nav-wa{display:none}
+  .mobile-bar{display:flex}
+  body{padding-bottom:64px}
+  section{padding:52px 0}
+}
+@media(max-width:520px){.sec-head h2{font-size:1.8rem}.film-suit{grid-template-columns:1fr}}
+
+/* ── About page-specific ── */
+.abt-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.abt-stat{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;text-align:center}
+.abt-stat .n{font-family:var(--head);font-weight:800;font-size:2.5rem;color:var(--orange);line-height:1}
+.abt-stat .l{font-weight:600;margin-top:6px}
+.abt-stat small{color:var(--muted);font-size:.82rem;display:block;margin-top:2px}
+
+.lead{max-width:760px;margin:0 auto 34px;text-align:center;color:var(--ink-2);font-size:1.05rem;line-height:1.75}
+.lead strong{color:var(--ink)}
+
+.ptypes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ptype{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);padding:16px 18px;font-family:var(--head);font-weight:600;font-size:.95rem;color:var(--ink-2)}
+.ptype .em{font-size:1.3rem;flex:none;line-height:1}
+
+.uvbox{background:#fff;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:var(--r);padding:34px 38px;max-width:920px;margin:0 auto;box-shadow:var(--shadow-sm)}
+.uvbox h3{font-size:1.35rem;margin-bottom:16px}
+.uvbox ul{list-style:none;margin-bottom:20px}
+.uvbox li{position:relative;padding:8px 0 8px 26px;color:var(--ink-2);font-size:.98rem}
+.uvbox li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.uvbox .hl{background:var(--ink);color:#fff;border-radius:var(--r-sm);padding:16px 20px;font-weight:600;margin-bottom:16px;font-size:.98rem}
+.uvbox .hl b{color:var(--orange)}
+.uvbox .cta-line{font-family:var(--head);font-weight:700;color:var(--ink)}
+
+.frange{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.frange-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.2s}
+.frange-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--orange)}
+.frange-card .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--orange);color:var(--ink);font-family:var(--head);font-weight:800;margin-bottom:14px}
+.frange-card h3{font-size:1.1rem;margin-bottom:8px}
+.frange-card p{color:var(--muted);font-size:.9rem;margin-bottom:10px}
+.frange-card .note{font-size:.84rem;color:var(--ink-2);border-left:3px solid var(--orange);padding-left:12px;font-style:italic}
+
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.why-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;transition:.2s}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--orange-soft)}
+.why-card .em{font-size:1.9rem;margin-bottom:12px;line-height:1}
+.why-card h3{font-size:1.12rem;margin-bottom:8px}
+.why-card p{color:var(--muted);font-size:.9rem}
+
+.guide{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:.2s}
+.gcard:hover{border-color:var(--orange);box-shadow:var(--shadow-sm)}
+.gcard h4{font-family:var(--head);font-size:.9rem;color:var(--muted);margin-bottom:8px}
+.gcard p{font-size:.95rem;color:var(--ink-2);margin-bottom:10px}
+.gcard .price{display:inline-block;background:var(--orange);color:var(--ink);font-family:var(--head);font-weight:700;font-size:.8rem;padding:4px 12px;border-radius:999px}
+
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+.note{background:var(--cream-2);border-left:4px solid var(--orange);border-radius:var(--r-sm);padding:20px}
+.note h4{font-family:var(--head);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-ink);margin-bottom:6px}
+.note p{font-size:.9rem;color:var(--muted)}
+
+.consult{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.consult .intro{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:18px}
+.clist{list-style:none;margin-bottom:24px}
+.clist li{position:relative;padding:11px 0 11px 28px;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink-2)}
+.clist li:last-child{border-bottom:none}
+.clist li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800}
+.ccard{background:var(--ink);color:#fff;border-radius:var(--r);padding:34px 32px}
+.ccard h3{color:#fff;font-size:1.3rem;margin-bottom:22px}
+.crow{display:flex;gap:14px;margin-bottom:16px}
+.crow .ic{color:var(--orange);flex:none;margin-top:2px}
+.crow b{display:block;font-family:var(--head);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:#fff;margin-bottom:3px}
+.crow span,.crow a{color:rgba(255,255,255,.72);font-size:.92rem}
+.ccard .btn{width:100%;justify-content:center;margin-top:10px}
+
+@media(max-width:920px){
+  .abt-stats,.ptypes,.frange,.why-grid,.guide,.notes{grid-template-columns:repeat(2,1fr)}
+  .consult{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .abt-stats,.ptypes,.frange,.why-grid,.guide,.notes{grid-template-columns:1fr}
+  .uvbox{padding:26px 22px}
+}
+.mobmenu{display:none;position:fixed;top:72px;left:0;right:0;z-index:49;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 24px 16px;box-shadow:var(--shadow-sm)}
+.mobmenu.open{display:flex}
+.mobmenu a{padding:13px 2px;font-family:var(--head);font-weight:700;font-size:1rem;color:var(--ink);border-bottom:1px solid var(--line)}
+.mobmenu a:last-child{border-bottom:0;color:var(--brand-ink)}
+@media(min-width:921px){.mobmenu{display:none!important}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://jaideeclear.com/"},
+      {"@type":"ListItem","position":2,"name":"About","item":"https://jaideeclear.com/about"}
+    ]},
+    {"@type":["Organization","LocalBusiness","HomeAndConstructionBusiness"],
+      "@id":"https://jaideeclear.com/#business",
+      "name":"JaiDeeClear",
+      "url":"https://jaideeclear.com",
+      "logo":"https://jaideeclear.com/jdclogo.jpg",
+      "image":"https://jaideeclear.com/jdclogo.jpg",
+      "telephone":"+66655079694",
+      "email":"jaideeclear@gmail.com",
+      "priceRange":"฿฿",
+      "description":"Professional window film specialists — UV and heat-rejection film for buildings, residences and yachts, installed on-site across Thailand. 30+ premium projects, 99% UV blocked.",
+      "areaServed":[
+        {"@type":"Place","name":"Thailand"},
+        {"@type":"City","name":"Bangkok"},
+        {"@type":"City","name":"Phuket"},
+        {"@type":"City","name":"Chonburi"}
+      ],
+      "sameAs":[
+        "https://www.instagram.com/jaideeclear",
+        "https://www.facebook.com/Jaideeclear"
+      ],
+      "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"50"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKRC2QVZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKRC2QVZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- ── Header ── -->
-        <header>
-        <div class="header-content">
-            <div class="logo-container">
-                <a href="/">
-                    <img src="jdclogo.jpg" alt="JaiDeeClear Logo" style="height: 64px; width: auto; object-fit: contain;">
-                </a>
-            </div>
-            <nav class="header-nav">
-                <a href="/films" class="nav-link">Our Films</a>
-                <a href="/locations" class="nav-link">Locations</a>
-                <a href="/our-work" class="nav-link">Our Work</a>
-                <div class="nav-dropdown">
-                    <a href="/about" class="nav-link nav-dropdown-toggle active">About <span class="nav-caret">▾</span></a>
-                    <div class="nav-dropdown-menu">
-                        <a href="/about" class="active">About</a>
-                        <a href="/careers">Careers</a>
-                        <a href="/affiliates">Affiliates</a>
-                    </div>
-                </div>
-                <a href="/schedule" class="nav-link">Schedule</a>
-                <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                    Chat with Us
-                </a>
-            </nav>
-            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
-    <!-- Mobile menu drawer -->
-    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-        <a href="/films" class="nav-link">Our Films</a>
-        <a href="/locations" class="nav-link">Locations</a>
-        <a href="/our-work" class="nav-link">Our Work</a>
-        <a href="/about" class="nav-link active">About</a>
-        <a href="/careers" class="nav-link">Careers</a>
-        <a href="/affiliates" class="nav-link">Affiliates</a>
-        <a href="/schedule" class="nav-link">Schedule</a>
-        <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn">
-            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-            Chat with Us
-        </a>
-    </div><section class="hero">
-        <div class="container">
-            <p class="hero-eyebrow">Premium UV Protection Film · Thailand</p>
-            <h1>About <em>JaiDeeClear</em></h1>
-            <p class="hero-sub">
-                Trusted by property developers, luxury property owners, and corporate buildings across Thailand for protection, durability, and exceptional performance.
-            </p>
-            <div class="hero-cta-group">
-                <a href="/schedule" class="btn btn-primary">Request On-Site Measurement</a>
-                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">
-                    Speak to an Expert
-                </a>
-            </div>
-        </div>
-    </section>
+<div class="ribbon">☀️ <b>Beat the hot season</b> — book your installation, today.</div>
 
-    <!-- ── Stats bar ── -->
-    <div class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">30+</div>
-                    <div class="stat-label">Premium Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Key Regions Served</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">99%</div>
-                    <div class="stat-label">UV Blockage</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5 yrs</div>
-                    <div class="stat-label">Film Warranty</div>
-                </div>
-            </div>
-        </div>
+<header>
+  <div class="wrap nav">
+    <a href="/" aria-label="JaiDeeClear home"><img class="logo" src="/jdclogo.png" alt="JaiDeeClear"></a>
+    <nav class="nav-links">
+      <a href="/films">Window Films</a>
+      <a href="/properties">Properties</a>
+      <a href="/locations">Locations</a>
+      <a href="/our-work">Our Work</a>
+      <a href="/about" class="on">About</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-wa nav-wa" href="https://wa.me/+66655079694"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M.5 23.5l1.6-6A11.5 11.5 0 1 1 12 23.5a11.6 11.6 0 0 1-5.6-1.4L.5 23.5zM6.7 20l.3.2a9.6 9.6 0 1 0-3.3-3.5l.2.3-1 3.5 3.6-.5zM17.4 14.3c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a7.8 7.8 0 0 1-3.8-3.3c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3z"/></svg>Chat</a>
+      <a class="btn btn-primary" href="/schedule">Schedule Now</a>
+      <button class="burger" aria-label="Menu"><svg class="ico" style="width:26px;height:26px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
+  </div>
+</header>
+<nav class="mobmenu" id="mobmenu"><a href="/films">Window Films</a><a href="/properties">Properties</a><a href="/locations">Locations</a><a href="/our-work">Our Work</a><a href="/about">About</a><a href="/schedule">Get a Free Quote</a></nav>
 
-    <!-- ── Our Projects ── -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Our Projects</p>
-                <h2>Proven Across Thailand's Most Prestigious Locations</h2>
-            </div>
-            <p class="projects-intro">
-                From <strong>luxury villas</strong> overlooking the Andaman Sea to <strong>commercial restaurants</strong> in bustling Pattaya, JaiDeeClear has delivered exceptional UV protection solutions across Thailand's most demanding environments. Our extensive portfolio proudly showcases a diverse array of successful projects, each requiring tailored film specifications to meet unique architectural and functional requirements.
-            </p>
-            <div class="project-types-grid">
-                <div class="project-type-item">
-                    <span class="project-type-icon">🏢</span>
-                    Residential Condominiums
-                </div>
-                <div class="project-type-item">
-                    <span class="project-type-icon">🏡</span>
-                    Luxury Villas
-                </div>
-                <div class="project-type-item">
-                    <span class="project-type-icon">🏗️</span>
-                    Commercial Buildings
-                </div>
-                <div class="project-type-item">
-                    <span class="project-type-icon">🍽️</span>
-                    Commercial Restaurants
-                </div>
-                <div class="project-type-item">
-                    <span class="project-type-icon">🏨</span>
-                    Hospitality Venues
-                </div>
-                <div class="project-type-item">
-                    <span class="project-type-icon">🎓</span>
-                    Educational Institutions
-                </div>
-                <div class="project-type-item">
-                    <span class="project-type-icon">🛏️</span>
-                    AirBNB &amp; Villas
-                </div>
-            </div>
+<div class="crumb">
+  <div class="wrap crumb-in">
+    <a href="/">Home</a><span class="sep">›</span><span class="cur">About</span>
+  </div>
+</div>
+
+<!-- hero -->
+<section class="fhero">
+  <div class="wrap">
+    <div class="eyebrow">About JaiDeeClear</div>
+    <h1>Thailand's window film <span class="acc">specialists.</span></h1>
+    <p>Trusted by property developers, luxury homeowners and corporate buildings across Thailand for protection, durability and exceptional performance. Professional window tinting for buildings, residences and yachts — Phuket-based, fitted on-site across Thailand, bilingual Thai/EN.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="/schedule">Request On-Site Measurement
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-wa" href="https://wa.me/+66655079694"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M.5 23.5l1.6-6A11.5 11.5 0 1 1 12 23.5a11.6 11.6 0 0 1-5.6-1.4L.5 23.5zM6.7 20l.3.2a9.6 9.6 0 1 0-3.3-3.5l.2.3-1 3.5 3.6-.5zM17.4 14.3c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a7.8 7.8 0 0 1-3.8-3.3c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3z"/></svg>Speak to an Expert</a>
+    </div>
+    <div class="uv-note"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Rated <b>4.9 from 50+ Google reviews</b> · 30+ premium projects delivered.</div>
+  </div>
+</section>
+
+<!-- stats -->
+<section class="xband">
+  <div class="wrap">
+    <div class="abt-stats">
+      <div class="abt-stat"><div class="n">30+</div><div class="l">Premium Projects</div><small>completed across Thailand</small></div>
+      <div class="abt-stat"><div class="n">99%</div><div class="l">UV Blocked</div><small>protects skin &amp; interiors</small></div>
+      <div class="abt-stat"><div class="n">10+</div><div class="l">Years' Experience</div><small>certified installers</small></div>
+      <div class="abt-stat"><div class="n">7 yr</div><div class="l">Written Warranty</div><small>genuine premium film</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- our projects -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our Projects</div>
+      <h2>Proven across Thailand's most prestigious <span class="acc">locations.</span></h2>
+    </div>
+    <p class="lead">From <strong>luxury villas</strong> overlooking the Andaman Sea to <strong>commercial restaurants</strong> in Chonburi, JaiDeeClear has delivered exceptional UV-protection solutions across Thailand's most demanding environments. Our portfolio showcases a diverse array of successful projects, each requiring tailored film specifications to meet unique architectural and functional requirements.</p>
+    <div class="ptypes">
+      <div class="ptype"><span class="em">🏢</span>Residential Condominiums</div>
+      <div class="ptype"><span class="em">🏡</span>Luxury Villas</div>
+      <div class="ptype"><span class="em">🏗️</span>Commercial Buildings</div>
+      <div class="ptype"><span class="em">🍽️</span>Commercial Restaurants</div>
+      <div class="ptype"><span class="em">🏨</span>Hospitality Venues</div>
+      <div class="ptype"><span class="em">🎓</span>Educational Institutions</div>
+      <div class="ptype"><span class="em">🛏️</span>AirBNB &amp; Villas</div>
+      <div class="ptype"><span class="em">⛵</span>Yachts</div>
+    </div>
+  </div>
+</section>
+
+<!-- why UV protection matters -->
+<section class="xband">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why It Matters</div>
+      <h2>Why UV protection <span class="acc">matters.</span></h2>
+      <p>Thailand's climate demands serious solar protection — for your health, your interiors and your energy bills.</p>
+    </div>
+    <div class="uvbox">
+      <h3>Three core challenges we solve</h3>
+      <ul>
+        <li><strong>Ultraviolet radiation</strong> damages interiors — fading furniture, flooring and artwork over time.</li>
+        <li><strong>Glare</strong> affects comfort and productivity in workspaces, reducing quality of life and efficiency.</li>
+        <li><strong>Privacy concerns</strong> grow in developments with expansive windows and open floor plans.</li>
+      </ul>
+      <div class="hl">JaiDeeClear UV-protection films block up to <b>99% of harmful UV rays</b> whilst delivering energy savings of up to <b>30%</b>.</div>
+      <p class="cta-line">Maintain crystal-clear views, protect your interior furniture and reduce electricity costs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- film range -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Film Catalogue</div>
+      <h2>Explore our premium film <span class="acc">range.</span></h2>
+      <p>Each series is engineered for a different balance of clarity, heat rejection and UV protection. Compare full specs and prices on our films page.</p>
+    </div>
+    <div class="frange">
+      <div class="frange-card"><div class="num">1</div><h3>Sputtering Film</h3><p>Advanced sputtering technology engineered for <strong>exceptional clarity and superior heat rejection</strong>.</p><div class="note">Ideal for high-end residential and commercial applications seeking optimal performance without compromising views.</div></div>
+      <div class="frange-card"><div class="num">2</div><h3>Titanium Film</h3><p>Durable titanium-based films offering <strong>robust solar control and a distinct aesthetic</strong>.</p><div class="note">Perfect for properties requiring enhanced privacy and significant energy efficiency.</div></div>
+      <div class="frange-card"><div class="num">3</div><h3>Ceramic UV400 Film</h3><p>Cutting-edge Ceramic UV400 films designed to <strong>block the widest spectrum of harmful UV rays</strong>.</p><div class="note">Protect your interiors and occupants with unparalleled UV protection and heat control.</div></div>
+      <div class="frange-card"><div class="num">4</div><h3>Ceramic Nano Film</h3><p>Blends high performance with subtlety, offering <strong>impressive heat and glare reduction</strong> while maintaining natural light and clear visibility.</p><div class="note">A popular choice for residential and commercial spaces.</div></div>
+      <div class="frange-card"><div class="num">5</div><h3>Metallized Window Film</h3><p>Known for their <strong>reflective properties and excellent heat rejection capabilities</strong>.</p><div class="note">These films provide strong solar control and can enhance building aesthetics.</div></div>
+      <div class="frange-card"><div class="num">6</div><h3>Carbon Film</h3><p>Offering a <strong>distinctive non-metallic aesthetic with stable colour and robust heat rejection</strong>.</p><div class="note">An affordable option for architectural applications across Thailand.</div></div>
+    </div>
+    <div style="text-align:center;margin-top:34px"><a class="btn btn-primary" href="/films">See Full Film Range &amp; Prices
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<!-- why choose us -->
+<section class="xband">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why Choose Us</div>
+      <h2>Why property owners choose <span class="acc">JaiDeeClear.</span></h2>
+      <p>Professional installation, premium materials and real results — delivered to your door across Thailand.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="em">🏆</div><h3>Proven Track Record</h3><p>Over 30+ premium projects completed across Thailand's most prestigious developments. From luxury villas in Phuket to commercial buildings in Bangkok, we demonstrate excellence across diverse applications.</p></div>
+      <div class="why-card"><div class="em">⚗️</div><h3>Premium Technology</h3><p>We use advanced ceramic nano and UV-protection films that deliver 99%+ UV blockage, superior heat rejection and exceptional durability built to last Thailand's climate.</p></div>
+      <div class="why-card"><div class="em">🔧</div><h3>Professional Installation</h3><p>Our certified team brings over 10+ years of experience and meticulous attention to detail. We work cleanly and efficiently — you can remain in the property during installation.</p></div>
+      <div class="why-card"><div class="em">📊</div><h3>Measurable Benefits</h3><p>Clients experience immediate comfort improvements and energy savings up to 30%. Reduce glare, enhance privacy and significantly lower energy costs from day one.</p></div>
+      <div class="why-card"><div class="em">🗺️</div><h3>Regional Expertise</h3><p>With established presence across Bangkok, Phuket and Chonburi, we understand Thailand's unique climate challenges. Our local knowledge ensures specifications perfectly suited to each location.</p></div>
+      <div class="why-card"><div class="em">🤝</div><h3>Comprehensive Service</h3><p>From initial consultation through specification, installation and after-sales support, we provide complete project management — a single point of contact from start to finish.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- recommendation guide -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Film Guide</div>
+      <h2>Simple recommendation <span class="acc">guide.</span></h2>
+      <p>Find the perfect JaiDeeClear film based on your specific priorities and budget.</p>
+    </div>
+    <div class="guide">
+      <div class="gcard"><h4>I have a tight budget</h4><p>Go with <strong>Carbon Series</strong> for basic UV protection at an accessible price point.</p><span class="price">฿70/sqft</span></div>
+      <div class="gcard"><h4>I want good value</h4><p>Choose <strong>Ceramic Nano</strong> — the perfect balance of performance and cost for most properties.</p><span class="price">฿110/sqft</span></div>
+      <div class="gcard"><h4>I have valuable furniture</h4><p>Select <strong>Ceramic UV400</strong> to prevent fading and protect precious items with the widest UV spectrum coverage.</p><span class="price">฿130/sqft</span></div>
+      <div class="gcard"><h4>It's really hot here — save on AC</h4><p>Go with <strong>Titanium Series</strong> for maximum heat rejection and the greatest energy savings on air conditioning.</p><span class="price">฿150/sqft</span></div>
+      <div class="gcard"><h4>I want the very best</h4><p>Choose <strong>Sputtering Film</strong> for premium performance, exceptional clarity and superior appearance.</p><span class="price">฿175/sqft</span></div>
+      <div class="gcard"><h4>I need security &amp; protection</h4><p>Select <strong>Safety Film</strong> to strengthen windows and enhance security — holds shattered glass in place.</p><span class="price">฿90–140/sqft</span></div>
+    </div>
+    <div class="notes">
+      <div class="note"><h4>Minimum Service Area</h4><p>200 sqft and above per installation visit.</p></div>
+      <div class="note"><h4>Free Consultation</h4><p>On-site measurement and expert film recommendation included at no charge.</p></div>
+      <div class="note"><h4>Professional Installation</h4><p>All pricing includes expert installation by our certified team.</p></div>
+      <div class="note"><h4>Shade Options</h4><p>Privacy Film, 20%–40%, 40%–60%, 60%–80%, 80%–100% visible light transmission.</p></div>
+      <div class="note"><h4>0% Installment Available</h4><p>Flexible payment options available — ask our team for details.</p></div>
+      <div class="note"><h4>Low Maintenance</h4><p>Clean like normal windows — no special products or procedures required.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- book a consultation -->
+<section class="xband">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Get Started</div>
+      <h2>Book a free <span class="acc">consultation.</span></h2>
+      <p>JaiDeeClear delivers exceptional UV-protection solutions tailored to your specific requirements.</p>
+    </div>
+    <div class="consult">
+      <div>
+        <p class="intro">Our complimentary consultation service includes a comprehensive site evaluation, film samples and detailed quotations. We'll help you understand the benefits, requirements and expected outcomes for your unique property.</p>
+        <ul class="clist">
+          <li>Comprehensive site evaluation and needs assessment</li>
+          <li>Film samples and demonstration of clarity and protection</li>
+          <li>Detailed performance specifications and energy savings calculations</li>
+          <li>Competitive quotations with clear project timelines</li>
+          <li>Direct consultation with our technical design team</li>
+        </ul>
+        <a class="btn btn-primary" href="/schedule">Schedule Free Consultation
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="ccard">
+        <h3>Get in touch</h3>
+        <div class="crow">
+          <svg class="ico ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" fill="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <div><b>Email</b><a href="mailto:jaideeclear@gmail.com">jaideeclear@gmail.com</a></div>
         </div>
-    </section>
-
-    <!-- ── Why UV Protection Matters ── -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Why It Matters</p>
-                <h2>Why UV Protection Matters</h2>
-                <p>Thailand's climate demands serious solar protection — for your health, your interiors, and your energy bills.</p>
-            </div>
-            <div class="uv-callout">
-                <h3>Three Core Challenges We Solve</h3>
-                <ul>
-                    <li><strong>Ultraviolet radiation</strong> damages interiors — fading furniture, flooring, and artwork over time.</li>
-                    <li><strong>Glare</strong> affects comfort and productivity in workspaces, reducing quality of life and efficiency.</li>
-                    <li><strong>Privacy concerns</strong> grow in developments with expansive windows and open floor plans.</li>
-                </ul>
-                <div class="uv-highlight">
-                    JaiDeeClear UV protection films block up to 99% of harmful UV rays whilst delivering energy savings of up to 30%.
-                </div>
-                <p class="uv-cta">Maintain crystal-clear views, protect your interior furniture, and reduce electricity costs.</p>
-            </div>
+        <div class="crow">
+          <svg class="ico ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div><b>Office Hours</b><span>Monday–Saturday, 9:00–18:00</span></div>
         </div>
-    </section>
-
-    <!-- ── Film Catalogue ── -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Film Catalogue</p>
-                <h2>Explore Our Premium Film Range</h2>
-                <p>Dive deeper into the technical specifications and aesthetic options available across our premium film range. Each series provides detailed insights to help you select the ideal solution for your property's unique needs.</p>
-            </div>
-            <div class="film-grid">
-                <div class="film-card">
-                    <div class="film-number">1</div>
-                    <h3>Sputtering Film</h3>
-                    <p>Discover our advanced sputtering technology films, engineered for <strong>exceptional clarity and superior heat rejection</strong>.</p>
-                    <div class="film-note">Ideal for high-end residential and commercial applications seeking optimal performance without compromising views.</div>
-                </div>
-                <div class="film-card">
-                    <div class="film-number">2</div>
-                    <h3>Titanium Film</h3>
-                    <p>Explore our durable titanium-based films, offering <strong>robust solar control and a distinct aesthetic</strong>.</p>
-                    <div class="film-note">Perfect for properties requiring enhanced privacy and significant energy efficiency.</div>
-                </div>
-                <div class="film-card">
-                    <div class="film-number">3</div>
-                    <h3>Ceramic UV400 Film</h3>
-                    <p>Explore our cutting-edge Ceramic UV400 films, specifically designed to <strong>block the widest spectrum of harmful UV rays</strong>.</p>
-                    <div class="film-note">Protect your interiors and occupants with unparalleled UV protection and heat control.</div>
-                </div>
-                <div class="film-card">
-                    <div class="film-number">4</div>
-                    <h3>Ceramic Nano Film</h3>
-                    <p>Our Ceramic Nano films blend high performance with subtlety, offering <strong>impressive heat and glare reduction</strong> while maintaining natural light and clear visibility.</p>
-                    <div class="film-note">A popular choice for residential and commercial spaces.</div>
-                </div>
-                <div class="film-card">
-                    <div class="film-number">5</div>
-                    <h3>Metallized Window Film</h3>
-                    <p>Explore our first series of metallized films, known for their <strong>reflective properties and excellent heat rejection capabilities</strong>.</p>
-                    <div class="film-note">These films provide strong solar control and can enhance building aesthetics.</div>
-                </div>
-                <div class="film-card">
-                    <div class="film-number">6</div>
-                    <h3>Metallized Window Film (Series 2)</h3>
-                    <p>Discover our second series of metallized window films, offering <strong>alternative performance characteristics and visual effects</strong>.</p>
-                    <div class="film-note">Explore options for diverse architectural designs and specific solar performance goals.</div>
-                </div>
-                <div class="film-card">
-                    <div class="film-number">7</div>
-                    <h3>Carbon Film</h3>
-                    <p>Review our Carbon Series films, offering a <strong>distinctive non-metallic aesthetic with stable colour and robust heat rejection</strong>.</p>
-                    <div class="film-note">An affordable option for architectural applications across Thailand.</div>
-                </div>
-            </div>
+        <div class="crow">
+          <svg class="ico ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><b>Service Areas</b><span>Bangkok, Phuket &amp; Chonburi — on-site across Thailand.</span></div>
         </div>
-    </section>
+        <a class="btn btn-wa" href="https://wa.me/+66655079694"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M.5 23.5l1.6-6A11.5 11.5 0 1 1 12 23.5a11.6 11.6 0 0 1-5.6-1.4L.5 23.5zM6.7 20l.3.2a9.6 9.6 0 1 0-3.3-3.5l.2.3-1 3.5 3.6-.5zM17.4 14.3c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a7.8 7.8 0 0 1-3.8-3.3c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3z"/></svg>Chat with Us on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- ── Why Choose JaiDeeClear ── -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Why Choose Us</p>
-                <h2>Why Thousands Choose JaiDeeClear</h2>
-                <p>Professional installation, premium materials, and real results — delivered to your door across Thailand.</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏆</div>
-                    <h3>Proven Track Record</h3>
-                    <p>Over 30+ premium projects completed across Thailand's most prestigious developments. From luxury villas in Phuket to commercial buildings in Pattaya, we demonstrate excellence across diverse applications.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚗️</div>
-                    <h3>Premium Technology</h3>
-                    <p>We use advanced ceramic nano and UV protection films that deliver 99%+ UV blockage, superior heat rejection, and exceptional durability built to last Thailand's climate.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔧</div>
-                    <h3>Professional Installation</h3>
-                    <p>Our certified team brings over 10+ years of experience and meticulous attention to detail. We work cleanly and efficiently — you can remain in the property during installation.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📊</div>
-                    <h3>Measurable Benefits</h3>
-                    <p>Clients experience immediate comfort improvements and energy savings up to 30%. Reduce glare, enhance privacy, and significantly lower energy costs from day one.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🗺️</div>
-                    <h3>Regional Expertise</h3>
-                    <p>With established presence across Bangkok, Phuket, Pattaya, and Chiang Rai, we understand Thailand's unique climate challenges. Our local knowledge ensures specifications perfectly suited to each location.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🤝</div>
-                    <h3>Comprehensive Service</h3>
-                    <p>From initial consultation through specification, installation, and after-sales support, we provide complete project management — a single point of contact from start to finish.</p>
-                </div>
-            </div>
+<!-- final cta -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--orange)">Free On-Site Quote</div>
+    <h2 style="margin-top:12px">Ready to protect your property?</h2>
+    <p>Join the architects, developers and property owners across Thailand who trust JaiDeeClear to protect their investments whilst enhancing comfort, reducing costs and preserving beauty.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="/schedule">Schedule a Free Quote
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-wa" href="https://wa.me/+66655079694"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M.5 23.5l1.6-6A11.5 11.5 0 1 1 12 23.5a11.6 11.6 0 0 1-5.6-1.4L.5 23.5zM6.7 20l.3.2a9.6 9.6 0 1 0-3.3-3.5l.2.3-1 3.5 3.6-.5zM17.4 14.3c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a7.8 7.8 0 0 1-3.8-3.3c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3z"/></svg>WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="/jdclogo-reversed.png" alt="JaiDeeClear">
+        <p style="font-size:.88rem">Premium UV &amp; heat-rejection window film, installed on-site across Thailand. 99% UV blocked, cooler rooms, lower bills.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/jaideeclear" target="_blank" rel="noopener" aria-label="JaiDeeClear on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@jaideeclear" target="_blank" rel="noopener" aria-label="JaiDeeClear on TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.26 2.02 1.6 3.63 3.5 3.94v2.64c-1.3.04-2.53-.35-3.56-1.05v6.06a5.79 5.79 0 1 1-5.79-5.79c.3 0 .6.02.89.07v2.71a3.09 3.09 0 1 0 2.19 2.96V3h2.78z"/></svg></a>
+          <a href="https://www.facebook.com/Jaideeclear" target="_blank" rel="noopener" aria-label="JaiDeeClear on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
         </div>
-    </section>
+      </div>
+      <div>
+        <h4>Properties</h4>
+        <a href="/window-tinting-villas">Villas</a><a href="/window-tinting-condos">Condos</a><a href="/window-tinting-houses">Houses</a><a href="/window-tinting-offices">Offices</a><a href="/properties">All properties &rarr;</a>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <a href="/window-tinting-bangkok">Bangkok</a><a href="/window-tinting-phuket">Phuket</a><a href="/window-tinting-chonburi">Chonburi</a><a href="/locations">All locations &rarr;</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/films">Window Films</a><a href="/our-work">Our Work</a><a href="/about">About</a><a href="/blog">Blog</a><a href="/careers">Careers</a>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <p class="foot-contact">&#128205; Based in Phuket, Thailand<br>On-site service across Thailand</p>
+        <a href="tel:+66655079694">&#128222; +66 65 507 9694</a><a href="https://wa.me/66655079694" target="_blank" rel="noopener">WhatsApp us</a><a href="mailto:jaideeclear@gmail.com">&#9993; jaideeclear@gmail.com</a>
+        <p class="foot-hours">&#128336; Mon&ndash;Sat &middot; 09:00&ndash;18:00</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 JaiDeeClear. On-site service throughout Thailand.</span>
+      <span class="concept-tag">Free on-site measurement</span>
+    </div>
+  </div>
+</footer>
 
-    <!-- ── Simple Recommendation Guide ── -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Film Guide</p>
-                <h2>Simple Recommendation Guide</h2>
-                <p>Find the perfect JaiDeeClear film based on your specific priorities and budget.</p>
-            </div>
-            <div class="guide-grid">
-                <div class="guide-card">
-                    <h4>I Have a Tight Budget</h4>
-                    <p>Go with <strong>Carbon Series</strong> for basic UV protection at an accessible price point.</p>
-                    <span class="price-tag">฿70/sqft</span>
-                </div>
-                <div class="guide-card">
-                    <h4>I Want Good Value</h4>
-                    <p>Choose <strong>Ceramic Nano</strong> — the perfect balance of performance and cost for most properties.</p>
-                    <span class="price-tag">฿110/sqft</span>
-                </div>
-                <div class="guide-card">
-                    <h4>I Have Valuable Furniture</h4>
-                    <p>Select <strong>Ceramic UV400</strong> to prevent fading and protect precious items with the widest UV spectrum coverage.</p>
-                    <span class="price-tag">฿130/sqft</span>
-                </div>
-                <div class="guide-card">
-                    <h4>It's Really Hot Here — Save on AC</h4>
-                    <p>Go with <strong>Titanium Series</strong> for maximum heat rejection and the greatest energy savings on air conditioning.</p>
-                    <span class="price-tag">฿150/sqft</span>
-                </div>
-                <div class="guide-card">
-                    <h4>I Want the Very Best</h4>
-                    <p>Choose <strong>Sputtering Film</strong> for premium performance, exceptional clarity, and superior appearance.</p>
-                    <span class="price-tag">฿175/sqft</span>
-                </div>
-                <div class="guide-card">
-                    <h4>I Need Security &amp; Protection</h4>
-                    <p>Select <strong>Safety Film</strong> to strengthen windows and enhance security — holds shattered glass in place.</p>
-                    <span class="price-tag">฿90–140/sqft</span>
-                </div>
-            </div>
+<div class="mobile-bar">
+  <a class="btn btn-primary" href="/schedule">Schedule Free Quote</a>
+  <a class="btn btn-wa" href="https://wa.me/+66655079694"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M.5 23.5l1.6-6A11.5 11.5 0 1 1 12 23.5a11.6 11.6 0 0 1-5.6-1.4L.5 23.5zM6.7 20l.3.2a9.6 9.6 0 1 0-3.3-3.5l.2.3-1 3.5 3.6-.5zM17.4 14.3c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a7.8 7.8 0 0 1-3.8-3.3c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3z"/></svg>WhatsApp</a>
+</div>
 
-            <!-- Important Notes -->
-            <div style="margin-top: 40px;">
-                <div class="notes-grid">
-                    <div class="note-item">
-                        <h4>Minimum Service Area</h4>
-                        <p>200 sqft and above per installation visit.</p>
-                    </div>
-                    <div class="note-item">
-                        <h4>Free Consultation</h4>
-                        <p>On-site measurement and expert film recommendation included at no charge.</p>
-                    </div>
-                    <div class="note-item">
-                        <h4>Professional Installation</h4>
-                        <p>All pricing includes expert installation by our certified team.</p>
-                    </div>
-                    <div class="note-item">
-                        <h4>Shade Options</h4>
-                        <p>Privacy Film, 20%–40%, 40%–60%, 60%–80%, 80%–100% visible light transmission.</p>
-                    </div>
-                    <div class="note-item">
-                        <h4>0% Installment Available</h4>
-                        <p>Flexible payment options available — ask our team for details.</p>
-                    </div>
-                    <div class="note-item">
-                        <h4>Low Maintenance</h4>
-                        <p>Clean like normal windows — no special products or procedures required.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Book a Free Consultation ── -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Get Started</p>
-                <h2>Book a Free Consultation</h2>
-                <p>JaiDeeClear delivers exceptional UV protection solutions tailored to your specific requirements.</p>
-            </div>
-            <div class="consultation-grid">
-                <div>
-                    <p style="font-size: 17px; color: #6e6e73; margin-bottom: 24px; line-height: 1.7;">
-                        Our complimentary consultation service includes a comprehensive site evaluation, film samples, and detailed quotations. We'll help you understand the benefits, requirements, and expected outcomes for your unique property.
-                    </p>
-                    <ul class="consultation-list">
-                        <li>Comprehensive site evaluation and needs assessment</li>
-                        <li>Film samples and demonstration of clarity and protection</li>
-                        <li>Detailed performance specifications and energy savings calculations</li>
-                        <li>Competitive quotations with clear project timelines</li>
-                        <li>Direct consultation with our technical design team</li>
-                    </ul>
-                    <div style="margin-top: 32px;">
-                        <a href="/schedule" class="btn btn-primary" style="margin-right: 12px;">Schedule Free Consultation</a>
-                    </div>
-                </div>
-                <div class="contact-info-card">
-                    <h3>Get in Touch</h3>
-                    <div class="contact-row">
-                        <span class="contact-row-icon"><i class="fas fa-phone"></i></span>
-                        <div class="contact-row-text">
-                            <strong>Phone</strong>
-                            <a href="tel:+66655079694" style="color: #a8a8a8; text-decoration: none;">065-507-9694</a>
-                        </div>
-                    </div>
-                    <div class="contact-row">
-                        <span class="contact-row-icon"><i class="fas fa-envelope"></i></span>
-                        <div class="contact-row-text">
-                            <strong>Email</strong>
-                            <a href="mailto:jaideeclear@gmail.com" style="color: #a8a8a8; text-decoration: none;">jaideeclear@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-row">
-                        <span class="contact-row-icon"><i class="fas fa-clock"></i></span>
-                        <div class="contact-row-text">
-                            <strong>Office Hours</strong>
-                            Monday–Saturday, 9:00–18:00
-                        </div>
-                    </div>
-                    <div class="contact-row">
-                        <span class="contact-row-icon"><i class="fas fa-map-marker-alt"></i></span>
-                        <div class="contact-row-text">
-                            <strong>Service Areas</strong>
-                            Bangkok, Phuket, Pattaya, Chiang Rai, Koh Samui, Krabi, and Hua Hin.
-                        </div>
-                    </div>
-                    <div style="margin-top: 28px;">
-                        <a href="https://wa.me/+66655079694" target="_blank" class="whatsapp-btn" style="justify-content: center; width: 100%;">
-                            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                            </svg>
-                            Chat with Us on WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── CTA Banner ── -->
-    <section class="section" style="padding-bottom: 0;">
-        <div class="cta-banner">
-            <h2>Ready to Protect Your Property?</h2>
-            <p>Join the architects, developers, and property owners across Thailand who trust JaiDeeClear to protect their investments whilst enhancing comfort, reducing costs, and preserving beauty.</p>
-            <div class="hero-cta-group">
-                <a href="/schedule" class="btn btn-primary">Schedule a Free Quote</a>
-                <a href="https://wa.me/+66655079694" target="_blank" class="btn btn-outline">
-                    WhatsApp Us
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Footer ── -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-locations">
-                    <h4>Service Locations</h4>
-                    <div class="footer-location-links">
-                        <a href="/window-tinting-bangkok" class="footer-location-link">Bangkok</a>
-                        <a href="/window-tinting-phuket" class="footer-location-link">Phuket</a>
-                        <a href="/window-tinting-pattaya" class="footer-location-link">Pattaya</a>
-                        <a href="/window-tinting-chiang-rai" class="footer-location-link">Chiang Rai</a>
-                        <a href="/window-tinting-samui" class="footer-location-link">Koh Samui</a>
-                        <a href="/window-tinting-krabi" class="footer-location-link">Krabi</a>
-                        <a href="/window-tinting-hua-hin" class="footer-location-link">Hua Hin</a>
-                    </div>
-                </div>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px">
-                    <a href="/blog" class="footer-location-link">Blog</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/Jaideeclear" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/jaideeclear" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <p class="copyright">© 2026 JaiDeeClear. On-site service throughout Thailand</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        (function() {
-            var btn = document.getElementById('hamburger');
-            var menu = document.getElementById('mobileMenu');
-            if (!btn || !menu) return;
-            btn.addEventListener('click', function() {
-                var isOpen = menu.classList.toggle('open');
-                btn.classList.toggle('open', isOpen);
-                btn.setAttribute('aria-expanded', isOpen);
-                document.body.style.overflow = isOpen ? 'hidden' : '';
-            });
-            menu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    menu.classList.remove('open');
-                    btn.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
-                });
-            });
-            document.addEventListener('click', function(e) {
-                if (!btn.contains(e.target) && !menu.contains(e.target)) {
-                    menu.classList.remove('open');
-                    btn.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
-                }
-            });
-        })();
-    </script>
+<script>(function(){var b=document.querySelector('.burger'),m=document.getElementById('mobmenu');if(b&&m)b.addEventListener('click',function(){m.classList.toggle('open')});})();</script>
 </body>
 </html>

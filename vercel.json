@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/window-tinting-pattaya", "destination": "/window-tinting-chonburi", "permanent": true },
+    { "source": "/window-tinting-chiang-rai", "destination": "/locations", "permanent": true },
+    { "source": "/window-tinting-samui", "destination": "/locations", "permanent": true },
+    { "source": "/window-tinting-krabi", "destination": "/locations", "permanent": true },
+    { "source": "/window-tinting-hua-hin", "destination": "/locations", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JaiDeeClear — Brand &amp; Design Guidelines</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* ── Signature Orange (the hero) ── */
+  --orange:#F5A623; --orange-d:#E0940A; --orange-dd:#C47F05; --orange-soft:#FDEDCB; --orange-tint:#FCF4E4; --brand-ink:#8A6300;
+  /* ── Ink / neutrals ── */
+  --ink:#16120F; --ink-2:#241D18; --ink-3:#34291F;
+  --cream:#FAF6F0; --cream-2:#F3EBDF; --white:#fff;
+  --muted:#7B6F62; --muted-2:#A89A8A; --line:#E9E0D2; --line-dk:#3A2F25;
+  /* ── Film-shade ramp (from the logo) ── */
+  --film-1:#EDEDED; --film-2:#D6D6D6; --film-3:#A8A8A8; --film-4:var(--orange);
+  /* ── Secondary: glass blue (from Instagram photography) ── */
+  --glass:#5FAFE0; --glass-d:#3E8FC4; --green:#25D366;
+  --sans:'Inter',system-ui,sans-serif; --head:'Plus Jakarta Sans',var(--sans); --serif:'Fraunces',Georgia,serif;
+  --shadow:0 18px 50px -22px rgba(22,18,15,.45); --shadow-sm:0 8px 24px -12px rgba(22,18,15,.30);
+  --r:18px; --r-sm:12px; --wrap:1080px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--brand-ink)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--head);font-weight:800;line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
+.acc{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--orange)}
+.eyebrow{font-family:var(--head);font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85em;background:var(--cream-2);padding:2px 7px;border-radius:6px;color:var(--ink-2)}
+
+/* layout */
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.sec-head{margin-bottom:34px}
+.sec-head h2{font-size:2rem;margin:8px 0 10px}
+.sec-head p{color:var(--muted);max-width:64ch}
+.num-tag{display:inline-block;font-family:var(--head);font-weight:800;color:var(--orange);font-size:.9rem;letter-spacing:.1em}
+
+/* hero — leaning into orange */
+.hero{background:linear-gradient(135deg,var(--orange) 0%,var(--orange-d) 60%,var(--orange-dd) 100%);color:var(--ink);padding:76px 0 68px;border-bottom:none;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.14)}
+.hero .wrap{position:relative;z-index:2}
+.hero .kick{font-family:var(--head);font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(22,18,15,.7)}
+.hero h1{font-size:3.4rem;margin:14px 0 12px;color:var(--ink)}
+.hero p{font-size:1.15rem;max-width:52ch;color:rgba(22,18,15,.82)}
+.hero .meta{margin-top:26px;display:flex;gap:24px;flex-wrap:wrap;font-family:var(--head);font-weight:600;font-size:.85rem;color:rgba(22,18,15,.72)}
+
+/* positioning */
+.posi{background:var(--ink);color:#fff;border-radius:var(--r);padding:40px 38px}
+.posi .eyebrow{color:var(--orange)}
+.posi h3{color:#fff;font-size:1.9rem;margin:10px 0 14px}
+.posi h3 .acc{color:var(--orange)}
+.posi p{color:rgba(255,255,255,.72);max-width:60ch}
+.posi .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.posi .tag{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 16px;font-family:var(--head);font-weight:600;font-size:.85rem;color:#fff}
+.posi .tag b{color:var(--orange)}
+
+/* logo */
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.logo-card{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.logo-card .frame{display:flex;align-items:center;justify-content:center;padding:40px;min-height:220px}
+.logo-card .frame.dark{background:var(--ink)}
+.logo-card .frame img{max-height:130px;width:auto}
+.logo-card .cap{padding:14px 18px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.logo-card .cap.warn{color:#B4531E}
+/* film-swatch motif (the brand device from the logo) */
+.swatch-ramp{display:flex;gap:8px;align-items:flex-end;height:96px}
+.swatch-ramp span{flex:1;border-radius:4px 4px 8px 8px;box-shadow:var(--shadow-sm)}
+.swatch-ramp span:nth-child(1){height:56%;background:var(--film-1)}
+.swatch-ramp span:nth-child(2){height:70%;background:var(--film-2)}
+.swatch-ramp span:nth-child(3){height:84%;background:var(--film-3)}
+.swatch-ramp span:nth-child(4){height:100%;background:var(--film-4)}
+
+/* colour */
+.pal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sw{border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;background:#fff}
+.sw .chip{height:96px}
+.sw .info{padding:12px 14px}
+.sw .info b{font-family:var(--head);font-size:.9rem;display:block}
+.sw .info span{font-size:.78rem;color:var(--muted);font-family:ui-monospace,monospace}
+.sw.big{grid-column:span 2}
+.sw.big .chip{height:150px;display:flex;align-items:flex-end;padding:16px;color:var(--ink);font-family:var(--head);font-weight:800;font-size:1.1rem}
+.ramp-note{margin-top:14px;color:var(--muted);font-size:.9rem}
+
+/* type */
+.type-row{border-bottom:1px dashed var(--line);padding:18px 0;display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:baseline}
+.type-row .lbl{font-size:.8rem;color:var(--muted);font-family:ui-monospace,monospace}
+.d1{font-family:var(--head);font-weight:800;font-size:3rem;line-height:1;letter-spacing:-.03em}
+.d2{font-family:var(--head);font-weight:800;font-size:2rem;letter-spacing:-.02em}
+.d3{font-family:var(--head);font-weight:700;font-size:1.3rem}
+.body-lg{font-size:1.15rem;color:var(--ink-2)}
+.body{font-size:1rem;color:var(--ink-2)}
+.serif-acc{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--orange)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--head);font-weight:700;font-size:.95rem;padding:14px 24px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none}
+.btn-primary{background:var(--orange);color:var(--ink);box-shadow:0 12px 28px -10px rgba(245,166,35,.6)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-dk)}
+.btn-wa{background:var(--green);color:#fff}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+/* component cards */
+.comp{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card .b-ico{width:48px;height:48px;border-radius:12px;background:var(--orange-soft);color:var(--brand-ink);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-weight:800;font-family:var(--head)}
+.card h4{font-size:1.1rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.9rem}
+.stat .n{font-family:var(--head);font-weight:800;font-size:2.4rem;color:var(--orange);line-height:1}
+
+/* do / don't */
+.dd{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dd .box{border-radius:var(--r);padding:22px 24px;border:1px solid var(--line)}
+.dd .do{background:#F1F8F1;border-color:#CBE7CB}
+.dd .dont{background:#FBF0EC;border-color:#F0D3C7}
+.dd h4{font-size:1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.dd .do h4{color:#2F8A5B}.dd .dont h4{color:#B4531E}
+.dd ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.dd li{font-size:.92rem;color:var(--ink-2);padding-left:20px;position:relative}
+.dd li::before{position:absolute;left:0;top:0}
+.dd .do li::before{content:"✓";color:#2F8A5B;font-weight:800}
+.dd .dont li::before{content:"✕";color:#B4531E;font-weight:800}
+
+/* rules table */
+.rules{width:100%;border-collapse:collapse;font-size:.92rem}
+.rules th,.rules td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+.rules th{font-family:var(--head);color:var(--ink);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.rules td:first-child{font-weight:600;white-space:nowrap}
+.rules code{white-space:nowrap}
+
+footer{background:var(--ink);color:rgba(255,255,255,.55);padding:34px 0;text-align:center;font-size:.85rem}
+footer b{color:var(--orange)}
+@media(max-width:820px){
+  .hero h1{font-size:2.4rem}
+  .logo-grid,.dd{grid-template-columns:1fr}
+  .pal{grid-template-columns:repeat(2,1fr)}
+  .sw.big{grid-column:span 2}
+  .comp{grid-template-columns:1fr}
+  .type-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div class="kick">Brand &amp; Design Guidelines · v1</div>
+    <h1>JaiDeeClear</h1>
+    <p>The single reference for how JaiDeeClear looks, sounds and behaves online — built from the logo and the @jaideeclear feed. <b>Lean into the signature orange.</b></p>
+    <div class="meta"><span>Professional Window Tinting</span><span>Building · Residence · Yachts</span><span>📍 Phuket · On-site across Thailand</span></div>
+  </div>
+</div>
+
+<!-- POSITIONING & VOICE -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">01</span><h2>Positioning &amp; voice</h2></div>
+    <div class="posi">
+      <div class="eyebrow">Who we are</div>
+      <h3>Professional window film, <span class="acc">installed at your door.</span></h3>
+      <p>JaiDeeClear fits premium UV-protection and heat-rejection window film on-site across Thailand — for buildings, residences and yachts. Phuket-born, bilingual Thai/English, quality-obsessed.</p>
+      <div class="tags"><span class="tag"><b>Building</b></span><span class="tag"><b>Residence</b></span><span class="tag"><b>Yachts</b></span></div>
+    </div>
+    <div class="dd" style="margin-top:26px">
+      <div class="box do">
+        <h4>Voice — do</h4>
+        <ul>
+          <li>Benefit-first, plain and confident: <em>"Keep the view, lose the heat."</em></li>
+          <li>Short punchy lines: <em>"Less heat. Lower bills. Protected furniture."</em></li>
+          <li>Concrete &amp; specific ("up to 10°C cooler", "Ceramic UV 400-17", "99% UV").</li>
+          <li>Bilingual-ready — Thai + English, both first-class.</li>
+          <li>Emoji as light seasoning on social (☀️🕶️💡) — sparingly on the website.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <h4>Voice — don't</h4>
+        <ul>
+          <li>No jargon dumps or spec sheets without the benefit.</li>
+          <li>No hype or fake urgency ("BEST EVER!!!").</li>
+          <li>Don't bury the offer — free on-site quote is always one tap away.</li>
+          <li>Don't mix currencies or units — ฿ and sq ft, consistently.</li>
+          <li>No stock imagery where a real install photo exists.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">02</span><h2>Logo &amp; the film-swatch motif</h2>
+      <p>The wordmark is a high-contrast split — <b>JAIDEE</b> (dark on light) / <b>CLEAR</b> (light on dark) — under the four curved film swatches that shade from clear to signature orange. That ramp is our signature brand device; reuse it as a graphic accent.</p></div>
+    <div class="logo-grid">
+      <div class="logo-card">
+        <div class="frame"><img src="https://jaideeclear.com/jdclogo.jpg" alt="JaiDeeClear logo on light"></div>
+        <div class="cap">Primary lockup on light / cream backgrounds.</div>
+      </div>
+      <div class="logo-card">
+        <div class="frame dark"><img src="https://jaideeclear.com/jdclogo.jpg" alt="JaiDeeClear logo on dark"></div>
+        <div class="cap warn">⚠ Current logo file has a solid white background — needs a <b>transparent PNG</b> (and ideally a reversed/white version) for dark placements. Asset to produce.</div>
+      </div>
+    </div>
+    <div style="margin-top:24px">
+      <div class="eyebrow">The film-swatch ramp — reusable device</div>
+      <div class="swatch-ramp" style="margin-top:12px"><span></span><span></span><span></span><span></span></div>
+      <p class="ramp-note">Clear → light → dark → <b style="color:var(--orange)">signature orange</b>. Use as section dividers, loaders, icon backdrops, or a progress motif.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLOUR -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">03</span><h2>Colour — orange leads</h2>
+      <p>Signature orange is the hero and does the heavy lifting: primary buttons, key numbers, highlights, section accents. Ink + warm neutrals carry the rest; glass-blue is an optional secondary drawn from the photography.</p></div>
+    <div class="pal">
+      <div class="sw big"><div class="chip" style="background:var(--orange)">Signature Orange</div><div class="info"><b>Signature Orange</b><span>#F5A623 · --orange</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--orange-d)"></div><div class="info"><b>Orange Deep</b><span>#E0940A · hover</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--orange-soft)"></div><div class="info"><b>Orange Soft</b><span>#FDEDCB · tint bg</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--ink)"></div><div class="info"><b>Ink</b><span>#16120F · text/dark</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--ink-2)"></div><div class="info"><b>Ink 2</b><span>#241D18 · dark surface</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--cream);border-bottom:1px solid var(--line)"></div><div class="info"><b>Cream</b><span>#FAF6F0 · page bg</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--cream-2)"></div><div class="info"><b>Cream 2</b><span>#F3EBDF · alt bg</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--muted)"></div><div class="info"><b>Muted</b><span>#7B6F62 · sub-text</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--glass)"></div><div class="info"><b>Glass Blue</b><span>#5FAFE0 · secondary</span></div></div>
+      <div class="sw"><div class="chip" style="background:var(--green)"></div><div class="info"><b>WhatsApp</b><span>#25D366 · chat only</span></div></div>
+    </div>
+    <p class="ramp-note"><b>Rule:</b> orange = action + emphasis (never body text on light). Glass-blue stays a light accent (stats, tags) so it never competes with orange.</p>
+  </div>
+</section>
+
+<!-- TYPE -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">04</span><h2>Typography</h2>
+      <p><b>Plus Jakarta Sans</b> for headings &amp; UI (bold, tight), <b>Inter</b> for body, <b>Fraunces</b> italic for the occasional emphasis word — e.g. <span class="acc">every</span> or <span class="acc">clarity.</span></p></div>
+    <div class="type-row"><div class="lbl">Display / H1<br>Jakarta 800</div><div class="d1">Keep the view.</div></div>
+    <div class="type-row"><div class="lbl">H2 / Section<br>Jakarta 800</div><div class="d2">Premium window tinting</div></div>
+    <div class="type-row"><div class="lbl">H3 / Card<br>Jakarta 700</div><div class="d3">99% UV rejection</div></div>
+    <div class="type-row"><div class="lbl">Accent<br>Fraunces italic</div><div class="serif-acc">lose the heat.</div></div>
+    <div class="type-row"><div class="lbl">Body large<br>Inter 400</div><div class="body-lg">Professional UV &amp; heat-rejection window film, measured and fitted at your property.</div></div>
+    <div class="type-row"><div class="lbl">Body<br>Inter 400</div><div class="body">Rooms up to 10°C cooler, 99% of UV blocked, and a clear view kept. Free on-site measurement across Thailand.</div></div>
+  </div>
+</section>
+
+<!-- BUTTONS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">05</span><h2>Buttons &amp; CTAs</h2>
+      <p>One primary action per view, and it's always orange → <code>/schedule</code>. WhatsApp green is the only secondary channel. Pill shape, Jakarta 700.</p></div>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#">Schedule Free Quote →</a>
+      <a class="btn btn-wa" href="#">WhatsApp</a>
+      <a class="btn btn-ghost" href="#">Secondary</a>
+    </div>
+    <p class="ramp-note">Primary = Signature Orange on Ink text. Never two orange buttons competing in one row.</p>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">06</span><h2>Core components</h2>
+      <p>Cards, stats and icon tiles — white on cream, hairline border, generous radius, orange for the number or icon accent.</p></div>
+    <div class="comp">
+      <div class="card"><div class="b-ico">UV</div><h4>Benefit card</h4><p>Icon tile in orange-soft, short benefit headline, muted supporting line.</p></div>
+      <div class="card stat"><div class="n">99%</div><h4>Stat</h4><p>Big orange number, label, small caption. For proof metrics.</p></div>
+      <div class="card"><div class="b-ico" style="background:var(--ink);color:var(--orange)">★</div><h4>Review card</h4><p>Gold stars, quote, avatar + name + property · city. "4.9 from 50+ Google reviews."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RULES -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">07</span><h2>Content &amp; UX rules</h2>
+      <p>The non-negotiables that keep every page consistent.</p></div>
+    <table class="rules">
+      <tr><th>Item</th><th>Standard</th></tr>
+      <tr><td>Pricing</td><td>Always <code>฿70/sq ft</code> (carbon) → <code>฿180/sq ft</code> (sputtering). Never ฿/m². Use the sq-ft calculator.</td></tr>
+      <tr><td>Reviews</td><td><code>4.9 from 50+ Google reviews</code> — everywhere, schema included.</td></tr>
+      <tr><td>Primary CTA</td><td>Everything funnels to <code>/schedule</code> (the lead magnet).</td></tr>
+      <tr><td>Chat channel</td><td>WhatsApp <code>+66655079694</code> only. <b>No LINE. No phone number in the nav.</b></td></tr>
+      <tr><td>URLs</td><td>Clean, extensionless, absolute: <code>/window-tinting-villas</code>, <code>/films</code>.</td></tr>
+      <tr><td>Warranty line</td><td>"Written warranty (film-specific)" · "authorised premium-film installer" · "same-week installation".</td></tr>
+      <tr><td>Locations</td><td>Bangkok · Phuket · Chonburi (3 city pages). Phuket is home base.</td></tr>
+      <tr><td>Global nav</td><td>Window Films · Properties · Locations · Our Work + Schedule / WhatsApp.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- IMAGERY -->
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="sec-head"><span class="num-tag">08</span><h2>Imagery</h2>
+      <p>Real installs only — technicians in JaiDeeClear shirts, glass with sky/sea/villa behind it, the before/after temperature story. Warm, natural light. The blue that appears is the glass itself, not a filter. Short install videos (muted autoplay loops) over static hero images where we have them.</p></div>
+    <div class="dd">
+      <div class="box do"><h4>Imagery — do</h4><ul>
+        <li>Real JaiDeeClear projects (Sava Beach Villas, Anchan Flora, Botanica Foresta…).</li>
+        <li>Show the view being kept — sea, pool, skyline through the glass.</li>
+        <li>Install-in-progress shots build trust (branded shirts, squeegee, film roll).</li>
+        <li>Muted autoplay video loops for hero / proof moments.</li>
+      </ul></div>
+      <div class="box dont"><h4>Imagery — don't</h4><ul>
+        <li>No generic stock windows or western/unbranded crews.</li>
+        <li>No heavy filters that fake the tint result.</li>
+        <li>No dark, mirror-limo-style "car tint" vibe — this is architectural.</li>
+        <li>Don't crop out the JaiDeeClear branding on shirts.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">JaiDeeClear Brand &amp; Design Guidelines · v1 · <b>Lean into the signature orange.</b> — the locked reference for the site redesign.</div>
+</footer>
+
+</body>
+</html>
