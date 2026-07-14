@@ -179,7 +179,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 28px;bord
 .faq details[open] summary::after{content:"\2212"}
 .faq details p{margin-top:14px;color:var(--muted);font-size:.95rem;line-height:1.7}
 @media(max-width:920px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat-item:nth-child(2){border-right:none}.stat-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.steps-grid{grid-template-columns:1fr}.cards-grid{grid-template-columns:1fr}.earnings .ex-big{font-size:2.4rem}}
-.mobmenu{display:none;position:fixed;top:72px;left:0;right:0;z-index:49;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 24px 16px;box-shadow:var(--shadow-sm)}
+.mobmenu{display:none;position:absolute;top:100%;left:0;right:0;z-index:49;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 24px 16px;box-shadow:var(--shadow-sm)}
 .mobmenu.open{display:flex}
 .mobmenu a{padding:13px 2px;font-family:var(--head);font-weight:700;font-size:1rem;color:var(--ink);border-bottom:1px solid var(--line)}
 .mobmenu a:last-child{border-bottom:0;color:var(--brand-ink)}
@@ -214,8 +214,9 @@ a,button,.btn,label,summary,select,input,textarea,[onclick]{touch-action:manipul
       <button class="burger" aria-label="Menu"><svg class="ico" style="width:26px;height:26px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
   </div>
-</header>
 <nav class="mobmenu" id="mobmenu"><a href="/films">Window Films</a><div class="mobdrop"><button class="mobdrop-btn" aria-expanded="false">Properties<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button><div class="mobdrop-menu"><a href="/properties">All Properties</a><a href="/window-tinting-villas">Villas</a><a href="/window-tinting-houses">Houses</a><a href="/window-tinting-condos">Condos</a><a href="/window-tinting-offices">Offices</a><a href="/window-tinting-hotels">Hotels</a><a href="/window-tinting-restaurants">Restaurants</a><a href="/window-tinting-shophouses">Shophouses</a><a href="/window-tinting-schools">Schools</a><a href="/window-tinting-padel-courts">Padel Courts</a></div></div><a href="/locations">Locations</a><a href="/our-work">Our Work</a><a href="/about">About</a><a href="/schedule">Get a Free Quote</a></nav>
+</header>
+
 
 <div class="crumb">
   <div class="wrap crumb-in">
