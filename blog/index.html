@@ -150,12 +150,29 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 28px;bord
   section{padding:52px 0}
 }
 @media(max-width:600px){.blog-grid{grid-template-columns:1fr}.sec-head h2{font-size:1.8rem}}
-.mobmenu{display:none;position:fixed;top:72px;left:0;right:0;z-index:49;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 24px 16px;box-shadow:var(--shadow-sm)}
+.mobmenu{display:none;position:absolute;top:100%;left:0;right:0;z-index:49;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;padding:8px 24px 16px;box-shadow:var(--shadow-sm)}
 .mobmenu.open{display:flex}
 .mobmenu a{padding:13px 2px;font-family:var(--head);font-weight:700;font-size:1rem;color:var(--ink);border-bottom:1px solid var(--line)}
 .mobmenu a:last-child{border-bottom:0;color:var(--brand-ink)}
 @media(min-width:921px){.mobmenu{display:none!important}}
 a,button,.btn,label,summary,select,input,textarea,[onclick]{touch-action:manipulation}@media(max-width:600px){section{padding:44px 0}.benefit,.step,.review,.card,.bento .bx,.bx,.film-card,.xcard,.rec,.stat,.feature,.rev,.tcard,.faq-item,.tier,.b-card,.info-card{padding:18px}.sec-head{margin-bottom:24px}.recbar{gap:10px}}input[type=range]{touch-action:pan-y}@media(max-width:600px){.calc-slider{height:8px}.calc-slider::-webkit-slider-thumb{width:30px;height:30px}.calc-slider::-moz-range-thumb{width:30px;height:30px}}.navdrop{position:relative;display:inline-flex;align-items:center}.navdrop-btn{background:none;border:0;cursor:pointer;font-family:var(--head);font-weight:600;font-size:.92rem;color:var(--ink-2);display:inline-flex;align-items:center;gap:4px;padding:0}.navdrop-btn .caret{width:15px;height:15px;transition:transform .2s}.navdrop-btn:hover,.navdrop.open .navdrop-btn{color:var(--orange)}.navdrop.open .caret{transform:rotate(180deg)}.navdrop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:210px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:8px;display:none;flex-direction:column;z-index:60}.navdrop.open .navdrop-menu{display:flex}.navdrop-menu a{padding:9px 14px;border-radius:8px;font-family:var(--head);font-weight:600;font-size:.9rem;color:var(--ink)}.navdrop-menu a:hover{background:var(--cream-2);color:var(--orange)}.mobdrop-btn{width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);cursor:pointer;padding:13px 2px;font-family:var(--head);font-weight:700;font-size:1rem;color:var(--ink);display:flex;align-items:center;justify-content:space-between}.mobdrop-btn .caret{width:18px;height:18px;transition:transform .2s}.mobdrop.open .mobdrop-btn .caret{transform:rotate(180deg)}.mobdrop-menu{display:none;flex-direction:column;padding:2px 0 6px 14px}.mobdrop.open .mobdrop-menu{display:flex}.mobdrop-menu a{padding:10px 2px;font-family:var(--head);font-weight:600;font-size:.92rem;color:var(--muted)!important;border-bottom:1px solid var(--line)}.mobdrop-menu a:last-child{border-bottom:0}</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '864070883127327');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -179,8 +196,9 @@ a,button,.btn,label,summary,select,input,textarea,[onclick]{touch-action:manipul
       <button class="burger" aria-label="Menu"><svg class="ico" style="width:26px;height:26px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
   </div>
-</header>
 <nav class="mobmenu" id="mobmenu"><a href="/films">Window Films</a><div class="mobdrop"><button class="mobdrop-btn" aria-expanded="false">Properties<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button><div class="mobdrop-menu"><a href="/properties">All Properties</a><a href="/window-tinting-villas">Villas</a><a href="/window-tinting-houses">Houses</a><a href="/window-tinting-condos">Condos</a><a href="/window-tinting-offices">Offices</a><a href="/window-tinting-hotels">Hotels</a><a href="/window-tinting-restaurants">Restaurants</a><a href="/window-tinting-shophouses">Shophouses</a><a href="/window-tinting-schools">Schools</a><a href="/window-tinting-padel-courts">Padel Courts</a></div></div><a href="/locations">Locations</a><a href="/our-work">Our Work</a><a href="/about">About</a><a href="/schedule">Get a Free Quote</a></nav>
+</header>
+
 
 <div class="crumb">
   <div class="wrap crumb-in">
