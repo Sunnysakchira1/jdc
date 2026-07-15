@@ -236,7 +236,24 @@ a,button,.btn,label,summary,select,input,textarea,[onclick]{touch-action:manipul
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jaideeclear.com/"},{"@type":"ListItem","position":2,"name":"Schedule","item":"https://jaideeclear.com/schedule"}]}
     </script>
-    </head>
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '864070883127327');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
 <body>
 <h1 class="sr-only">Get a Free Window Film Quote in Thailand — JaiDeeClear</h1>
     <!-- Google Tag Manager (noscript) -->
@@ -871,6 +888,7 @@ a,button,.btn,label,summary,select,input,textarea,[onclick]{touch-action:manipul
         function ensureQuoteStarted() {
             if (!quoteStarted) {
                 dataLayer.push({ event: 'quote_started' });
+                if (window.fbq) fbq('track', 'InitiateCheckout');
                 quoteStarted = true;
             }
         }
@@ -1072,6 +1090,9 @@ a,button,.btn,label,summary,select,input,textarea,[onclick]{touch-action:manipul
                         first_name: (data.get('name') || '').split(' ')[0] || '',
                         last_name: (data.get('name') || '').split(' ').slice(1).join(' ') || ''
                     }));
+
+                    // Fire Meta Pixel Lead on thank-you page (survives redirect, one-shot)
+                    sessionStorage.setItem('jdc_lead_pending', '1');
 
                     window.location.href = 'thank-you.html';
                 } else {
