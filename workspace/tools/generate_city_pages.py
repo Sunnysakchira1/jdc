@@ -1783,7 +1783,10 @@ def generate_page(c, all_cities):
 
 def main():
     all_cities = build_cities()
-    output_dir = os.path.dirname(os.path.abspath(__file__))
+    # Script lives in workspace/tools/ — city pages are written to the site root (repo root)
+    output_dir = os.path.abspath(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+    )
 
     for city in all_cities:
         filename = f"window-tinting-{city['slug']}.html"

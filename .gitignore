@@ -2,28 +2,36 @@
 .DS_Store
 **/.DS_Store
 
-# Scratch, scraping, and working dirs (not part of the shipped site)
-.firecrawl/
-screenshots/
-gov/
+# ─────────────────────────────────────────────
+# workspace/ — everything NOT served by the site
+# (source footage, renders, internal docs, tools)
+# ─────────────────────────────────────────────
 
-# Large source-only asset projects — NOT referenced by any shipped page
-video-assets/
-remotion/
+# Large source-only asset projects (video pipeline — 560 MB of media)
+workspace/remotion/
+workspace/video-assets/
 
-# Standalone internal tool (depends on video-assets/ stills, unlinked)
-jdc-carousel-measurement.html
+# Scraping / screenshot working dirs
+workspace/screenshots/
 
-# Loose marketing / source files (the site links catalogue.pdf instead)
-Blue Modern Doors And Windows Service Poster.png
-with price.png
-with price (1).png
-Jaidee Clear Catalog .pdf
-Jaidee-Clear-UV-Protection-Film.pdf
+# Internal company + tender documents (not public)
+workspace/gov/
+
+# Standalone internal tool (unlinked from the site)
+workspace/tools/jdc-carousel-measurement.html
 
 # Working notes
-geo-page-template-v2.md
-location-page-feedback.md
+workspace/notes/
+
+# General image library — keep the README + folder structure, ignore the media
+workspace/images/**
+!workspace/images/README.md
+!workspace/images/**/
+!workspace/images/**/.gitkeep
+
+# Social carousel generator — keep the tool, ignore its 28 MB of media
+workspace/social/car-tinting/img/
+workspace/social/car-tinting/out/
 
 # Unreferenced stray image
 images/729561489_17903963559448947_6287226192220742100_n.jpg
