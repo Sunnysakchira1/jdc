@@ -40,9 +40,8 @@ Nothing in `workspace/` is deployed. Source material, tools, internal docs.
 workspace/
   images/          general JaiDee images — see workspace/images/README.md
   remotion/        video project
-  video-assets/    source .mov clips, frame grabs
+  video-assets/    source .mov clips
   social/          social carousel + ad generators
-  source-assets/   poster PNGs, UV film PDF
   gov/             tender + company registration PDFs (not public)
   screenshots/     page captures
   notes/           working notes

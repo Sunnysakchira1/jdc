@@ -17,9 +17,6 @@ workspace/screenshots/
 # Internal company + tender documents (not public)
 workspace/gov/
 
-# Loose marketing source files (the site links catalogue.pdf instead)
-workspace/source-assets/
-
 # Standalone internal tool (unlinked from the site)
 workspace/tools/jdc-carousel-measurement.html
 
