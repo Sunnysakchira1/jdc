@@ -26,6 +26,12 @@ workspace/tools/jdc-carousel-measurement.html
 # Working notes
 workspace/notes/
 
+# General image library — keep the README + folder structure, ignore the media
+workspace/images/**
+!workspace/images/README.md
+!workspace/images/*/
+!workspace/images/**/.gitkeep
+
 # Social carousel generator — keep the tool, ignore its 28 MB of media
 workspace/social/car-tinting/img/
 workspace/social/car-tinting/out/
