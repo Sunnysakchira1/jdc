@@ -12,17 +12,22 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free window film quote in Thailand. Choose from Carbon, Ceramic, Titanium, and Sputtering films. On-site installation across Bangkok, Phuket, Pattaya & more.">
-    <title>Get a Free Window Film Quote — JaiDeeClear Thailand</title>
+    <meta name="description" content="Get a free window film quote in 2–3 minutes. Pick your property or car and film, and we come to you for a free on-site measurement.">
+    <title>Free Window Film Quote &amp; On-Site Measurement | JaiDeeClear</title>
     <link rel="canonical" href="https://jaideeclear.com/schedule">
-    <meta property="og:title" content="Get a Free Window Film Quote — JaiDeeClear Thailand">
-    <meta property="og:description" content="Choose your film, tell us about your property, and get a free on-site quote. 99% UV protection, on-site installation across Thailand.">
+<!-- hreflang:start -->
+<link rel="alternate" hreflang="en" href="https://jaideeclear.com/schedule">
+<link rel="alternate" hreflang="th" href="https://jaideeclear.com/th/schedule">
+<link rel="alternate" hreflang="x-default" href="https://jaideeclear.com/schedule">
+<!-- hreflang:end -->
+    <meta property="og:title" content="Free Window Film Quote &amp; On-Site Measurement | JaiDeeClear">
+    <meta property="og:description" content="Get a free window film quote in 2–3 minutes. Pick your property or car and film, and we come to you for a free on-site measurement.">
     <meta property="og:url" content="https://jaideeclear.com/schedule">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://jaideeclear.com/jdclogo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -91,6 +96,38 @@ main{min-height:40vh}
 .property-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--orange)}
 .property-card .icon{font-size:44px;margin-bottom:10px}
 .property-card .label{font-size:.95rem;font-weight:700;color:var(--ink)}
+/* car tinting entry + car steps */
+.car-banner{display:grid;grid-template-columns:260px 1fr auto;align-items:center;gap:24px;width:100%;max-width:900px;margin:16px auto 0;padding:14px;background:#fff;border:1px solid var(--line);border-radius:var(--r);cursor:pointer;text-align:left;font-family:var(--head);transition:.2s}
+.car-banner:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--orange)}
+.car-banner img{width:100%;height:150px;object-fit:cover;border-radius:12px;display:block}
+.car-banner .new{display:inline-block;background:var(--orange);color:var(--ink);font-size:.7rem;font-weight:800;letter-spacing:.12em;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+.car-banner h3{font-size:1.3rem;margin:0 0 4px;color:var(--ink)}
+.car-banner p{font-family:var(--sans);font-size:.92rem;color:var(--muted);margin:0}
+.car-banner .go{font-size:.95rem;font-weight:700;color:var(--ink);background:var(--orange);padding:12px 20px;border-radius:999px;white-space:nowrap;margin-right:10px}
+.vehicle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:36px auto 0}
+.vehicle-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 18px;text-align:center;cursor:pointer;transition:.2s;font-family:var(--head)}
+.vehicle-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--orange)}
+.vehicle-card .icon{font-size:40px;margin-bottom:10px}
+.vehicle-card .label{font-size:1rem;font-weight:700;color:var(--ink)}
+.vehicle-card small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);margin-top:4px}
+.carfilm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:36px auto 0}
+.carfilm-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 24px;text-align:left;cursor:pointer;transition:.2s;display:flex;flex-direction:column}
+.carfilm-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm);border-color:var(--orange)}
+.carfilm-card.popular{border-color:var(--orange);box-shadow:0 0 0 1px var(--orange)}
+.carfilm-card .tag{position:absolute;top:-11px;left:22px;background:var(--orange);color:var(--ink);font-family:var(--head);font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:4px 10px;border-radius:999px}
+.carfilm-card .swatch{height:54px;border-radius:10px;margin-bottom:18px;background:linear-gradient(135deg,#9fb3c2,#5d7384)}
+.carfilm-card h3{font-size:1.3rem;margin-bottom:6px}
+.carfilm-card p{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+.carfilm-card ul{list-style:none;padding:0;margin:0 0 20px;font-size:.9rem;color:var(--ink-2)}
+.carfilm-card li{padding:4px 0 4px 22px;position:relative}
+.carfilm-card li::before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800}
+.carfilm-card .btn{margin-top:auto;width:100%}
+.car-notsure{display:block;max-width:900px;margin:18px auto 0;text-align:center;font-family:var(--head);font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:4px;cursor:pointer;background:none;border:0;font-size:.95rem}
+html[lang="th"] body,html[lang="th"] .step h2,html[lang="th"] .step h3,html[lang="th"] button,html[lang="th"] input,html[lang="th"] select,html[lang="th"] textarea{font-family:'Plus Jakarta Sans','Noto Sans Thai',sans-serif}
+html[lang="th"] .step p,html[lang="th"] .step li,html[lang="th"] label,html[lang="th"] small{font-family:'Inter','Noto Sans Thai',sans-serif;line-height:1.65}
+.car-only{display:none}
+.car-mode .car-only{display:block}
+.car-mode .prop-only{display:none}
 
 /* focus grid */
 .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:36px auto 0}
@@ -200,6 +237,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:54px 0 28px;bord
   .mobile-bar{display:flex}
   body{padding-bottom:64px}
   .property-grid{grid-template-columns:repeat(2,1fr)}
+  .car-banner{grid-template-columns:1fr;gap:12px}.car-banner img{height:170px}.car-banner .go{justify-self:start;margin:0 0 4px}
+  .vehicle-grid{grid-template-columns:repeat(2,1fr)}.carfilm-grid{grid-template-columns:1fr}
   .focus-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   .treview-grid{grid-template-columns:1fr}
@@ -253,6 +292,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+<style id="langswitch-css">.lang-link{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:38px;padding:0 12px;border:1.5px solid var(--line,#E9E0D2);border-radius:999px;font-family:var(--head,inherit);font-weight:700;font-size:.85rem;color:var(--ink,#16120F);text-decoration:none;background:#fff}.lang-link:hover{border-color:var(--orange,#F5A623)}.mobmenu .lang-link{margin-top:6px;align-self:flex-start}html[lang="th"]{--sans:"Inter","Noto Sans Thai",system-ui,sans-serif;--head:"Plus Jakarta Sans","Noto Sans Thai","Inter",sans-serif}html[lang="th"] body{line-height:1.7}</style>
 </head>
 <body>
 <h1 class="sr-only">Get a Free Window Film Quote in Thailand — JaiDeeClear</h1>
@@ -272,13 +312,13 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
       <a href="/our-work">Our Work</a>
       <a href="/about">About</a>
     </nav>
-    <div class="nav-right">
+    <div class="nav-right"><!-- langswitch:start --><a class="lang-link" href="/th/schedule" hreflang="th" lang="th" aria-label="ภาษาไทย">ไทย</a><!-- langswitch:end -->
       <a class="btn btn-wa nav-wa" href="https://wa.me/+66655079694"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M.5 23.5l1.6-6A11.5 11.5 0 1 1 12 23.5a11.6 11.6 0 0 1-5.6-1.4L.5 23.5zM6.7 20l.3.2a9.6 9.6 0 1 0-3.3-3.5l.2.3-1 3.5 3.6-.5zM17.4 14.3c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a7.8 7.8 0 0 1-3.8-3.3c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.9 2.9 0 0 0-.9 2.1c0 1.3.9 2.5 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.2-.2-.4-.3z"/></svg>Chat</a>
       <a class="btn btn-primary nav-cta" href="/schedule">Get a Free Quote</a>
       <button class="burger" aria-label="Menu"><svg class="ico" style="width:26px;height:26px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
   </div>
-<nav class="mobmenu" id="mobmenu"><a href="/films">Window Films</a><div class="mobdrop"><button class="mobdrop-btn" aria-expanded="false">Properties<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button><div class="mobdrop-menu"><a href="/properties">All Properties</a><a href="/window-tinting-villas">Villas</a><a href="/window-tinting-houses">Houses</a><a href="/window-tinting-condos">Condos</a><a href="/window-tinting-offices">Offices</a><a href="/window-tinting-hotels">Hotels</a><a href="/window-tinting-restaurants">Restaurants</a><a href="/window-tinting-shophouses">Shophouses</a><a href="/window-tinting-schools">Schools</a><a href="/window-tinting-padel-courts">Padel Courts</a></div></div><a href="/locations">Locations</a><a href="/our-work">Our Work</a><a href="/about">About</a><a href="/schedule">Get a Free Quote</a></nav>
+<nav class="mobmenu" id="mobmenu"><a href="/films">Window Films</a><div class="mobdrop"><button class="mobdrop-btn" aria-expanded="false">Properties<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></button><div class="mobdrop-menu"><a href="/properties">All Properties</a><a href="/window-tinting-villas">Villas</a><a href="/window-tinting-houses">Houses</a><a href="/window-tinting-condos">Condos</a><a href="/window-tinting-offices">Offices</a><a href="/window-tinting-hotels">Hotels</a><a href="/window-tinting-restaurants">Restaurants</a><a href="/window-tinting-shophouses">Shophouses</a><a href="/window-tinting-schools">Schools</a><a href="/window-tinting-padel-courts">Padel Courts</a></div></div><a href="/locations">Locations</a><a href="/our-work">Our Work</a><a href="/about">About</a><a href="/schedule">Get a Free Quote</a><!-- langswitch:start --><a class="lang-link" href="/th/schedule" hreflang="th" lang="th" aria-label="ภาษาไทย">ไทย</a><!-- langswitch:end --></nav>
 </header>
 
 
@@ -292,7 +332,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
     </div>
 
     <!-- TRUST STRIP -->
-    <div style="background:#F3EBDF;border-bottom:1px solid #E9E0D2;padding:14px 0">
+    <div id="trustStrip" style="background:#F3EBDF;border-bottom:1px solid #E9E0D2;padding:14px 0">
         <div class="wrap" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif">
             <div style="display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:#241D18"><span style="color:#F5A623">★★★★★</span><span><b style="color:#16120F">4.9</b> from 50+ Google reviews</span></div>
             <span style="color:#A89A8A">·</span>
@@ -344,6 +384,15 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                         <div class="label">Other</div>
                     </button>
                 </div>
+                <button class="car-banner" onclick="selectCar()">
+                    <img src="images/car-at-home-wide.jpg" alt="Car window tinting at the customer's home">
+                    <div>
+                        <span class="new">NEW</span>
+                        <h3>Car Tinting at Home</h3>
+                        <p>We tint your car at your home or office. Free removal of old tint. Bangkok &amp; Phuket.</p>
+                    </div>
+                    <span class="go">Get a car quote →</span>
+                </button>
             </div>
 
             <!-- Step 2: Main Concern -->
@@ -702,9 +751,60 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                 </div>
             </div>
 
+            <!-- Step 7: Car — Vehicle Type -->
+            <div class="step" id="step7">
+                <a class="back-button" onclick="goToStep(1)">← Back</a>
+                <div class="step-header">
+                    <h2>What type of car do you have?</h2>
+                    <p>Car tinting at your home or office · Bangkok &amp; Phuket</p>
+                </div>
+                <div class="vehicle-grid">
+                    <button class="vehicle-card" onclick="selectVehicle('Sedan')"><div class="icon">🚗</div><div class="label">Sedan</div><small>4-door saloon</small></button>
+                    <button class="vehicle-card" onclick="selectVehicle('Hatchback')"><div class="icon">🚘</div><div class="label">Hatchback</div><small>Compact / city car</small></button>
+                    <button class="vehicle-card" onclick="selectVehicle('SUV / Crossover')"><div class="icon">🚙</div><div class="label">SUV / Crossover</div><small>5 or 7 seats</small></button>
+                    <button class="vehicle-card" onclick="selectVehicle('Pickup')"><div class="icon">🛻</div><div class="label">Pickup</div><small>Single or double cab</small></button>
+                    <button class="vehicle-card" onclick="selectVehicle('MPV / Van')"><div class="icon">🚐</div><div class="label">MPV / Van</div><small>Family or passenger van</small></button>
+                    <button class="vehicle-card" onclick="selectVehicle('Other')"><div class="icon">➕</div><div class="label">Other</div><small>Tell us in the next step</small></button>
+                </div>
+            </div>
+
+            <!-- Step 8: Car — Film -->
+            <div class="step" id="step8">
+                <a class="back-button" onclick="goToStep(7)">← Back</a>
+                <div class="step-header">
+                    <h2>Choose your car film</h2>
+                    <p>All films include a written warranty. Final price confirmed in your quote.</p>
+                </div>
+                <div class="carfilm-grid">
+                    <div class="carfilm-card">
+                        <div class="swatch" style="background:linear-gradient(135deg,#8a9aa6,#4d5a63)"></div>
+                        <h3>Carbon</h3>
+                        <p>Matte, non-reflective finish. The best-value upgrade.</p>
+                        <ul><li>Reduces heat and glare</li><li>Won't fade to purple</li><li>No signal interference</li></ul>
+                        <button class="btn btn-primary" onclick="selectCarFilm('Carbon')">Choose Carbon</button>
+                    </div>
+                    <div class="carfilm-card popular">
+                        <span class="tag">MOST POPULAR</span>
+                        <div class="swatch" style="background:linear-gradient(135deg,#7f93a3,#3f4f5c)"></div>
+                        <h3>Ceramic</h3>
+                        <p>Nano-ceramic film. Strong heat rejection with a clear view out.</p>
+                        <ul><li>Cooler cabin on long drives</li><li>Clear visibility at night</li><li>Metal-free: phone and GPS work as normal</li></ul>
+                        <button class="btn btn-primary" onclick="selectCarFilm('Ceramic')">Choose Ceramic</button>
+                    </div>
+                    <div class="carfilm-card">
+                        <div class="swatch" style="background:linear-gradient(135deg,#6f8494,#2c3a45)"></div>
+                        <h3>Titanium IR90</h3>
+                        <p>Our premium infrared-rejecting film for maximum cabin comfort.</p>
+                        <ul><li>Highest heat rejection we offer</li><li>Premium clarity</li><li>Best for daily sun exposure</li></ul>
+                        <button class="btn btn-primary" onclick="selectCarFilm('Titanium IR90')">Choose Titanium IR90</button>
+                    </div>
+                </div>
+                <button class="car-notsure" onclick="selectCarFilm('Not sure — please advise')">Not sure? We'll recommend the right film →</button>
+            </div>
+
             <!-- Step 5: Contact Form -->
             <div class="step" id="step5">
-                <a class="back-button" onclick="goToStep(4)">← Back</a>
+                <a class="back-button" onclick="goToStep(formData.service === 'Car' ? 8 : 4)">← Back</a>
                 <div class="step-header">
                     <h2>Almost done!</h2>
                     <p>Let us know how to reach you</p>
@@ -718,26 +818,42 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                         completes successfully.
                     -->
                     <form id="contactForm" action="https://formspree.io/f/xovkoeap" method="POST" novalidate>
+                        <input type="hidden" name="_subject" id="f_subject" value="New window film quote request">
+                        <input type="hidden" name="service" id="f_service" value="Property window film">
+                        <input type="hidden" name="property_type" id="f_property">
+                        <input type="hidden" name="main_concern" id="f_concern">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
                             <span class="error-message">Please enter your full name</span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group prop-only">
                             <label for="email">Email *</label>
                             <input type="email" id="email" name="email" required>
                             <span class="error-message">Please enter a valid email address</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone" id="phoneLabel">Phone Number</label>
                             <input type="tel" id="phone" name="phone" placeholder="+66 XX-XXX-XXXX">
-                            <small>Optional - we'll use email if not provided</small>
+                            <small class="prop-only">Optional - we'll use email if not provided</small>
+                            <span class="error-message">Please enter your contact number</span>
+                        </div>
+
+                        <div class="form-group car-only">
+                            <input type="hidden" name="vehicle_type" id="f_vehicle" disabled>
+                            <label for="contact_method">Preferred contact method *</label>
+                            <select id="contact_method" name="contact_method" disabled>
+                                <option value="">Select one</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="Phone call">Phone call</option>
+                            </select>
+                            <span class="error-message">Please choose how we should contact you</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="location">Installation Location (include Google Maps link) *</label>
+                            <label for="location" id="locationLabel">Installation Location (include Google Maps link) *</label>
                             <textarea id="location" name="location" required placeholder="e.g., 123 Sukhumvit Soi 21, Bangkok 10110&#10;Google Maps: https://maps.app.goo.gl/..."></textarea>
                             <span class="error-message">Please enter your installation location with Google Maps link</span>
                         </div>
@@ -748,8 +864,8 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                             <small>We'll contact you to confirm availability</small>
                         </div>
 
-                        <div class="form-group">
-                            <label for="film">Film of Interest *</label>
+                        <div class="form-group prop-only">
+                            <label for="film" id="filmLabel">Film of Interest *</label>
                             <select id="film" name="film" required>
                                 <option value="">Select a film</option>
                                 <option value="Carbon Series">Carbon Series</option>
@@ -765,7 +881,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                             <span class="error-message">Please select a film type</span>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group prop-only">
                             <label for="notes">Additional Notes</label>
                             <textarea id="notes" name="notes" placeholder="Any specific requirements, window measurements you already have, or questions..."></textarea>
                         </div>
@@ -881,6 +997,36 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
 </footer>
 
     <script>
+        // JS-generated labels (car/property mode, errors) are translated at runtime; /th/schedule sets lang = 'th'.
+        // Static page text is translated at build time by tools/i18n/build_th.py. Form values stay in English.
+        const TH = {"Beat the hot season": "สู้ร้อนหน้าร้อนนี้", "— book your installation, today.": "— จองติดตั้งได้เลยวันนี้", "What type of property do you have?": "เลือกประเภทอาคารของคุณ", "Choose your space to get started": "เลือกพื้นที่ของคุณเพื่อเริ่มต้น", "House": "บ้านเดี่ยว", "Condo": "คอนโด", "Villa": "วิลล่า", "Townhouse": "ทาวน์เฮาส์", "Office": "สำนักงาน", "Building": "อาคาร", "Cafe": "คาเฟ่", "Other": "อื่นๆ", "NEW": "ใหม่", "Car Tinting at Home": "ติดฟิล์มรถยนต์ถึงบ้าน", "We tint your car at your home or office. Free removal of old tint. Bangkok & Phuket.": "ทีมงานไปติดฟิล์มรถให้ถึงบ้านหรือที่ทำงาน ลอกฟิล์มเก่าฟรี ให้บริการกรุงเทพฯ และภูเก็ต", "Get a car quote →": "ขอใบเสนอราคารถยนต์ →", "← Back": "← ย้อนกลับ", "What's your main concern?": "คุณให้ความสำคัญกับเรื่องใดมากที่สุด?", "Select your primary need": "เลือกความต้องการหลักของคุณ", "Heat Reduction": "ลดความร้อน", "Lower cooling costs & temperature": "ลดอุณหภูมิและค่าแอร์", "Privacy": "ความเป็นส่วนตัว", "Block outside view during daytime": "ป้องกันการมองจากภายนอกในเวลากลางวัน", "UV Protection": "ป้องกันรังสี UV", "Protect furniture & skin health": "ปกป้องเฟอร์นิเจอร์และผิวของคุณ", "Heat + Privacy": "ลดความร้อน + ความเป็นส่วนตัว", "Comprehensive protection": "ปกป้องครบทุกด้าน", "Choose your film": "เลือกฟิล์มของคุณ", "Select the protection level that fits your needs": "เลือกระดับการปกป้องที่เหมาะกับคุณ", "Understanding Film Performance Ratings": "ทำความเข้าใจค่าประสิทธิภาพของฟิล์ม", "— Ultraviolet Rejection: Percentage of harmful UV rays blocked": "— การป้องกันรังสียูวี: เปอร์เซ็นต์รังสี UV ที่ถูกกันออก", "— Heat Rejection: Percentage of heat-causing heat blocked": "— การกันความร้อน: เปอร์เซ็นต์ความร้อนที่ถูกกันออก", "— Total Solar Energy Rejected: Overall solar heat control capability": "— การกันพลังงานแสงอาทิตย์รวม: ความสามารถในการควบคุมความร้อนโดยรวม", "Lifespan: 2-3 years": "อายุการใช้งาน: 2-3 ปี", "Lifespan: 5-7 years": "อายุการใช้งาน: 5-7 ปี", "Lifespan: 7-9 years": "อายุการใช้งาน: 7-9 ปี", "Lifespan: 9+ years": "อายุการใช้งาน: 9 ปีขึ้นไป", "Lifespan: Varies": "อายุการใช้งาน: แตกต่างกันไป", "per sq.ft": "ต่อตร.ฟุต", "The Carbon Series is our most affordable entry-level option, offering solid basic UV protection for temporary or budget-friendly needs.": "ซีรีส์คาร์บอนเป็นตัวเลือกเริ่มต้นที่ราคาประหยัดที่สุด ให้การป้องกัน UV พื้นฐานที่ดี เหมาะกับงานระยะสั้นหรืองบประมาณจำกัด", "Best for": "เหมาะสำหรับ", "Not recommended for": "ไม่แนะนำสำหรับ", "Commonly used in": "นิยมใช้ใน", "Budget-conscious customers, short-term window film needs, basic UV protection projects": "ลูกค้าที่คำนึงถึงงบประมาณ งานติดฟิล์มระยะสั้น งานที่ต้องการป้องกัน UV ขั้นพื้นฐาน", "Long-term installations (5+ years), heat-intensive environments, premium aesthetic preferences, commercial buildings requiring durability": "การติดตั้งระยะยาว (5 ปีขึ้นไป) พื้นที่ที่ร้อนจัด ผู้ที่ต้องการความสวยงามระดับพรีเมียม อาคารพาณิชย์ที่ต้องการความทนทาน", "Schedule On-Site Measurement": "นัดวัดพื้นที่หน้างาน", "View Catalogue": "ดูแคตตาล็อก", "This series uses reflective technology for effective heat rejection and a distinctive metallic finish, offering good value for mid-range budgets.": "ซีรีส์นี้ใช้เทคโนโลยีสะท้อนแสงเพื่อกันความร้อนได้อย่างมีประสิทธิภาพ พร้อมผิวเมทัลลิกโดดเด่น คุ้มค่าสำหรับงบประมาณระดับกลาง", "Reflective heat rejection, customers prioritizing solar control, building aesthetics with metallic appearance": "การกันความร้อนแบบสะท้อนแสง ลูกค้าที่เน้นควบคุมแสงแดด อาคารที่ต้องการลุคเมทัลลิก", "Areas needing long-term durability, customers sensitive to a reflective appearance, premium UV protection needs": "พื้นที่ที่ต้องการความทนทานระยะยาว ผู้ที่ไม่ชอบลักษณะกระจกสะท้อนแสง งานที่ต้องการป้องกัน UV ระดับพรีเมียม", "Most Popular": "ยอดนิยม", "Recommended": "แนะนำ", "MOST POPULAR": "ยอดนิยม", "Our most popular choice, Ceramic Nano offers excellent value with nano-ceramic technology for heat and glare reduction without a metallic look.": "ตัวเลือกยอดนิยมของเรา เซรามิกนาโนให้ความคุ้มค่าสูงด้วยเทคโนโลยีนาโนเซรามิก ช่วยลดความร้อนและแสงจ้าโดยไม่ดูเป็นเมทัลลิก", "Residential homes wanting quality, mid-range budget customers, natural light and visibility important, heat reduction with modern appearance": "บ้านพักอาศัยที่ต้องการคุณภาพ ลูกค้างบประมาณระดับกลาง ผู้ที่ให้ความสำคัญกับแสงธรรมชาติและทัศนวิสัย การลดความร้อนพร้อมรูปลักษณ์ทันสมัย", "Extreme heat environments, maximum UV blocking requirements, very tight budgets": "พื้นที่ที่ร้อนจัด งานที่ต้องการป้องกัน UV สูงสุด งบประมาณจำกัดมาก", "Designed to block the widest spectrum of harmful UV rays, this film is perfect for preserving valuable interiors and ensuring optimal protection.": "ออกแบบมาเพื่อกันรังสี UV ได้ในช่วงกว้างที่สุด เหมาะอย่างยิ่งสำหรับถนอมการตกแต่งภายในที่มีค่าและให้การปกป้องที่ดีที่สุด", "Protecting furniture and interiors from fading, homes with valuable furnishings, premium UV protection priority, commercial offices with sensitive equipment": "ป้องกันเฟอร์นิเจอร์และการตกแต่งภายในไม่ให้ซีดจาง บ้านที่มีของตกแต่งมีค่า ผู้ที่เน้นการป้องกัน UV ระดับพรีเมียม สำนักงานที่มีอุปกรณ์อ่อนไหว", "Budget-conscious customers, properties where UV blocking is not critical": "ลูกค้าที่คำนึงถึงงบประมาณ อาคารที่ไม่จำเป็นต้องป้องกัน UV มากนัก", "For top-tier performance, the Titanium Series provides maximum heat and UV rejection, ideal for Thailand's intense tropical heat and superior durability.": "เพื่อประสิทธิภาพระดับสูงสุด ซีรีส์ไทเทเนียมกันความร้อนและรังสี UV ได้สูงสุด เหมาะกับอากาศร้อนจัดของประเทศไทย และมีความทนทานเหนือกว่า", "Extreme heat rejection needs, high-end residential properties, commercial buildings in hot climates, maximum energy efficiency priority": "งานที่ต้องการกันความร้อนสูงสุด บ้านพักอาศัยระดับไฮเอนด์ อาคารพาณิชย์ในพื้นที่อากาศร้อน ผู้ที่เน้นการประหยัดพลังงานสูงสุด", "Budget-conscious customers, properties with basic protection needs": "ลูกค้าที่คำนึงถึงงบประมาณ อาคารที่ต้องการการป้องกันขั้นพื้นฐาน", "The premium choice, Sputtering Film combines beautiful optical clarity with superior heat and UV rejection, offering unmatched quality and the longest lifespan.": "ตัวเลือกระดับพรีเมียม ฟิล์มสปัตเตอริงผสานความใสคมชัดเข้ากับการกันความร้อนและ UV ที่เหนือกว่า ให้คุณภาพที่โดดเด่นและอายุการใช้งานยาวนานที่สุด", "Aesthetic + performance priority, premium residential properties, high-end commercial buildings, customers wanting the best": "ผู้ที่เน้นทั้งความสวยงามและประสิทธิภาพ บ้านพักอาศัยระดับพรีเมียม อาคารพาณิชย์ระดับไฮเอนด์ ลูกค้าที่ต้องการสิ่งที่ดีที่สุด", "Budget-conscious customers, short-term temporary needs": "ลูกค้าที่คำนึงถึงงบประมาณ งานชั่วคราวระยะสั้น", "Basic glass protection, sliding doors, storefront windows, child-safe environments": "การป้องกันกระจกขั้นพื้นฐาน ประตูบานเลื่อน กระจกหน้าร้าน พื้นที่ที่ต้องปลอดภัยสำหรับเด็ก", "High-security areas, locations requiring ballistic protection": "พื้นที่ความปลอดภัยสูง สถานที่ที่ต้องการกันกระสุน", "Family homes, kindergartens, retail stores, restaurants, residential balconies": "บ้านครอบครัว โรงเรียนอนุบาล ร้านค้าปลีก ร้านอาหาร ระเบียงที่พักอาศัย", "Enhanced security, ground floor windows, jewelry stores, high-value property protection": "ความปลอดภัยที่เพิ่มขึ้น หน้าต่างชั้นล่าง ร้านเครื่องประดับ การปกป้องทรัพย์สินมูลค่าสูง", "Standard residential use where cost is concern, areas without security risks": "ที่พักอาศัยทั่วไปที่คำนึงถึงค่าใช้จ่าย พื้นที่ที่ไม่มีความเสี่ยงด้านความปลอดภัย", "Banks, jewelry stores, pharmacies, electronics stores, cash-handling businesses": "ธนาคาร ร้านเครื่องประดับ ร้านขายยา ร้านเครื่องใช้ไฟฟ้า ธุรกิจที่มีเงินสดหมุนเวียน", "Protection plus UV blocking, retail displays, museums, galleries with valuable items": "ป้องกันกระจกพร้อมกันรังสี UV ตู้โชว์สินค้า พิพิธภัณฑ์ แกลเลอรีที่มีของมีค่า", "Areas needing maximum security without UV concerns, budget-constrained projects": "พื้นที่ที่ต้องการความปลอดภัยสูงสุดโดยไม่เน้นเรื่อง UV งานที่มีงบประมาณจำกัด", "Art galleries, museums, antique shops, luxury retail, exhibition spaces": "แกลเลอรีศิลปะ พิพิธภัณฑ์ ร้านของเก่า ร้านค้าหรู พื้นที่จัดนิทรรศการ", "Schedule Your Free Measurement": "นัดวัดพื้นที่ฟรี", "Our team will visit your location for accurate assessment": "ทีมงานจะเข้าไปประเมินหน้างานเพื่อความแม่นยำ", "Professional On-Site Measurement": "บริการวัดพื้นที่หน้างานโดยมืออาชีพ", "Free service • Expert consultation • Accurate quote": "บริการฟรี • ให้คำปรึกษาโดยผู้เชี่ยวชาญ • ใบเสนอราคาแม่นยำ", "✓ Recommended for Best Results": "✓ แนะนำเพื่อผลลัพธ์ที่ดีที่สุด", "Continue to Contact Details": "ไปที่ข้อมูลติดต่อ", "What type of car do you have?": "รถของคุณเป็นประเภทใด?", "Car tinting at your home or office · Bangkok & Phuket": "ติดฟิล์มรถถึงบ้านหรือที่ทำงาน · กรุงเทพฯ และภูเก็ต", "Sedan": "รถเก๋ง", "4-door saloon": "รถเก๋ง 4 ประตู", "Hatchback": "แฮทช์แบ็ก", "Compact / city car": "รถเล็ก / รถในเมือง", "SUV / Crossover": "SUV / ครอสโอเวอร์", "5 or 7 seats": "5 หรือ 7 ที่นั่ง", "Pickup": "รถกระบะ", "Single or double cab": "ตอนเดียวหรือสี่ประตู", "MPV / Van": "MPV / รถตู้", "Family or passenger van": "รถครอบครัวหรือรถตู้โดยสาร", "Tell us in the next step": "แจ้งรายละเอียดในขั้นตอนถัดไป", "Choose your car film": "เลือกฟิล์มรถยนต์", "All films include a written warranty. Final price confirmed in your quote.": "ฟิล์มทุกรุ่นมีใบรับประกัน ราคาสุดท้ายยืนยันในใบเสนอราคา", "Matte, non-reflective finish. The best-value upgrade.": "ผิวด้าน ไม่สะท้อนแสง คุ้มค่าที่สุด", "Reduces heat and glare": "ลดความร้อนและแสงจ้า", "Won't fade to purple": "ไม่ซีดเป็นสีม่วง", "No signal interference": "ไม่รบกวนสัญญาณ", "Choose Carbon": "เลือก Carbon", "Choose Ceramic": "เลือก Ceramic", "Choose Titanium IR90": "เลือก Titanium IR90", "Nano-ceramic film. Strong heat rejection with a clear view out.": "ฟิล์มนาโนเซรามิก กันความร้อนได้ดี มองออกไปได้ชัดเจน", "Cooler cabin on long drives": "ห้องโดยสารเย็นสบายแม้ขับทางไกล", "Clear visibility at night": "มองเห็นชัดในเวลากลางคืน", "Metal-free: phone and GPS work as normal": "ไม่มีส่วนผสมโลหะ: โทรศัพท์และ GPS ใช้งานได้ปกติ", "Our premium infrared-rejecting film for maximum cabin comfort.": "ฟิล์มพรีเมียมกันรังสีอินฟราเรด เพื่อความสบายสูงสุดในห้องโดยสาร", "Highest heat rejection we offer": "กันความร้อนได้สูงสุดในบรรดาฟิล์มของเรา", "Premium clarity": "ความใสระดับพรีเมียม", "Best for daily sun exposure": "เหมาะกับรถที่เจอแดดทุกวัน", "Not sure? We'll recommend the right film →": "ไม่แน่ใจ? เราช่วยแนะนำฟิล์มที่เหมาะกับคุณ →", "Almost done!": "เกือบเสร็จแล้ว!", "Let us know how to reach you": "แจ้งช่องทางที่เราติดต่อคุณได้", "Full Name *": "ชื่อ-นามสกุล *", "Please enter your full name": "กรุณากรอกชื่อ-นามสกุล", "Email *": "อีเมล *", "Please enter a valid email address": "กรุณากรอกอีเมลให้ถูกต้อง", "Phone Number": "เบอร์โทรศัพท์", "Optional - we'll use email if not provided": "ไม่บังคับ - หากไม่ระบุ เราจะติดต่อทางอีเมล", "Contact Number *": "เบอร์ติดต่อ *", "Please enter your contact number": "กรุณากรอกเบอร์ติดต่อ", "Preferred contact method *": "ช่องทางที่สะดวกให้ติดต่อ *", "Select one": "เลือก 1 ช่องทาง", "Phone call": "โทรศัพท์", "Please choose how we should contact you": "กรุณาเลือกช่องทางที่สะดวกให้ติดต่อ", "Installation Location (include Google Maps link) *": "สถานที่ติดตั้ง (แนบลิงก์ Google Maps) *", "Please enter your installation location with Google Maps link": "กรุณากรอกสถานที่ติดตั้งพร้อมลิงก์ Google Maps", "Where should we tint your car? (home or office address, Google Maps link) *": "สถานที่ติดฟิล์มรถ (ที่อยู่บ้านหรือที่ทำงาน พร้อมลิงก์ Google Maps) *", "Preferred Date/Time": "วัน/เวลาที่สะดวก", "We'll contact you to confirm availability": "เราจะติดต่อกลับเพื่อยืนยันวันเวลา", "Film of Interest *": "ฟิล์มที่สนใจ *", "Select a film": "เลือกฟิล์ม", "Please select a film type": "กรุณาเลือกประเภทฟิล์ม", "Not sure — please advise": "ไม่แน่ใจ — ขอคำแนะนำ", "Additional Notes": "หมายเหตุเพิ่มเติม", "Submit Request": "ส่งคำขอ", "Quote Request Received!": "ได้รับคำขอใบเสนอราคาแล้ว!", "Our team will contact you shortly with your detailed quotation": "ทีมงานจะติดต่อกลับพร้อมใบเสนอราคาโดยละเอียดในเร็วๆ นี้", "Contact Us:": "ติดต่อเรา:", "Start New Quote Request": "เริ่มขอใบเสนอราคาใหม่", "from 50+ Google reviews": "จากรีวิว Google 50+ รีวิว", "99% UV blocked · Free on-site measurement": "กัน UV 99% · วัดพื้นที่หน้างานฟรี", "Response within 2 hours": "ตอบกลับภายใน 2 ชั่วโมง", "Submitting...": "กำลังส่ง...", "There was an error submitting the form. Please try again.": "ส่งแบบฟอร์มไม่สำเร็จ กรุณาลองใหม่อีกครั้ง", "There was an error submitting the form. Please check your connection and try again.": "ส่งแบบฟอร์มไม่สำเร็จ กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วลองใหม่", "PH::e.g., 123 Sukhumvit Soi 21, Bangkok 10110\nGoogle Maps: https://maps.app.goo.gl/...": "เช่น 123 สุขุมวิท ซอย 21 กรุงเทพฯ 10110\nGoogle Maps: https://maps.app.goo.gl/...", "PH::e.g., Home driveway, 45 Soi Ari, Bangkok\nGoogle Maps: https://maps.app.goo.gl/...": "เช่น ที่จอดรถหน้าบ้าน 45 ซอยอารีย์ กรุงเทพฯ\nGoogle Maps: https://maps.app.goo.gl/...", "PH::e.g., Monday June 5th, morning or 2-4pm": "เช่น วันจันทร์ที่ 5 มิ.ย. ช่วงเช้า หรือ 14.00-16.00 น.", "PH::Any specific requirements, window measurements you already have, or questions...": "ความต้องการเพิ่มเติม ขนาดหน้าต่างที่วัดไว้แล้ว หรือคำถามต่างๆ...", "What Our Customers Say": "เสียงจากลูกค้าของเรา", "4.9★ from": "4.9★ จาก", "50+ verified reviews": "รีวิวที่ยืนยันแล้ว 50+ รีวิว", "On-site service across Thailand — Bangkok, Phuket, Pattaya, Hua Hin, and more.": "บริการถึงหน้างานทั่วประเทศไทย — กรุงเทพฯ ภูเก็ต พัทยา หัวหิน และอื่นๆ", "Not sure which film is right for you? Read our guides first:": "ยังไม่แน่ใจว่าฟิล์มแบบไหนเหมาะกับคุณ? อ่านคู่มือของเราก่อน:", "Film Selection Guide →": "คู่มือเลือกฟิล์ม →", "Pricing Guide →": "คู่มือราคา →", "UV Protection Guide →": "คู่มือป้องกันรังสี UV →"};
+        let lang = 'en';
+        function t(en) { return lang === 'th' && TH[en] ? TH[en] : en; }
+        function applyLang() {
+            document.documentElement.lang = lang;
+            ['.ribbon', '#trustStrip', 'main', '.tsec-head', '.tlinks'].forEach(sel => {
+                const root = document.querySelector(sel);
+                if (!root) return;
+                const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+                let node;
+                while ((node = walker.nextNode())) {
+                    if (node.parentElement.closest('script,style')) continue;
+                    const key = node.nodeValue.replace(/\s+/g, ' ').trim();
+                    if (!key) continue;
+                    if (node.__en === undefined || (node.nodeValue !== node.__shown)) node.__en = key;
+                    const out = t(node.__en);
+                    const lead = node.nodeValue.match(/^\s*/)[0], tail = node.nodeValue.match(/\s*$/)[0];
+                    node.nodeValue = lead + out + tail;
+                    node.__shown = node.nodeValue;
+                }
+                root.querySelectorAll('[placeholder]').forEach(el => {
+                    if (el.__phShown !== el.placeholder) el.__phEn = el.placeholder;
+                    el.placeholder = t('PH::' + el.__phEn) === 'PH::' + el.__phEn ? el.__phEn : t('PH::' + el.__phEn);
+                    el.__phShown = el.placeholder;
+                });
+            });
+        }
+
         // GTM dataLayer tracking helpers
         window.dataLayer = window.dataLayer || [];
         let quoteStarted = false;
@@ -921,20 +1067,51 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
         }
         
         let formData = {
+            service: 'Property',
             propertyType: '',
             focus: '',
+            vehicleType: '',
             film: '',
             filmPrice: 0
         };
+
+        const PROPERTY_FILMS = ['Carbon Series', 'Metallic Series', 'Ceramic Nano', 'Ceramic UV400', 'Titanium Series', 'Sputtering Series', 'Safety Film 0.4mm', 'Safety Film 0.8mm', 'Safety UV Film 0.4mm'];
+        const CAR_FILMS = ['Carbon', 'Ceramic', 'Titanium IR90', 'Not sure — please advise'];
+
+        // Switch the contact form between property and car quotes
+        function setServiceMode(service) {
+            formData.service = service;
+            const isCar = service === 'Car';
+            document.getElementById('contactForm').classList.toggle('car-mode', isCar);
+            // Car quotes only need name, number, contact method, address and date/time
+            document.querySelectorAll('.car-only input, .car-only select').forEach(el => { el.disabled = !isCar; });
+            document.getElementById('email').disabled = isCar;
+            document.getElementById('notes').disabled = isCar;
+            document.getElementById('phoneLabel').textContent = isCar ? 'Contact Number *' : 'Phone Number';
+            document.getElementById('f_service').value = isCar ? 'Car tinting at home' : 'Property window film';
+            document.getElementById('f_subject').value = isCar ? 'New CAR tinting quote request' : 'New window film quote request';
+            document.getElementById('locationLabel').textContent = isCar
+                ? 'Where should we tint your car? (home or office address, Google Maps link) *'
+                : 'Installation Location (include Google Maps link) *';
+            document.getElementById('location').placeholder = isCar
+                ? 'e.g., Home driveway, 45 Soi Ari, Bangkok\nGoogle Maps: https://maps.app.goo.gl/...'
+                : 'e.g., 123 Sukhumvit Soi 21, Bangkok 10110\nGoogle Maps: https://maps.app.goo.gl/...';
+            const select = document.getElementById('film');
+            const films = isCar ? CAR_FILMS : PROPERTY_FILMS;
+            select.innerHTML = '<option value="">Select a film</option>' + films.map(f => '<option value="' + f + '">' + f + '</option>').join('');
+            applyLang();
+        }
 
         function goToStep(stepNumber) {
             document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
             document.getElementById('step' + stepNumber).classList.add('active');
             
-            if (stepNumber > 1 && stepNumber < 6) {
+            // Car steps 7-8 sit at positions 2-3 of the progress bar
+            const progressPos = { 2: 2, 3: 3, 4: 4, 5: 5, 7: 2, 8: 3 }[stepNumber];
+            if (progressPos) {
                 document.getElementById('progressBar').style.display = 'block';
                 for (let i = 1; i <= 4; i++) {
-                    document.getElementById('progress' + i).classList.toggle('active', i < stepNumber);
+                    document.getElementById('progress' + i).classList.toggle('active', i < progressPos);
                 }
             } else {
                 document.getElementById('progressBar').style.display = 'none';
@@ -946,7 +1123,9 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                 3: 'film',
                 4: 'schedule',
                 5: 'contact',
-                6: 'received'
+                6: 'received',
+                7: 'car_vehicle',
+                8: 'car_film'
             };
 
             if (stepNames[stepNumber]) {
@@ -962,12 +1141,38 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
         }
 
         function selectProperty(type) {
+            setServiceMode('Property');
             formData.propertyType = type;
+            document.getElementById('f_property').value = type;
             goToStep(2);
+        }
+
+        function selectCar() {
+            setServiceMode('Car');
+            formData.propertyType = '';
+            document.getElementById('f_property').value = '';
+            document.getElementById('f_concern').value = '';
+            dataLayer.push({ event: 'quote_service_selected', service: 'car' });
+            goToStep(7);
+        }
+
+        function selectVehicle(type) {
+            formData.vehicleType = type;
+            document.getElementById('f_vehicle').value = type;
+            goToStep(8);
+        }
+
+        function selectCarFilm(filmName) {
+            formData.film = filmName;
+            document.getElementById('film').value = filmName;
+            ensureQuoteStarted();
+            dataLayer.push({ event: 'quote_film_selected', film: 'car_' + filmName.toLowerCase().split(' ')[0].replace(/[^a-z0-9]/g, ''), service: 'car' });
+            goToStep(5);
         }
 
         function selectFocus(focus) {
             formData.focus = focus;
+            document.getElementById('f_concern').value = focus;
             
             // Remove all existing recommended badges
             document.querySelectorAll('.film-card').forEach(card => {
@@ -1030,8 +1235,9 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                 isValid = false;
             }
 
+            const isCar = formData.service === 'Car';
             const email = document.getElementById('email');
-            if (!email.value.trim() || !validateEmail(email.value)) {
+            if (!isCar && (!email.value.trim() || !validateEmail(email.value))) {
                 email.closest('.form-group').classList.add('error');
                 isValid = false;
             }
@@ -1040,6 +1246,19 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
             if (!location.value.trim()) {
                 location.closest('.form-group').classList.add('error');
                 isValid = false;
+            }
+
+            if (isCar) {
+                const phone = document.getElementById('phone');
+                if (phone.value.replace(/\D/g, '').length < 9) {
+                    phone.closest('.form-group').classList.add('error');
+                    isValid = false;
+                }
+                const method = document.getElementById('contact_method');
+                if (!method.value) {
+                    method.closest('.form-group').classList.add('error');
+                    isValid = false;
+                }
             }
 
             const film = document.getElementById('film');
@@ -1064,7 +1283,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                 return;
             }
             const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.textContent = 'Submitting...';
+            submitBtn.textContent = t('Submitting...');
             submitBtn.disabled = true;
             const formData = new FormData(this);
             try {
@@ -1081,6 +1300,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
                         name_provided: !!data.get('name'),
                         email_provided: !!data.get('email'),
                         phone_provided: !!data.get('phone'),
+                        service: formData.service === 'Car' ? 'car' : 'property',
                         film: filmValue.toLowerCase().replace(/\s+/g, '_')
                     });
 
@@ -1096,12 +1316,12 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
 
                     window.location.href = 'thank-you.html';
                 } else {
-                    alert('There was an error submitting the form. Please try again.');
+                    alert(t('There was an error submitting the form. Please try again.'));
                 }
             } catch (err) {
-                alert('There was an error submitting the form. Please check your connection and try again.');
+                alert(t('There was an error submitting the form. Please check your connection and try again.'));
             }
-            submitBtn.textContent = 'Submit Request';
+            submitBtn.textContent = t('Submit Request');
             submitBtn.disabled = false;
         });
 
@@ -1122,14 +1342,31 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
             });
         });
 
+        ['phone', 'contact_method'].forEach(id => document.getElementById(id).addEventListener('input', function() {
+            if (this.value.trim()) this.closest('.form-group').classList.remove('error');
+        }));
+
+        // Thai lives at /th/schedule (static, indexable). Old ?lang=th links forward there.
+        if (lang === 'en' && new URLSearchParams(location.search).get('lang') === 'th') {
+            const q = new URLSearchParams(location.search); q.delete('lang');
+            location.replace('/th/schedule' + (q.toString() ? '?' + q : ''));
+        }
+        applyLang();
+
+        // Deep link for car campaigns: /schedule?service=car opens the car path
+        if (new URLSearchParams(location.search).get('service') === 'car') selectCar();
+
         function resetForm() {
             formData = {
+                service: 'Property',
                 propertyType: '',
                 focus: '',
+                vehicleType: '',
                 film: '',
                 filmPrice: 0
             };
             document.getElementById('contactForm').reset();
+            setServiceMode('Property');
             goToStep(1);
         }
     </script>
