@@ -240,6 +240,24 @@ section{padding:80px 0}
 .cities{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:32px}
 .city{padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;font-family:var(--head);font-weight:600;font-size:.9rem;transition:.2s}
 .city:hover{border-color:var(--orange);color:var(--orange)}
+/* film types + car band + service areas (home) */
+.ftypes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ftype{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.2s}
+.ftype:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.ftype .tag{font-family:var(--head);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-ink)}
+.ftype h3{font-size:1.2rem;margin:8px 0 10px}
+.ftype .pr{font-family:var(--head);font-weight:800;color:var(--ink);font-size:1.25rem}
+.ftype .pr small{font-size:.75rem;color:var(--muted);font-weight:600}
+.ftype .life{display:block;font-size:.85rem;color:var(--muted);margin-top:4px}
+.areas{text-align:center;margin-top:40px}
+.areas h3{font-size:1.25rem;margin-bottom:4px}
+.car-band{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;background:var(--ink);border-radius:var(--r);overflow:hidden;color:#fff}
+.car-band img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+.car-band .txt{padding:40px 44px 40px 0}
+.car-band h2{color:#fff;font-size:2.1rem;margin:12px 0 14px}
+.car-band p{color:rgba(255,255,255,.75);margin-bottom:22px}
+@media(max-width:820px){.ftypes{grid-template-columns:repeat(2,1fr)}.car-band{grid-template-columns:1fr;gap:0}.car-band .txt{padding:28px 24px 32px}.car-band img{min-height:220px}.car-band h2{font-size:1.7rem}}
+@media(max-width:480px){.ftypes{grid-template-columns:1fr}}
 
 /* faq */
 .faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
@@ -428,7 +446,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">ฟิล์มกรองแสงกัน UV และกันความร้อน · ติดตั้งถึงหน้างาน</div>
-      <h1 style="margin-top:14px">ติดฟิล์มกรองแสง<span class="acc">พรีเมียม</span><br>ถึงหน้างานทั่วประเทศไทย</h1>
+      <h1 style="margin-top:14px">ติดฟิล์มกรองแสง<span class="acc">บ้าน คอนโด อาคาร</span><br>ถึงหน้างานทั่วประเทศไทย</h1>
       <p class="lede" style="max-width:44ch">JaiDeeClear ติดฟิล์มกรองแสงกัน UV และกันความร้อนโดยช่างมืออาชีพ ถึงหน้างานของคุณ — ทั้งบ้าน วิลล่า อาคารพาณิชย์ หรือสนามพาเดล</p>
       <div class="rating">
         <span class="stars">★★★★★</span>
@@ -477,7 +495,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ขั้นตอนการใช้บริการ</div>
-      <h2>3 ขั้นตอนง่ายๆ<span class="acc">สู่กระจกที่เย็นขึ้นและปกป้องได้ดีกว่า</span></h2>
+      <h2><span class="acc">ติดฟิล์มกระจก</span>ง่ายๆ 3 ขั้นตอน วัดพื้นที่ฟรีถึงหน้างาน</h2>
     </div>
     <div class="steps-grid">
       <div class="step"><span class="t">2–3 นาที</span><div class="num">1</div><h3>นัดวัดพื้นที่หน้างาน</h3><p>นัดให้เราเข้าไปดูหน้างานฟรี — แจ้งประเภทอาคารและเมืองของคุณ เราจะวัดกระจกทุกบาน แล้วส่งใบเสนอราคาที่ชัดเจนพร้อมตัวเลือกฟิล์ม ไม่มีข้อผูกมัด</p></div>
@@ -512,7 +530,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ราคาโปร่งใส</div>
-      <h2>เช็กราคาติดฟิล์มกระจกได้ในไม่กี่&nbsp;วินาที</h2>
+      <h2><span class="acc">ราคาติดฟิล์มกรองแสง</span>เริ่มต้น ฿70/ตร.ฟุต</h2>
       <p>กรอกพื้นที่กระจกทั้งหมด แล้วดูช่วงราคารวมค่าติดตั้งได้ทันที — ตั้งแต่ฟิล์ม Carbon ราคาประหยัด ไปจนถึง Sputtering ระดับพรีเมียม ราคาจริงยืนยันฟรีเมื่อเข้าวัดหน้างาน</p>
     </div>
     <div class="calc">
@@ -552,12 +570,29 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- film types -->
+<section id="film-types">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">ฟิล์มของเรา</div>
+      <h2><span class="acc">ประเภทฟิล์มกรองแสง</span> Carbon, ฟิล์มเซรามิค, Titanium และ Sputtering</h2>
+    </div>
+    <div class="ftypes">
+      <a class="ftype" href="/th/films"><span class="tag">คุ้มค่าที่สุด</span><h3>Carbon Series</h3><span class="pr">เริ่มต้น ฿70 <small>/ตร.ฟุต</small></span><span class="life">อายุการใช้งาน 2–3 ปี</span></a>
+      <a class="ftype" href="/th/films"><span class="tag">ยอดนิยม</span><h3>ฟิล์มเซรามิค Ceramic Nano</h3><span class="pr">เริ่มต้น ฿110 <small>/ตร.ฟุต</small></span><span class="life">อายุการใช้งาน 5–7 ปี</span></a>
+      <a class="ftype" href="/th/films"><span class="tag">กันความร้อนสูงสุด</span><h3>Titanium Series</h3><span class="pr">เริ่มต้น ฿150 <small>/ตร.ฟุต</small></span><span class="life">อายุการใช้งาน 7–9 ปี</span></a>
+      <a class="ftype" href="/th/films"><span class="tag">ใสที่สุด</span><h3>Sputtering Film</h3><span class="pr">เริ่มต้น ฿175 <small>/ตร.ฟุต</small></span><span class="life">อายุการใช้งาน 9 ปีขึ้นไป</span></a>
+    </div>
+    <p style="text-align:center;margin-top:22px"><a href="/th/films" style="font-family:var(--head);font-weight:700;color:var(--brand-ink)">เปรียบเทียบฟิล์มและราคาทั้งหมด →</a></p>
+  </div>
+</section>
+
 <!-- property types + cities -->
 <section id="locations">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ประเภทอาคารที่เราให้บริการ</div>
-      <h2>ฟิล์มพรีเมียมสำหรับ<span class="acc">ทุก</span>อาคาร</h2>
+      <h2><span class="acc">ติดฟิล์มกระจก</span>บ้าน คอนโด สำนักงาน และอาคารทุกประเภท</h2>
     </div>
     <div class="types-grid">
       <a class="type" href="/th/window-tinting-villas"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>วิลล่า</a>
@@ -569,6 +604,30 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
       <a class="type" href="/th/window-tinting-schools"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20V9l8-5 8 5v11M9 20v-4h6v4"/></svg>โรงเรียน</a>
     </div>
     <p style="text-align:center;margin-top:22px"><a href="/th/properties" style="font-family:var(--head);font-weight:700;color:var(--brand-ink)">ดูอาคารทุกประเภทที่เราให้บริการ →</a></p>
+    <div class="areas">
+      <h3>พื้นที่ให้บริการ: กรุงเทพฯ ภูเก็ต และชลบุรี</h3>
+      <div class="cities">
+        <a class="city" href="/th/window-tinting-bangkok">กรุงเทพฯ</a>
+        <a class="city" href="/th/window-tinting-phuket">ภูเก็ต</a>
+        <a class="city" href="/th/window-tinting-chonburi">ชลบุรี และพัทยา</a>
+        <a class="city" href="/th/locations">พื้นที่ให้บริการทั้งหมด &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- car tinting band -->
+<section id="car-tinting">
+  <div class="wrap">
+    <div class="car-band">
+      <img src="/images/car-at-home-wide.jpg" alt="JaiDeeClear ติดฟิล์มรถยนต์ถึงบ้านลูกค้า" loading="lazy">
+      <div class="txt">
+        <div class="eyebrow" style="color:var(--orange)">บริการใหม่</div>
+        <h2><span class="acc">ติดฟิล์มรถยนต์</span>ถึงบ้านหรือที่ทำงานของคุณ</h2>
+        <p>ทีมงานไปติดฟิล์มให้ถึงที่จอดรถของคุณ มีฟิล์ม Carbon, Ceramic และ Titanium IR90 พร้อมลอกฟิล์มเก่าให้ฟรี ให้บริการกรุงเทพฯ และภูเก็ต</p>
+        <a class="btn btn-primary" href="/th/schedule?service=car">ขอใบเสนอราคาติดฟิล์มรถยนต์ →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -577,7 +636,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">เสียงจากลูกค้า</div>
-      <h2>คะแนน <span class="acc">4.9</span> จากงานติดตั้ง 50+ งานทั่วประเทศไทย</h2>
+      <h2>รีวิวลูกค้าติดฟิล์มกรองแสง คะแนน <span class="acc">4.9</span> จากรีวิว Google 50+ รีวิว</h2>
       <p><span class="gverify"><svg class="ico" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38z"/></svg> รีวิว Google ที่ยืนยันแล้ว</span></p>
     </div>
     <div class="reviews-grid">
@@ -605,7 +664,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ทำไมถึงได้ผล</div>
-      <h2>การปกป้องที่<span class="acc">วัดผลได้จริง</span></h2>
+      <h2><span class="acc">ฟิล์มกรองแสง</span>กัน UV 99% ลดความร้อน ลดค่าแอร์</h2>
       <p>ฟิล์มพรีเมียมกันความร้อนและรังสี UV จากแดดเมืองไทยที่ส่องผ่านกระจกเข้ามาทุกวัน</p>
     </div>
     <div class="stats-grid">
@@ -622,7 +681,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">งานจริง ผลลัพธ์จริง</div>
-      <h2>ผลงานล่าสุดของเราทั่ว<span class="acc">ประเทศไทย</span></h2>
+      <h2><span class="acc">ผลงานติดฟิล์มกรองแสง</span>ล่าสุดทั่วประเทศไทย</h2>
     </div>
     <div class="gal-grid">
       <div class="gal"><img src="/insta1.jpeg" alt="วิลล่า Anchan Flora ภูเก็ต"><div class="gal-cap"><b>Anchan Flora Villa</b><small>ภูเก็ต · กระจกทั้งวิลล่า</small></div></div>
@@ -637,7 +696,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ความต่างที่คุณสัมผัสได้</div>
-      <h2>ติดครั้งเดียว พื้นที่ของคุณดีขึ้น <span class="acc">4 ด้าน</span></h2>
+      <h2><span class="acc">ประโยชน์ของฟิล์มติดกระจก</span> 4 ด้านที่ดีขึ้นทันที</h2>
     </div>
     <div class="benefits-grid">
       <div class="benefit">
@@ -669,7 +728,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ก่อนจองบริการ</div>
-      <h2>ทุกคำถามเรื่องติดฟิล์มกระจก<span class="acc">ครบทุกคำตอบ</span></h2>
+      <h2><span class="acc">คำถามที่พบบ่อยเรื่องติดฟิล์มกรองแสง</span></h2>
     </div>
     <div class="faq-list">
       <details class="faq" open><summary>ติดฟิล์มกรองแสงราคาเท่าไหร่?<span class="pl">+</span></summary><div class="a">ราคารวมค่าติดตั้งเริ่มต้นที่ ฿70/ตร.ฟุต สำหรับฟิล์ม Carbon รุ่นประหยัด ไปจนถึง ฿180/ตร.ฟุต สำหรับฟิล์ม Sputtering เซรามิคระดับพรีเมียม ราคาสุดท้ายขึ้นอยู่กับพื้นที่กระจกทั้งหมด ความสูงของหน้าต่าง และระดับฟิล์ม — ยืนยันฟรีเมื่อเข้าวัดหน้างาน ใช้เครื่องคำนวณด้านบนเพื่อดูราคาประเมินได้ทันที</div></details>
@@ -706,7 +765,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">ติดตามผลงานของเรา</div>
-      <h2>ส่งตรงจาก<span class="acc">ฟีด</span></h2>
+      <h2><span class="acc">ผลงานติดฟิล์ม</span>จาก Instagram</h2>
       <p>ผลงานติดตั้งล่าสุดทั่วประเทศไทย อัปเดตสดจาก Instagram</p>
       <div class="ig-live"><span class="ig-dot"></span> อัปเดตสดจาก @jaideeclear</div>
     </div>

@@ -238,6 +238,24 @@ section{padding:80px 0}
 .cities{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:32px}
 .city{padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;font-family:var(--head);font-weight:600;font-size:.9rem;transition:.2s}
 .city:hover{border-color:var(--orange);color:var(--orange)}
+/* film types + car band + service areas (home) */
+.ftypes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ftype{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:.2s}
+.ftype:hover{border-color:var(--orange);transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.ftype .tag{font-family:var(--head);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-ink)}
+.ftype h3{font-size:1.2rem;margin:8px 0 10px}
+.ftype .pr{font-family:var(--head);font-weight:800;color:var(--ink);font-size:1.25rem}
+.ftype .pr small{font-size:.75rem;color:var(--muted);font-weight:600}
+.ftype .life{display:block;font-size:.85rem;color:var(--muted);margin-top:4px}
+.areas{text-align:center;margin-top:40px}
+.areas h3{font-size:1.25rem;margin-bottom:4px}
+.car-band{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;background:var(--ink);border-radius:var(--r);overflow:hidden;color:#fff}
+.car-band img{width:100%;height:100%;min-height:340px;object-fit:cover;display:block}
+.car-band .txt{padding:40px 44px 40px 0}
+.car-band h2{color:#fff;font-size:2.1rem;margin:12px 0 14px}
+.car-band p{color:rgba(255,255,255,.75);margin-bottom:22px}
+@media(max-width:820px){.ftypes{grid-template-columns:repeat(2,1fr)}.car-band{grid-template-columns:1fr;gap:0}.car-band .txt{padding:28px 24px 32px}.car-band img{min-height:220px}.car-band h2{font-size:1.7rem}}
+@media(max-width:480px){.ftypes{grid-template-columns:1fr}}
 
 /* faq */
 .faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
@@ -393,7 +411,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">UV &amp; Heat-Rejection Window Film · Fitted On-Site</div>
-      <h1 style="margin-top:14px">Premium <span class="acc">Window Tinting</span><br>Across Thailand.</h1>
+      <h1 style="margin-top:14px">Window Tinting for <span class="acc">Homes, Condos &amp; Buildings</span><br>Across Thailand.</h1>
       <p class="lede" style="max-width:44ch">JaiDeeClear delivers professional UV-protection and heat-rejection window film directly to your property — homes, villas, shophouses or padel courts.</p>
       <div class="rating">
         <span class="stars">★★★★★</span>
@@ -442,7 +460,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">How It Works</div>
-      <h2>Three steps to cooler, protected <span class="acc">glass.</span></h2>
+      <h2><span class="acc">Window tinting</span> in three steps, measured free on-site.</h2>
     </div>
     <div class="steps-grid">
       <div class="step"><span class="t">2–3 min</span><div class="num">1</div><h3>Schedule On-Site Measurement</h3><p>Book a free on-site visit — tell us your property type and city, and we measure every pane and send a clear quote with film options, no obligation.</p></div>
@@ -477,7 +495,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Transparent Pricing</div>
-      <h2>See your window tinting price in&nbsp;seconds.</h2>
+      <h2><span class="acc">Window tinting prices</span> from ฿70/sq&nbsp;ft.</h2>
       <p>Enter your total window area and see your installed price range instantly — from budget carbon film to premium sputtering. Your exact quote is confirmed free, on-site.</p>
     </div>
     <div class="calc">
@@ -517,12 +535,29 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- film types -->
+<section id="film-types">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our Films</div>
+      <h2><span class="acc">Window film types</span>: Carbon, Ceramic, Titanium, Sputtering.</h2>
+    </div>
+    <div class="ftypes">
+      <a class="ftype" href="/films"><span class="tag">Best value</span><h3>Carbon Series</h3><span class="pr">from ฿70 <small>/sq ft</small></span><span class="life">2–3 year lifespan</span></a>
+      <a class="ftype" href="/films"><span class="tag">Most popular</span><h3>Ceramic Nano</h3><span class="pr">from ฿110 <small>/sq ft</small></span><span class="life">5–7 year lifespan</span></a>
+      <a class="ftype" href="/films"><span class="tag">Max heat rejection</span><h3>Titanium Series</h3><span class="pr">from ฿150 <small>/sq ft</small></span><span class="life">7–9 year lifespan</span></a>
+      <a class="ftype" href="/films"><span class="tag">Top clarity</span><h3>Sputtering Film</h3><span class="pr">from ฿175 <small>/sq ft</small></span><span class="life">9+ year lifespan</span></a>
+    </div>
+    <p style="text-align:center;margin-top:22px"><a href="/films" style="font-family:var(--head);font-weight:700;color:var(--brand-ink)">Compare all films &amp; prices →</a></p>
+  </div>
+</section>
+
 <!-- property types + cities -->
 <section id="locations">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Properties We Serve</div>
-      <h2>Premium film for <span class="acc">every</span> building.</h2>
+      <h2><span class="acc">Window tinting</span> for homes, condos, offices and every building.</h2>
     </div>
     <div class="types-grid">
       <a class="type" href="/window-tinting-villas"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Villas</a>
@@ -534,6 +569,30 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
       <a class="type" href="/window-tinting-schools"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M4 20V9l8-5 8 5v11M9 20v-4h6v4"/></svg>Schools</a>
     </div>
     <p style="text-align:center;margin-top:22px"><a href="/properties" style="font-family:var(--head);font-weight:700;color:var(--brand-ink)">View all properties we serve →</a></p>
+    <div class="areas">
+      <h3>Service areas: Bangkok, Phuket &amp; Chonburi</h3>
+      <div class="cities">
+        <a class="city" href="/window-tinting-bangkok">Bangkok</a>
+        <a class="city" href="/window-tinting-phuket">Phuket</a>
+        <a class="city" href="/window-tinting-chonburi">Chonburi &amp; Pattaya</a>
+        <a class="city" href="/locations">All locations &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- car tinting band -->
+<section id="car-tinting">
+  <div class="wrap">
+    <div class="car-band">
+      <img src="images/car-at-home-wide.jpg" alt="Car window tinting at the customer's home by JaiDeeClear" loading="lazy">
+      <div class="txt">
+        <div class="eyebrow" style="color:var(--orange)">New Service</div>
+        <h2><span class="acc">Car tinting</span> at your home or office.</h2>
+        <p>Our team comes to your driveway with Carbon, Ceramic or Titanium IR90 film, and removes old tint free. Bangkok and Phuket.</p>
+        <a class="btn btn-primary" href="/schedule?service=car">Get a car tinting quote →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -542,7 +601,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">What Customers Say</div>
-      <h2>Rated <span class="acc">4.9</span> across 50+ installs in Thailand</h2>
+      <h2>Rated <span class="acc">4.9</span> from 50+ Google reviews</h2>
       <p><span class="gverify"><svg class="ico" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38z"/></svg> Verified Google Reviews</span></p>
     </div>
     <div class="reviews-grid">
@@ -570,7 +629,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Why It Works</div>
-      <h2>Protection you can actually <span class="acc">measure.</span></h2>
+      <h2><span class="acc">Window film</span> that blocks 99% UV and cuts cooling bills.</h2>
       <p>Premium film blocks the heat and UV that Thailand's sun forces through your glass every day.</p>
     </div>
     <div class="stats-grid">
@@ -587,7 +646,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Real Installs. Real Results.</div>
-      <h2>Our recent work across <span class="acc">Thailand.</span></h2>
+      <h2><span class="acc">Window film projects</span> across Thailand.</h2>
     </div>
     <div class="gal-grid">
       <div class="gal"><img src="https://jaideeclear.com/insta1.jpeg" alt="Anchan Flora villa, Phuket"><div class="gal-cap"><b>Anchan Flora Villa</b><small>Phuket · full villa glass</small></div></div>
@@ -602,7 +661,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">The Difference You Feel</div>
-      <h2>One install. Four ways your space <span class="acc">improves.</span></h2>
+      <h2><span class="acc">Window film benefits</span>: four ways your space improves.</h2>
     </div>
     <div class="benefits-grid">
       <div class="benefit">
@@ -634,7 +693,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Before You Book</div>
-      <h2>Window tinting, <span class="acc">answered.</span></h2>
+      <h2><span class="acc">Window tinting FAQs</span>, answered.</h2>
     </div>
     <div class="faq-list">
       <details class="faq" open><summary>How much does window tinting cost in Thailand?<span class="pl">+</span></summary><div class="a">Installed rates run from ฿70/sq ft for our budget carbon film up to ฿180/sq ft for premium sputtering ceramic. Final price depends on total glass area, window height, and film tier — confirmed free during your on-site measurement. Use the calculator above for an instant estimate.</div></details>
@@ -671,7 +730,7 @@ src="https://www.facebook.com/tr?id=864070883127327&ev=PageView&noscript=1"
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">Follow Our Work</div>
-      <h2>Straight from the <span class="acc">feed.</span></h2>
+      <h2><span class="acc">Window film installs</span> on Instagram.</h2>
       <p>Our newest installs across Thailand, pulled live from Instagram.</p>
       <div class="ig-live"><span class="ig-dot"></span> Live from @jaideeclear</div>
     </div>
