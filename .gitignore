@@ -27,3 +27,6 @@ location-page-feedback.md
 
 # Unreferenced stray image
 images/729561489_17903963559448947_6287226192220742100_n.jpg
+
+# Python bytecode
+__pycache__/
