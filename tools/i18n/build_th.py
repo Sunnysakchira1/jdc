@@ -29,6 +29,8 @@ PAGES = {
     'window-tinting-schools': '/window-tinting-schools', 'window-tinting-padel-courts': '/window-tinting-padel-courts',
     # Phase 3 (2026-11-16): car page + blog. The expat guide stays English-only (written for expats).
     'car-window-tinting': '/car-window-tinting',
+    'car-window-tinting-bangkok': '/car-window-tinting-bangkok', 'car-window-tinting-phuket': '/car-window-tinting-phuket',
+    'car-window-film': '/car-window-film',
     'blog/index': '/blog',
     'blog/how-to-choose-window-film-thailand': '/blog/how-to-choose-window-film-thailand',
     'blog/window-tinting-cost-thailand': '/blog/window-tinting-cost-thailand',
