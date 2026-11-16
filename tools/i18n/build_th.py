@@ -27,6 +27,16 @@ PAGES = {
     'locations': '/locations', 'our-work': '/our-work', 'affiliates': '/affiliates', 'careers': '/careers',
     'window-tinting-restaurants': '/window-tinting-restaurants', 'window-tinting-shophouses': '/window-tinting-shophouses',
     'window-tinting-schools': '/window-tinting-schools', 'window-tinting-padel-courts': '/window-tinting-padel-courts',
+    # Phase 3 (2026-11-16): car page + blog. The expat guide stays English-only (written for expats).
+    'car-window-tinting': '/car-window-tinting',
+    'blog/index': '/blog',
+    'blog/how-to-choose-window-film-thailand': '/blog/how-to-choose-window-film-thailand',
+    'blog/window-tinting-cost-thailand': '/blog/window-tinting-cost-thailand',
+    'blog/uv-protection-windows-thailand': '/blog/uv-protection-windows-thailand',
+    'blog/window-tinting-hot-season-thailand': '/blog/window-tinting-hot-season-thailand',
+    'blog/hot-season-window-tinting-phuket-villas': '/blog/hot-season-window-tinting-phuket-villas',
+    'blog/hot-season-window-tinting-bangkok-homes': '/blog/hot-season-window-tinting-bangkok-homes',
+    'blog/hot-season-window-tinting-schools-bangkok': '/blog/hot-season-window-tinting-schools-bangkok',
 }
 NOINDEX = {'thank-you'}  # no hreflang / sitemap for non-indexable pages
 
@@ -37,6 +47,14 @@ def th_path(en_path):
 
 def abs_url(path):
     return SITE + path
+
+
+def en_file(slug):
+    return os.path.join(ROOT, slug + '.html')
+
+
+def th_file(slug):
+    return os.path.join(ROOT, 'th', slug + '.html')
 
 
 def has_th(slug):
@@ -66,9 +84,9 @@ def map_internal(url):
     elif path.startswith(('http:', 'https:', '//')):
         return url
     elif not path.startswith('/'):
-        path = '/' + path                       # relative asset/page -> root-absolute
+        path = '/' + re.sub(r'^(\.\./)+', '', path)   # relative asset/page -> root-absolute
     slug_path = re.sub(r'\.html$', '', path)
-    slug_path = '/' if slug_path in ('/index', '') else slug_path
+    slug_path = re.sub(r'/index$', '', slug_path) or '/'
     for slug, en in PAGES.items():
         if slug_path == en and has_th(slug):
             return th_path(en) + rest
@@ -131,6 +149,23 @@ SWITCH_CSS = ('<style id="langswitch-css">'
               '</style>')
 
 
+# Six top-nav items: keep the desktop header on one line between the burger breakpoint and wide screens.
+NAVFIT_CSS = ('<style id="navfit-css">'
+              '.nav-links a,.navdrop-btn{white-space:nowrap}'
+              'header .logo{flex-shrink:0}'
+              '@media(min-width:921px) and (max-width:1240px){.nav-links{gap:16px}}'
+              '@media(min-width:921px) and (max-width:1080px){.nav-right .btn-wa{font-size:0!important;gap:0!important;padding:11px 13px!important}}'
+              '@media(min-width:921px) and (max-width:1080px){.nav-links{gap:12px;margin-left:0}.nav-links a,.navdrop-btn{font-size:.82rem}'
+              '.nav-cta{padding-left:14px!important;padding-right:14px!important;font-size:.85rem!important}}'
+              '</style>')
+_NAVFIT = re.compile(r'\n?<style id="navfit-css">.*?</style>', re.S)
+EN_ONLY = ['blog/expat-guide-window-film-thailand']   # no TH twin, still needs the nav fix
+
+
+def add_navfit(html):
+    return _NAVFIT.sub('', html).replace('</head>', NAVFIT_CSS + '\n</head>', 1)
+
+
 def switch_link(href, label, hreflang):
     return (f'<!-- langswitch:start --><a class="lang-link" href="{href}" hreflang="{hreflang}" lang="{hreflang}" '
             f'aria-label="{"English version" if hreflang == "en" else "ภาษาไทย"}">{label}</a><!-- langswitch:end -->')
@@ -143,16 +178,16 @@ def add_switch(html, href, label, hreflang):
     html = re.sub(r'(<div class="nav-right">)', r'\1' + link.replace('\\', r'\\'), html, count=1)
     html = re.sub(r'(<nav class="mobmenu"[^>]*>.*?)(</nav>)', lambda m: m.group(1) + link + m.group(2), html, count=1, flags=re.S)
     html = _SWITCH_CSS.sub('', html)
-    return html.replace('</head>', SWITCH_CSS + '\n</head>', 1)
+    return add_navfit(html.replace('</head>', SWITCH_CSS + '\n</head>', 1))
 
 
 def strip_generated(html):
-    return _SWITCH_CSS.sub('', _SWITCH.sub('', _BLOCK.sub('', html)))
+    return _NAVFIT.sub('', _SWITCH_CSS.sub('', _SWITCH.sub('', _BLOCK.sub('', html))))
 
 
 # ---------- EN side ----------
 def update_en(slug, en_path):
-    fn = os.path.join(ROOT, slug + '.html')
+    fn = en_file(slug)
     html = open(fn, encoding='utf-8').read()
     html = strip_generated(html)
     if slug not in NOINDEX:
@@ -176,7 +211,9 @@ def ld_hook_for(en_path):
                     if p is not None:
                         v = abs_url(map_internal(p or '/'))
                 new[k] = fix(v)
-            if any(t in str(obj.get('@type', '')) for t in ('WebPage', 'FAQPage', 'Service', 'BreadcrumbList', 'Article')):
+            if str(obj.get('@type', '')) == 'WebPage' and ident.startswith(SITE) and '#' not in ident:
+                new['@id'] = abs_url(map_internal(ident[len(SITE):] or '/'))     # mainEntityOfPage on blog posts
+            if any(t in str(obj.get('@type', '')) for t in ('WebPage', 'FAQPage', 'Service', 'BreadcrumbList', 'Article', 'BlogPosting', 'Blog')):
                 new.setdefault('inLanguage', 'th')
             return new
         if isinstance(obj, list):
@@ -186,7 +223,7 @@ def ld_hook_for(en_path):
 
 
 def build_th(slug, en_path, strict=False):
-    src = open(os.path.join(ROOT, slug + '.html'), encoding='utf-8').read()
+    src = open(en_file(slug), encoding='utf-8').read()
     src = strip_generated(src)
     d = load_dict(slug)
     missing = [s for s in htmltext.extract(src) if s not in d]
@@ -221,8 +258,8 @@ def build_th(slug, en_path, strict=False):
     if slug == 'schedule':
         html = html.replace("window.location.href = 'thank-you.html';", "window.location.href = '/th/thank-you';")
         html = html.replace("let lang = 'en';", "let lang = 'th';")
-    os.makedirs(os.path.join(ROOT, 'th'), exist_ok=True)
-    out = os.path.join(ROOT, 'th', ('index' if slug == 'index' else slug) + '.html')
+    out = th_file(slug)
+    os.makedirs(os.path.dirname(out), exist_ok=True)
     open(out, 'w', encoding='utf-8').write(html)
     return True
 
@@ -234,19 +271,27 @@ def update_sitemap():
     xml = re.sub(r'\n  <!-- Thai -->.*?<!-- /Thai -->', '', xml, flags=re.S)
     lastmod = __import__('datetime').date.today().isoformat()
     rows = [f'  <url><loc>{abs_url(th_path(p))}</loc><lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>'
-            for s, p in PAGES.items() if s not in NOINDEX]
+            for s, p in PAGES.items() if s not in NOINDEX and os.path.exists(th_file(s))]
     xml = xml.replace('</urlset>', '\n  <!-- Thai -->\n' + '\n'.join(rows) + '\n  <!-- /Thai -->\n</urlset>')
     open(fn, 'w', encoding='utf-8').write(xml)
 
 
 def main():
+    if '--dump' in sys.argv:        # build_th.py --dump <slug>  -> JSON list of strings not yet translated
+        slug = sys.argv[sys.argv.index('--dump') + 1]
+        src = strip_generated(open(en_file(slug), encoding='utf-8').read())
+        d = json.load(open(os.path.join(I18N, 'th', '_common.json'), encoding='utf-8'))
+        if has_th(slug):
+            d.update(json.load(open(os.path.join(I18N, 'th', slug + '.json'), encoding='utf-8')))
+        print(json.dumps([s for s in htmltext.extract(src) if s not in d], ensure_ascii=False, indent=1))
+        return
     check = '--check' in sys.argv
     ok = True
     for slug, en_path in PAGES.items():
         if not os.path.exists(os.path.join(I18N, 'th', slug + '.json')):
             print(f'  ! {slug}: no translation file yet'); ok = False; continue
         if check:
-            src = strip_generated(open(os.path.join(ROOT, slug + '.html'), encoding='utf-8').read())
+            src = strip_generated(open(en_file(slug), encoding='utf-8').read())
             d = load_dict(slug)
             miss = [s for s in htmltext.extract(src) if s not in d]
             print(f'{slug:28} {"OK" if not miss else str(len(miss)) + " missing"}')
@@ -255,8 +300,12 @@ def main():
         ok &= build_th(slug, en_path)
     if not check:
         for slug, en_path in PAGES.items():
-            if os.path.exists(os.path.join(ROOT, 'th', ('index' if slug == 'index' else slug) + '.html')):
+            if os.path.exists(th_file(slug)):
                 update_en(slug, en_path)
+        for slug in EN_ONLY:
+            fn = en_file(slug)
+            html = add_navfit(open(fn, encoding='utf-8').read())
+            open(fn, 'w', encoding='utf-8').write(html)
         update_sitemap()
         print('built', len(PAGES), 'TH pages')
     sys.exit(0 if ok else 1)
