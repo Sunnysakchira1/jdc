@@ -149,6 +149,23 @@ SWITCH_CSS = ('<style id="langswitch-css">'
               '</style>')
 
 
+# Six top-nav items: keep the desktop header on one line between the burger breakpoint and wide screens.
+NAVFIT_CSS = ('<style id="navfit-css">'
+              '.nav-links a,.navdrop-btn{white-space:nowrap}'
+              'header .logo{flex-shrink:0}'
+              '@media(min-width:921px) and (max-width:1240px){.nav-links{gap:16px}}'
+              '@media(min-width:921px) and (max-width:1080px){.nav-right .btn-wa{font-size:0!important;gap:0!important;padding:11px 13px!important}}'
+              '@media(min-width:921px) and (max-width:1080px){.nav-links{gap:12px;margin-left:0}.nav-links a,.navdrop-btn{font-size:.82rem}'
+              '.nav-cta{padding-left:14px!important;padding-right:14px!important;font-size:.85rem!important}}'
+              '</style>')
+_NAVFIT = re.compile(r'\n?<style id="navfit-css">.*?</style>', re.S)
+EN_ONLY = ['blog/expat-guide-window-film-thailand']   # no TH twin, still needs the nav fix
+
+
+def add_navfit(html):
+    return _NAVFIT.sub('', html).replace('</head>', NAVFIT_CSS + '\n</head>', 1)
+
+
 def switch_link(href, label, hreflang):
     return (f'<!-- langswitch:start --><a class="lang-link" href="{href}" hreflang="{hreflang}" lang="{hreflang}" '
             f'aria-label="{"English version" if hreflang == "en" else "ภาษาไทย"}">{label}</a><!-- langswitch:end -->')
@@ -161,11 +178,11 @@ def add_switch(html, href, label, hreflang):
     html = re.sub(r'(<div class="nav-right">)', r'\1' + link.replace('\\', r'\\'), html, count=1)
     html = re.sub(r'(<nav class="mobmenu"[^>]*>.*?)(</nav>)', lambda m: m.group(1) + link + m.group(2), html, count=1, flags=re.S)
     html = _SWITCH_CSS.sub('', html)
-    return html.replace('</head>', SWITCH_CSS + '\n</head>', 1)
+    return add_navfit(html.replace('</head>', SWITCH_CSS + '\n</head>', 1))
 
 
 def strip_generated(html):
-    return _SWITCH_CSS.sub('', _SWITCH.sub('', _BLOCK.sub('', html)))
+    return _NAVFIT.sub('', _SWITCH_CSS.sub('', _SWITCH.sub('', _BLOCK.sub('', html))))
 
 
 # ---------- EN side ----------
@@ -285,6 +302,10 @@ def main():
         for slug, en_path in PAGES.items():
             if os.path.exists(th_file(slug)):
                 update_en(slug, en_path)
+        for slug in EN_ONLY:
+            fn = en_file(slug)
+            html = add_navfit(open(fn, encoding='utf-8').read())
+            open(fn, 'w', encoding='utf-8').write(html)
         update_sitemap()
         print('built', len(PAGES), 'TH pages')
     sys.exit(0 if ok else 1)
